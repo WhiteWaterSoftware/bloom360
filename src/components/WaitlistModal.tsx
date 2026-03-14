@@ -140,6 +140,25 @@ export default function WaitlistModal({
                     </p>
                   )}
 
+                  <p className="text-xs text-ink-muted leading-relaxed">
+                    By joining, you agree to receive occasional messages from bloom360
+                    about our launch and services. Message frequency varies. Reply STOP
+                    to unsubscribe. Msg &amp; data rates may apply. Your mobile opt-in
+                    data will not be shared with third parties. See our{" "}
+                    <a href="/privacy" className="underline hover:text-ink">
+                      Privacy Policy
+                    </a>{" "}
+                    and{" "}
+                    <a href="/terms" className="underline hover:text-ink">
+                      Terms of Service
+                    </a>
+                    . For help, contact{" "}
+                    <a href="mailto:care@bloom360.com" className="underline hover:text-ink">
+                      care@bloom360.com
+                    </a>
+                    .
+                  </p>
+
                   <button
                     type="submit"
                     disabled={status === "submitting"}

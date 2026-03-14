@@ -145,7 +145,7 @@ const CONSENT_ITEMS = [
   {
     type: "communication_consent",
     label:
-      "I consent to receive appointment reminders, health tips, and care communications via phone, email, and/or SMS.",
+      "I consent to receive appointment reminders, health tips, and care communications via phone, email, and/or SMS. Message frequency varies, up to 10 messages per month. Reply STOP to unsubscribe. Msg & data rates may apply. My mobile opt-in data will not be shared with third parties. US carriers are not liable for delayed or undelivered messages.",
     heading: "Communication Consent",
   },
 ];
@@ -1043,6 +1043,15 @@ function StepConsents({
           />
         </div>
       </div>
+
+      <p className="text-xs text-ink-muted leading-relaxed mt-6">
+        By submitting this form, you agree to our{" "}
+        <a href="/privacy" className="underline hover:text-ink">Privacy Policy</a>{" "}
+        and{" "}
+        <a href="/terms" className="underline hover:text-ink">Terms of Service</a>
+        . For help or questions, contact{" "}
+        <a href="mailto:care@bloom360.com" className="underline hover:text-ink">care@bloom360.com</a>.
+      </p>
     </div>
   );
 }
