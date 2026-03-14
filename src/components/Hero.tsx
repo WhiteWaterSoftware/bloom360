@@ -3,8 +3,10 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import { useWaitlist } from "./WaitlistProvider";
 
 export default function Hero() {
+  const openWaitlist = useWaitlist();
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -84,15 +86,15 @@ export default function Hero() {
             style={{ y: subY }}
             className="lg:col-span-4 flex flex-col gap-4 lg:items-end"
           >
-            <a
-              href="#join"
+            <button
+              onClick={openWaitlist}
               className="group inline-flex items-center gap-3 bg-ink text-cream px-8 py-4 rounded-full text-sm tracking-wide uppercase hover:bg-sage transition-colors duration-500"
             >
-              Become a member
+              Join the Waitlist
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                 &rarr;
               </span>
-            </a>
+            </button>
             <p className="text-ink-muted text-xs tracking-wide lg:text-right">
               Available across the U.S. via telehealth
             </p>

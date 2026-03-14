@@ -3,8 +3,10 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import { useWaitlist } from "./WaitlistProvider";
 
 export default function CTA() {
+  const openWaitlist = useWaitlist();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -40,15 +42,15 @@ export default function CTA() {
             built around your life. Join bloom360 today.
           </p>
           <div className="mt-12 flex flex-col sm:flex-row gap-4">
-            <a
-              href="#"
+            <button
+              onClick={openWaitlist}
               className="group inline-flex items-center justify-center gap-3 bg-ink text-cream px-10 py-5 rounded-full text-sm tracking-wide uppercase hover:bg-sage transition-colors duration-500"
             >
-              Become a member
+              Join the Waitlist
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                 &rarr;
               </span>
-            </a>
+            </button>
             <a
               href="mailto:care@bloom360.com"
               className="inline-flex items-center justify-center gap-2 border border-ink/15 text-ink px-10 py-5 rounded-full text-sm tracking-wide uppercase hover:border-ink/40 transition-colors duration-500"

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import WaitlistProvider from "@/components/WaitlistProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -86,7 +87,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
+        <WaitlistProvider>
+          {children}
+        </WaitlistProvider>
       </body>
     </html>
   );
