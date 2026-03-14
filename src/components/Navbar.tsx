@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import { useWaitlist } from "./WaitlistProvider";
 
 const links = [
   { label: "About", href: "#about" },
@@ -13,6 +14,7 @@ const links = [
 ];
 
 export default function Navbar() {
+  const openWaitlist = useWaitlist();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -56,12 +58,12 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#join"
+            <button
+              onClick={openWaitlist}
               className="text-[13px] tracking-wide uppercase bg-ink text-cream px-6 py-2.5 rounded-full hover:bg-ink-light transition-colors duration-300"
             >
               Join
-            </a>
+            </button>
           </div>
 
           <button
@@ -92,13 +94,12 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#join"
-                onClick={() => setMobileOpen(false)}
-                className="block text-center text-sm tracking-wide uppercase bg-ink text-cream px-6 py-3 rounded-full"
+              <button
+                onClick={() => { setMobileOpen(false); openWaitlist(); }}
+                className="block w-full text-center text-sm tracking-wide uppercase bg-ink text-cream px-6 py-3 rounded-full"
               >
                 Join
-              </a>
+              </button>
             </div>
           </motion.div>
         )}

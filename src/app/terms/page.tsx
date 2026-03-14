@@ -353,47 +353,88 @@ export default function TermsOfServicePage() {
         internet disruptions, cyberattacks, or failures of third-party service providers.
       </p>
 
-      <h2>20. Miscellaneous</h2>
-      <h3>20.1 Entire Agreement</h3>
+      <h2>20. SMS/Text Messaging Terms</h2>
+      <h3>20.1 Program Description</h3>
+      <p>
+        By providing your phone number and opting in, you consent to receive recurring SMS/text messages from Bloom360
+        related to your waitlist status, appointment reminders, health tips, and care communications. Message frequency
+        varies and may include up to 10 messages per month.
+      </p>
+      <h3>20.2 Opt-Out</h3>
+      <p>
+        You can opt out of receiving text messages at any time by replying STOP to any message you receive from us.
+        After opting out, you will receive a one-time confirmation message. You will no longer receive text messages
+        from Bloom360 unless you opt in again.
+      </p>
+      <h3>20.3 Help</h3>
+      <p>
+        For help or questions about our messaging program, reply HELP to any message or contact us at{" "}
+        <a href="mailto:care@bloom360.com">care@bloom360.com</a>.
+      </p>
+      <h3>20.4 Message and Data Rates</h3>
+      <p>
+        Message and data rates may apply depending on your mobile carrier plan. Bloom360 is not responsible for any
+        charges incurred from your carrier for receiving text messages.
+      </p>
+      <h3>20.5 Carrier Liability</h3>
+      <p>
+        Carriers (including but not limited to T-Mobile, AT&amp;T, Verizon, and others) are not liable for delayed or
+        undelivered messages. Delivery of messages is subject to effective transmission from your wireless carrier.
+      </p>
+      <h3>20.6 Privacy</h3>
+      <p>
+        Your mobile opt-in data and consent will not be shared with or sold to third parties for their marketing
+        purposes. We may share your information with service providers who assist us in delivering messages, but only
+        as necessary to operate our messaging program. For more information, see our{" "}
+        <a href="/privacy">Privacy Policy</a>.
+      </p>
+      <h3>20.7 Supported Carriers</h3>
+      <p>
+        Our messaging program is supported on major US carriers. Carriers are not responsible for the content of
+        messages sent by Bloom360.
+      </p>
+
+      <h2>21. Miscellaneous</h2>
+      <h3>21.1 Entire Agreement</h3>
       <p>
         These Terms, together with our Privacy Policy, Cancellation Policy, Telehealth Consent, and any other policies
         referenced herein, constitute the entire agreement between you and Bloom360 regarding your use of our Services and
         supersede all prior agreements, understandings, and communications, whether written or oral.
       </p>
-      <h3>20.2 Severability</h3>
+      <h3>21.2 Severability</h3>
       <p>
         If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent
         jurisdiction, the remaining provisions shall continue in full force and effect. The invalid provision shall be modified
         to the minimum extent necessary to make it valid and enforceable.
       </p>
-      <h3>20.3 Waiver</h3>
+      <h3>21.3 Waiver</h3>
       <p>
         Our failure to enforce any right or provision of these Terms shall not constitute a waiver of that right or provision.
         Any waiver of any provision of these Terms will be effective only if in writing and signed by Bloom360.
       </p>
-      <h3>20.4 Assignment</h3>
+      <h3>21.4 Assignment</h3>
       <p>
         You may not assign or transfer these Terms or your rights under these Terms without our prior written consent.
         Bloom360 may assign these Terms without your consent in connection with a merger, acquisition, reorganization, or sale
         of all or substantially all of our assets.
       </p>
-      <h3>20.5 Notices</h3>
+      <h3>21.5 Notices</h3>
       <p>
         Notices to you may be sent to the email address associated with your account. Notices to Bloom360 should be sent to{" "}
         <a href="mailto:care@bloom360.com">care@bloom360.com</a> or mailed to Bloom360, Inc., 4444 2nd Ave Ste 30674,
         Detroit, MI 48201.
       </p>
-      <h3>20.6 Accessibility</h3>
+      <h3>21.6 Accessibility</h3>
       <p>
         Bloom360 is committed to making our Services accessible to individuals with disabilities. If you need assistance or
         have questions about accessibility, please contact us at <a href="mailto:care@bloom360.com">care@bloom360.com</a>.
       </p>
-      <h3>20.7 No Third-Party Beneficiaries</h3>
+      <h3>21.7 No Third-Party Beneficiaries</h3>
       <p>
         These Terms do not create any third-party beneficiary rights in any individual or entity that is not a party to these
         Terms.
       </p>
-      <h3>20.8 Language</h3>
+      <h3>21.8 Language</h3>
       <p>
         These Terms are drafted in English. If these Terms are translated into another language and there is a conflict between
         the English version and the translated version, the English version shall control.
