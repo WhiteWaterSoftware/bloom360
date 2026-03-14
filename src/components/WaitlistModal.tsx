@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function WaitlistModal({
@@ -14,6 +14,15 @@ export default function WaitlistModal({
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  useEffect(() => {
+    if (open) {
+      setName("");
+      setEmail("");
+      setPhone("");
+      setStatus("idle");
+    }
+  }, [open]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -35,13 +44,6 @@ export default function WaitlistModal({
 
   const handleClose = () => {
     onClose();
-    // Reset after animation
-    setTimeout(() => {
-      setName("");
-      setEmail("");
-      setPhone("");
-      setStatus("idle");
-    }, 300);
   };
 
   return (

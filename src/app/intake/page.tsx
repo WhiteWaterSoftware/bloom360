@@ -1081,10 +1081,10 @@ export default function IntakePage() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h1 className="font-serif text-4xl mb-3">Thank you</h1>
+          <h1 className="font-serif text-4xl mb-3">Form Preview Complete</h1>
           <p className="text-ink-muted leading-relaxed mb-8">
-            Your intake form has been received. Our team will review your information and
-            reach out to schedule your first visit.
+            This is a preview of the intake form. Your information was not saved or submitted.
+            The full intake process will be available when you join bloom360.
           </p>
           <Link
             href="/"
