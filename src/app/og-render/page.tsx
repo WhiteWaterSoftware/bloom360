@@ -80,7 +80,7 @@ export default function OGRender() {
             }}
           >
             Your health,{" "}
-            <span className="italic" style={{ color: "#4a6741" }}>
+            <span className="italic" style={{ color: "#f26a6c" }}>
               finally
             </span>
           </div>
