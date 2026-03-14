@@ -1,9 +1,21 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import Image from "next/image";
+import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
+import { useRef, useEffect } from "react";
+import { Stethoscope, UsersThree } from "@phosphor-icons/react";
 
+function CountUp({ target, inView }: { target: number; inView: boolean }) {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (v) => Math.round(v));
+
+  useEffect(() => {
+    if (inView) {
+      animate(count, target, { duration: 1.5, ease: "easeOut" });
+    }
+  }, [inView, count, target]);
+
+  return <motion.span>{rounded}</motion.span>;
+}
 export default function About() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
@@ -38,14 +50,8 @@ export default function About() {
           >
             <div className="grid sm:grid-cols-2 gap-12">
               <div>
-                <div className="w-10 h-10 rounded-full bg-sage-muted flex items-center justify-center mb-5">
-                  <Image
-                    src="/emblem.svg"
-                    alt=""
-                    width={20}
-                    height={20}
-                    className="w-5 h-5"
-                  />
+                <div className="w-12 h-12 rounded-full bg-sage/10 flex items-center justify-center mb-5">
+                  <Stethoscope size={22} weight="duotone" className="text-sage" />
                 </div>
                 <p className="text-ink-light leading-relaxed">
                   bloom360 is a physician-led membership built for how people
@@ -56,8 +62,8 @@ export default function About() {
               </div>
 
               <div>
-                <div className="w-10 h-10 rounded-full bg-sage-muted flex items-center justify-center mb-5">
-                  <div className="w-2 h-2 rounded-full bg-sage" />
+                <div className="w-12 h-12 rounded-full bg-sage/10 flex items-center justify-center mb-5">
+                  <UsersThree size={22} weight="duotone" className="text-sage" />
                 </div>
                 <p className="text-ink-light leading-relaxed">
                   Every member gets a dedicated primary care physician at the
@@ -70,9 +76,9 @@ export default function About() {
 
             <div className="mt-16 grid grid-cols-3 gap-8 pt-12 border-t border-ink/10">
               {[
-                { number: "4", label: "Care disciplines" },
-                { number: "1", label: "Dedicated physician" },
-                { number: "50", label: "States via telehealth" },
+                { number: 4, label: "Care disciplines" },
+                { number: 1, label: "Dedicated physician" },
+                { number: 50, label: "States via telehealth" },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}
@@ -81,7 +87,7 @@ export default function About() {
                   transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
                 >
                   <p className="text-4xl md:text-5xl font-serif text-sage">
-                    {stat.number}
+                    <CountUp target={stat.number} inView={inView} />
                   </p>
                   <p className="mt-2 text-xs tracking-wide uppercase text-ink-muted">
                     {stat.label}
