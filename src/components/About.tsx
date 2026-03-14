@@ -1,94 +1,95 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Heart, Shield, Smartphone } from "lucide-react";
-
-const pillars = [
-  {
-    icon: Heart,
-    title: "Relationship-First",
-    description:
-      "Every member is paired with a dedicated primary care physician who knows your history, goals, and life — not just your symptoms.",
-  },
-  {
-    icon: Shield,
-    title: "Prevention Over Reaction",
-    description:
-      "We prioritize keeping you well over treating you when you're sick. Proactive screenings, lifestyle guidance, and early intervention.",
-  },
-  {
-    icon: Smartphone,
-    title: "Technology-Enabled",
-    description:
-      "State-of-the-art telehealth that makes great care accessible from anywhere in the U.S. No waiting rooms. No barriers.",
-  },
-];
+import Image from "next/image";
 
 export default function About() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-28 md:py-36 bg-warm-50" ref={ref}>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+    <section id="about" className="py-24 md:py-40" ref={ref}>
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+          {/* Left column — large statement */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="lg:col-span-5"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-px w-12 bg-teal-600" />
-              <span className="text-teal-600 text-sm font-medium tracking-widest uppercase">
-                About bloom360
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
-              Care designed for
-              <br />
-              <span className="text-teal-700">how you actually live.</span>
+            <p className="text-ink-muted text-[13px] tracking-[0.2em] uppercase mb-6">
+              About bloom360
+            </p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-[1.05] tracking-tight">
+              We built this for the people who{" "}
+              <em className="text-sage">deserve better</em> than a waiting
+              room.
             </h2>
-            <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-              bloom360 is a comprehensive preventive and primary care
-              telemedicine practice. Our monthly membership gives you real
-              access to a dedicated physician and an integrated care team —
-              so you spend less time managing healthcare and more time
-              living well.
-            </p>
-            <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-              We believe the best care happens through lasting relationships,
-              supported by technology that removes friction — not replaces the
-              human connection.
-            </p>
           </motion.div>
 
-          <div className="space-y-6">
-            {pillars.map((pillar, i) => (
-              <motion.div
-                key={pillar.title}
-                initial={{ opacity: 0, x: 30 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.2 + i * 0.15 }}
-                className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
-              >
-                <div className="flex gap-5">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center group-hover:bg-teal-100 transition-colors">
-                    <pillar.icon className="w-6 h-6 text-teal-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      {pillar.title}
-                    </h3>
-                    <p className="mt-2 text-gray-600 leading-relaxed">
-                      {pillar.description}
-                    </p>
-                  </div>
+          {/* Right column — details */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="lg:col-span-7 lg:pt-16"
+          >
+            <div className="grid sm:grid-cols-2 gap-12">
+              <div>
+                <div className="w-10 h-10 rounded-full bg-sage-muted flex items-center justify-center mb-5">
+                  <Image
+                    src="/emblem.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="w-5 h-5"
+                  />
                 </div>
-              </motion.div>
-            ))}
-          </div>
+                <p className="text-ink-light leading-relaxed">
+                  bloom360 is a physician-led membership built for how people
+                  actually live. Not episodic sick visits — ongoing,
+                  relationship-based preventive care delivered entirely through
+                  telehealth.
+                </p>
+              </div>
+
+              <div>
+                <div className="w-10 h-10 rounded-full bg-sage-muted flex items-center justify-center mb-5">
+                  <div className="w-2 h-2 rounded-full bg-sage" />
+                </div>
+                <p className="text-ink-light leading-relaxed">
+                  Every member gets a dedicated primary care physician at the
+                  center, supported by integrated programs in nutrition,
+                  movement, and reproductive health. Technology makes it
+                  accessible. Relationships make it stick.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-16 grid grid-cols-3 gap-8 pt-12 border-t border-ink/10">
+              {[
+                { number: "4", label: "Care disciplines" },
+                { number: "1", label: "Dedicated physician" },
+                { number: "50", label: "States via telehealth" },
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
+                >
+                  <p className="text-4xl md:text-5xl font-serif text-sage">
+                    {stat.number}
+                  </p>
+                  <p className="mt-2 text-xs tracking-wide uppercase text-ink-muted">
+                    {stat.label}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

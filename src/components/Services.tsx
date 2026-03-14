@@ -2,101 +2,100 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import {
-  Stethoscope,
-  Apple,
-  Dumbbell,
-  Baby,
-} from "lucide-react";
 
 const services = [
   {
-    icon: Stethoscope,
+    number: "01",
     title: "Primary Care",
     description:
-      "Your dedicated physician manages your overall health, coordinates care, and is available when you need them — not just when you're sick.",
-    features: ["Annual wellness exams", "Chronic condition management", "Prescription management", "Specialist referrals"],
+      "A dedicated physician who leads your care, manages your health holistically, and is there when you need them — not just when something breaks.",
+    details: ["Annual wellness", "Chronic conditions", "Prescriptions", "Referrals"],
   },
   {
-    icon: Apple,
+    number: "02",
     title: "Nutrition",
     description:
-      "Work with a registered dietician to build sustainable eating habits that align with your health goals and lifestyle.",
-    features: ["Personalized meal guidance", "Metabolic health", "Weight management", "Gut health optimization"],
+      "A registered dietician who builds sustainable plans around your actual life — not a generic meal template you'll abandon in two weeks.",
+    details: ["Meal guidance", "Metabolic health", "Weight goals", "Gut health"],
   },
   {
-    icon: Dumbbell,
-    title: "Exercise & Physical Therapy",
+    number: "03",
+    title: "Movement",
     description:
-      "Expert-guided movement programs designed to prevent injury, build strength, and support your body at every stage.",
-    features: ["Custom exercise plans", "Injury prevention", "Rehabilitation support", "Mobility programs"],
+      "Exercise coaching and physical therapy designed to keep you moving well, prevent injury, and build a body that supports how you want to live.",
+    details: ["Custom programs", "Injury prevention", "Rehab support", "Mobility"],
   },
   {
-    icon: Baby,
+    number: "04",
     title: "Reproductive Health",
     description:
-      "Comprehensive reproductive health guidance from family planning to fertility support, all integrated with your primary care.",
-    features: ["Family planning", "Fertility support", "Hormonal health", "Prenatal guidance"],
+      "From family planning to hormonal health, integrated with your primary care so nothing falls through the cracks.",
+    details: ["Family planning", "Fertility", "Hormonal health", "Prenatal"],
   },
 ];
 
 export default function Services() {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="services" className="py-28 md:py-36 bg-white" ref={ref}>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="services" className="py-24 md:py-40 bg-ink text-cream" ref={ref}>
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-2xl mx-auto mb-20"
+          className="mb-20 md:mb-28"
         >
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="h-px w-12 bg-teal-600" />
-            <span className="text-teal-600 text-sm font-medium tracking-widest uppercase">
-              Your Care Team
-            </span>
-            <div className="h-px w-12 bg-teal-600" />
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
-            One membership.
-            <br />
-            <span className="text-teal-700">Complete care.</span>
-          </h2>
-          <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-            Every bloom360 member has access to a fully integrated care team,
-            all working together around your health.
+          <p className="text-cream/40 text-[13px] tracking-[0.2em] uppercase mb-6">
+            Your Care Team
           </p>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif leading-[1] tracking-tight max-w-3xl">
+            Four disciplines.
+            <br />
+            <em className="text-sage-light">One team.</em>
+          </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="space-y-0">
           {services.map((service, i) => (
             <motion.div
-              key={service.title}
+              key={service.number}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
-              className="group relative bg-sage-50 rounded-3xl p-10 hover:bg-teal-50 transition-colors duration-300 border border-transparent hover:border-teal-100"
+              className="group grid md:grid-cols-12 gap-6 md:gap-10 py-10 md:py-14 border-t border-cream/10 hover:border-cream/20 transition-colors duration-500"
             >
-              <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:shadow-md transition-shadow">
-                <service.icon className="w-7 h-7 text-teal-600" />
+              <div className="md:col-span-1">
+                <span className="text-cream/20 text-sm tracking-wide font-mono">
+                  {service.number}
+                </span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                {service.description}
-              </p>
-              <ul className="space-y-2">
-                {service.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-sm text-gray-600">
-                    <div className="w-1.5 h-1.5 rounded-full bg-teal-500 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+
+              <div className="md:col-span-3">
+                <h3 className="text-2xl md:text-3xl font-serif group-hover:text-sage-light transition-colors duration-500">
+                  {service.title}
+                </h3>
+              </div>
+
+              <div className="md:col-span-5">
+                <p className="text-cream/60 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+
+              <div className="md:col-span-3">
+                <div className="flex flex-wrap gap-2">
+                  {service.details.map((d) => (
+                    <span
+                      key={d}
+                      className="text-xs tracking-wide text-cream/30 border border-cream/10 rounded-full px-3 py-1.5"
+                    >
+                      {d}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

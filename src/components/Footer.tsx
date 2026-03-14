@@ -2,125 +2,77 @@
 
 import Image from "next/image";
 
+const footerLinks = {
+  Care: [
+    { label: "Primary Care", href: "#services" },
+    { label: "Nutrition", href: "#services" },
+    { label: "Physical Therapy", href: "#services" },
+    { label: "Reproductive Health", href: "#services" },
+  ],
+  Company: [
+    { label: "About", href: "#about" },
+    { label: "How It Works", href: "#how-it-works" },
+    { label: "FAQ", href: "#faq" },
+    { label: "Contact", href: "mailto:care@bloom360.com" },
+  ],
+  Legal: [
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "/terms" },
+    { label: "Telehealth Consent", href: "/telehealth-consent" },
+    { label: "Nondiscrimination", href: "/nondiscrimination" },
+    { label: "Cancellation", href: "/cancellation" },
+    { label: "Controlled Substances", href: "/controlled-substances" },
+  ],
+};
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-gray-400">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-4 gap-12 md:gap-8">
-          <div className="md:col-span-1">
+    <footer className="bg-ink text-cream/40">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-20">
+        <div className="grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-4">
             <Image
               src="/logo-white.svg"
               alt="bloom360"
-              width={140}
-              height={32}
-              className="h-7 w-auto mb-4"
+              width={120}
+              height={28}
+              className="h-6 w-auto mb-5 opacity-80"
             />
-            <p className="text-sm leading-relaxed text-gray-500">
-              Tech-powered, physician-led preventive care built for the way
-              you actually live.
+            <p className="text-sm leading-relaxed max-w-xs">
+              Tech-powered, physician-led preventive care built for the way you
+              actually live.
+            </p>
+            <p className="mt-6 text-xs text-cream/20">
+              care@bloom360.com
             </p>
           </div>
 
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4 tracking-wide uppercase">
-              Care
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a href="#services" className="hover:text-white transition-colors">
-                  Primary Care
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-white transition-colors">
-                  Nutrition
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-white transition-colors">
-                  Physical Therapy
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-white transition-colors">
-                  Reproductive Health
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4 tracking-wide uppercase">
-              Company
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a href="#about" className="hover:text-white transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#how-it-works" className="hover:text-white transition-colors">
-                  How It Works
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-white transition-colors">
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4 tracking-wide uppercase">
-              Legal
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a href="/privacy" className="hover:text-white transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="/terms" className="hover:text-white transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="/telehealth-consent" className="hover:text-white transition-colors">
-                  Telehealth Consent
-                </a>
-              </li>
-              <li>
-                <a href="/nondiscrimination" className="hover:text-white transition-colors">
-                  Nondiscrimination
-                </a>
-              </li>
-              <li>
-                <a href="/cancellation" className="hover:text-white transition-colors">
-                  Cancellation Policy
-                </a>
-              </li>
-              <li>
-                <a href="/controlled-substances" className="hover:text-white transition-colors">
-                  Controlled Substances
-                </a>
-              </li>
-            </ul>
-          </div>
+          {Object.entries(footerLinks).map(([category, links]) => (
+            <div key={category} className="md:col-span-2 md:col-start-auto">
+              <h4 className="text-[11px] font-medium text-cream/20 tracking-[0.2em] uppercase mb-5">
+                {category}
+              </h4>
+              <ul className="space-y-3">
+                {links.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className="text-sm hover:text-cream/70 transition-colors duration-300"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        <div className="mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-600">
-            &copy; {new Date().getFullYear()} bloom360. All rights reserved.
+        <div className="mt-20 pt-8 border-t border-cream/5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <p className="text-xs text-cream/20">
+            &copy; {new Date().getFullYear()} bloom360, Inc. All rights reserved.
           </p>
-          <p className="text-xs text-gray-700">
+          <p className="text-[11px] text-cream/15 max-w-lg md:text-right leading-relaxed">
             bloom360 provides telehealth services and is not a substitute for
             emergency care. If you are experiencing a medical emergency, call
             911.

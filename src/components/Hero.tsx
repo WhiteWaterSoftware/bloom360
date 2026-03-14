@@ -5,118 +5,101 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-teal-950">
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-teal-950 via-teal-900 to-teal-800" />
+    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pb-16 md:pb-24 pt-32">
+      {/* Background emblem */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 0.04, scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+      >
+        <Image
+          src="/emblem.svg"
+          alt=""
+          width={800}
+          height={800}
+          className="w-[700px] h-auto animate-float"
+        />
+      </motion.div>
 
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-96 h-96 rounded-full bg-teal-600/10 blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-80 h-80 rounded-full bg-teal-400/8 blur-3xl" />
+      <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 w-full">
+        <div className="grid lg:grid-cols-12 gap-8 items-end">
+          <div className="lg:col-span-8">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-ink-muted text-[13px] tracking-[0.2em] uppercase mb-6"
+            >
+              Physician-led preventive care
+            </motion.p>
 
-      {/* Subtle grid pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      />
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-[clamp(3rem,8vw,7.5rem)] leading-[0.92] tracking-[-0.03em] font-serif"
+            >
+              Your health,{" "}
+              <em className="text-sage">finally</em>
+              <br />
+              in good hands.
+            </motion.h1>
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-32 md:py-40">
-        <div className="max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="h-px w-12 bg-teal-400/60" />
-              <span className="text-teal-300 text-sm font-medium tracking-widest uppercase">
-                Preventive Care Membership
-              </span>
-            </div>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl md:text-7xl font-bold text-white leading-[1.08] tracking-tight"
-          >
-            Healthcare that
-            <br />
-            <span className="text-teal-300">meets you</span>
-            <br />
-            where you are.
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-8 text-lg md:text-xl text-teal-100/80 leading-relaxed max-w-2xl"
-          >
-            A physician-led membership that puts prevention first. Your
-            dedicated doctor, nutritionist, exercise coach, and reproductive
-            health adviser — all accessible from wherever you are.
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mt-8 text-ink-muted text-lg md:text-xl leading-relaxed max-w-xl"
+            >
+              One dedicated doctor. A full care team. Nutrition, movement,
+              reproductive health — all coordinated, all virtual, all yours.
+            </motion.p>
+          </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-12 flex flex-col sm:flex-row gap-4"
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="lg:col-span-4 flex flex-col gap-4 lg:items-end"
           >
             <a
               href="#join"
-              className="inline-flex items-center justify-center rounded-full bg-teal-500 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-teal-500/25 transition-all hover:bg-teal-400 hover:shadow-teal-500/40 hover:scale-[1.02]"
+              className="group inline-flex items-center gap-3 bg-ink text-cream px-8 py-4 rounded-full text-sm tracking-wide uppercase hover:bg-sage transition-colors duration-500"
             >
-              Become a Member
+              Become a member
+              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                &rarr;
+              </span>
             </a>
-            <a
-              href="#about"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-white/10"
-            >
-              Learn More
-            </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            className="mt-16 flex items-center gap-8 text-teal-200/60 text-sm"
-          >
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-teal-400" />
-              Telehealth Nationwide
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-teal-400" />
-              Physician-Led
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-teal-400" />
-              Monthly Membership
-            </div>
+            <p className="text-ink-muted text-xs tracking-wide lg:text-right">
+              Available across the U.S. via telehealth
+            </p>
           </motion.div>
         </div>
 
-        {/* Floating emblem */}
+        {/* Divider line */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.06, scale: 1 }}
-          transition={{ duration: 1.2, delay: 0.5 }}
-          className="absolute -right-20 top-1/2 -translate-y-1/2 hidden lg:block"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1, delay: 1, ease: "easeOut" }}
+          className="mt-12 h-px bg-ink/10 origin-left"
+        />
+
+        {/* Bottom ticker */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+          className="mt-6 flex items-center gap-12 text-[13px] text-ink-muted tracking-wide"
         >
-          <Image
-            src="/emblem-white.svg"
-            alt=""
-            width={600}
-            height={600}
-            className="w-[500px] h-auto"
-          />
+          <span>Primary Care</span>
+          <span className="text-ink/20">/</span>
+          <span>Nutrition</span>
+          <span className="text-ink/20">/</span>
+          <span>Physical Therapy</span>
+          <span className="text-ink/20">/</span>
+          <span>Reproductive Health</span>
         </motion.div>
       </div>
     </section>
