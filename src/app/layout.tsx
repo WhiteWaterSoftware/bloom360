@@ -24,12 +24,21 @@ export const metadata: Metadata = {
     siteName: "bloom360",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "bloom360 — Your health, finally in good hands.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "bloom360 — Preventive Care, Reimagined",
     description:
       "One dedicated doctor. A full care team. Nutrition, movement, reproductive health — all coordinated, all virtual, all yours.",
+    images: ["/og.png"],
   },
 };
 
