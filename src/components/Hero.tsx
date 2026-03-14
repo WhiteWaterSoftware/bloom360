@@ -1,16 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import Image from "next/image";
 
 export default function Hero() {
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  const emblemY = useTransform(scrollYProgress, [0, 1], [0, 150]);
+  const emblemScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const headlineY = useTransform(scrollYProgress, [0, 1], [0, 60]);
+  const subY = useTransform(scrollYProgress, [0, 1], [0, 40]);
+  const tickerY = useTransform(scrollYProgress, [0, 1], [0, 20]);
+
   return (
-    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pb-16 md:pb-24 pt-32">
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen flex flex-col justify-end overflow-hidden pb-16 md:pb-24 pt-32"
+    >
       {/* Background emblem */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 0.04, scale: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
+        style={{ y: emblemY, scale: emblemScale }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
       >
         <Image
@@ -18,7 +35,7 @@ export default function Hero() {
           alt=""
           width={800}
           height={800}
-          className="w-[700px] h-auto animate-float"
+          className="w-[700px] h-auto"
         />
       </motion.div>
 
@@ -29,6 +46,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              style={{ y: headlineY }}
               className="text-ink-muted text-[13px] tracking-[0.2em] uppercase mb-6"
             >
               Physician-led preventive care
@@ -38,6 +56,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
+              style={{ y: headlineY }}
               className="text-[clamp(3rem,8vw,7.5rem)] leading-[0.92] tracking-[-0.03em] font-serif"
             >
               Your health,{" "}
@@ -50,6 +69,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
+              style={{ y: subY }}
               className="mt-8 text-ink-muted text-lg md:text-xl leading-relaxed max-w-xl"
             >
               One dedicated doctor. A full care team. Nutrition, movement,
@@ -61,6 +81,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
+            style={{ y: subY }}
             className="lg:col-span-4 flex flex-col gap-4 lg:items-end"
           >
             <a
@@ -91,6 +112,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
+          style={{ y: tickerY }}
           className="mt-6 flex items-center gap-12 text-[13px] text-ink-muted tracking-wide"
         >
           <span>Primary Care</span>
