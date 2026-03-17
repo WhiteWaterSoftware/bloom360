@@ -38,6 +38,14 @@
 }
 
 @layer base {
+  html[data-accent="salmon"] {
+    --color-sage: #f26a6c;
+    --color-sage-light: #f4898b;
+    --color-sage-dark: #d45456;
+    --color-sage-muted: #fde8e8;
+    --color-sage-50: #fef2f2;
+  }
+
   html {
     scroll-behavior: smooth;
   }
