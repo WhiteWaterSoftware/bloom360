@@ -8,29 +8,29 @@ const services = [
     number: "01",
     title: "Primary Care",
     description:
-      "A dedicated physician who leads your care, manages your health holistically, and is there when you need them — not just when something breaks.",
+      "Your dedicated physician knows everything. They know your history, manage your health holistically, and are there when you need them — not just when something breaks.",
     details: ["Annual wellness", "Chronic conditions", "Prescriptions", "Referrals"],
   },
   {
     number: "02",
     title: "Nutrition",
     description:
-      "A registered dietician who builds sustainable plans around your actual life — not a generic meal template you'll abandon in two weeks.",
+      "A registered dietitian who builds a plan around your actual life — not a generic template. Something that lasts.",
     details: ["Meal guidance", "Metabolic health", "Weight goals", "Gut health"],
   },
   {
     number: "03",
     title: "Movement",
     description:
-      "Exercise coaching and physical therapy designed to keep you moving well, prevent injury, and build a body that supports how you want to live.",
+      "Physical therapist-led exercise and movement coaching designed to keep you strong, prevent injury, and support the life you want to live.",
     details: ["Custom programs", "Injury prevention", "Rehab support", "Mobility"],
   },
   {
     number: "04",
-    title: "Reproductive Health",
+    title: "Care Navigation",
     description:
-      "From family planning to hormonal health, integrated with your primary care so nothing falls through the cracks.",
-    details: ["Family planning", "Fertility", "Hormonal health", "Prenatal"],
+      "Your care navigator ties everything together. They keep your team aligned, follow up between visits, and make sure nothing slips through.",
+    details: ["Member support", "Continuity", "Care coordination", "Follow-ups"],
   },
 ];
 

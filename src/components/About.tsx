@@ -35,9 +35,8 @@ export default function About() {
               About bloom360
             </p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-[1.05] tracking-tight">
-              We built this for the people who{" "}
-              <em className="text-sage">deserve better</em> than a waiting
-              room.
+              Care that keeps you{" "}
+              <em className="text-sage">well</em>, not just better.
             </h2>
           </motion.div>
 
@@ -54,10 +53,10 @@ export default function About() {
                   <Stethoscope size={22} weight="duotone" className="text-sage" />
                 </div>
                 <p className="text-ink-light leading-relaxed">
-                  bloom360 is a physician-led membership built for how people
-                  actually live. Not episodic sick visits — ongoing,
-                  relationship-based preventive care delivered entirely through
-                  telehealth.
+                  bloom360 is proactive, relationship-based care led by a
+                  physician and backed by a dietitian and physical therapist.
+                  We&apos;re focused on where your health is going, not just
+                  where it&apos;s been.
                 </p>
               </div>
 
@@ -66,19 +65,17 @@ export default function About() {
                   <UsersThree size={22} weight="duotone" className="text-sage" />
                 </div>
                 <p className="text-ink-light leading-relaxed">
-                  Every member gets a dedicated primary care physician at the
-                  center, supported by integrated programs in nutrition,
-                  movement, and reproductive health. Technology makes it
-                  accessible. Relationships make it stick.
+                  No waiting rooms. No runaround. Everything happens virtually,
+                  on your schedule. But collaboratively, without the silos.
                 </p>
               </div>
             </div>
 
             <div className="mt-16 grid grid-cols-3 gap-8 pt-12 border-t border-ink/10">
               {[
-                { number: 4, label: "Care disciplines" },
-                { number: 1, label: "Dedicated physician" },
-                { number: 50, label: "States via telehealth" },
+                { value: "1", label: "Integrated team", sublabel: "Physician, dietitian, and care navigator on every team" },
+                { value: "$0", label: "Copays, ever" },
+                { value: "100%", label: "Virtual", sublabel: "No commute, no waiting room" },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}
@@ -87,11 +84,16 @@ export default function About() {
                   transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
                 >
                   <p className="text-4xl md:text-5xl font-serif text-sage">
-                    <CountUp target={stat.number} inView={inView} />
+                    {stat.value}
                   </p>
                   <p className="mt-2 text-xs tracking-wide uppercase text-ink-muted">
                     {stat.label}
                   </p>
+                  {stat.sublabel && (
+                    <p className="mt-1 text-xs text-ink-muted/60">
+                      {stat.sublabel}
+                    </p>
+                  )}
                 </motion.div>
               ))}
             </div>

@@ -16,12 +16,12 @@ const steps = [
   {
     title: "Access your team",
     description:
-      "Your nutritionist, exercise coach, and reproductive health adviser — all coordinated by your doctor.",
+      "Your dietitian, exercise coach, and care navigator — one centralized and managed plan from day one.",
   },
   {
     title: "Stay well",
     description:
-      "Ongoing visits, proactive check-ins, and a team that actually knows you. That's the whole point.",
+      "Proactive check-ins and visits when you need them — that's the whole point.",
   },
 ];
 

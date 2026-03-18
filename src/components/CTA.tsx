@@ -38,15 +38,15 @@ export default function CTA() {
             <em className="text-sage">actually knows you?</em>
           </h2>
           <p className="mt-8 text-ink-muted text-lg leading-relaxed max-w-xl">
-            No waiting rooms. No runaround. Just excellent, accessible medicine
-            built around your life. Join bloom360 today.
+            Join the waitlist and be first to access bloom360 when we launch in
+            your area. Founding spots are limited.
           </p>
           <div className="mt-12 flex flex-col sm:flex-row gap-4">
             <button
               onClick={openWaitlist}
               className="group inline-flex items-center justify-center gap-3 bg-ink text-cream px-10 py-5 rounded-full text-sm tracking-wide uppercase hover:bg-sage transition-colors duration-500"
             >
-              Join the Waitlist
+              Become a Member
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                 &rarr;
               </span>

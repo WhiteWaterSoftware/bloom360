@@ -25,8 +25,8 @@ export default function Philosophy() {
             <em>stick.</em>&rdquo;
           </blockquote>
           <div className="mt-10 h-px w-16 bg-cream/30 mx-auto" />
-          <p className="mt-6 text-cream/50 text-sm tracking-wide">
-            Prevention first. Always.
+          <p className="mt-6 text-cream/80 text-lg md:text-xl font-serif italic">
+            Most care shows up when you&apos;re sick. Ours shows up before.
           </p>
         </motion.div>
       </div>

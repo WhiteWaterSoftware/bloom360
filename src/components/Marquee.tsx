@@ -8,7 +8,7 @@ const words = [
   "Your Doctor",
   "Nutrition",
   "Movement",
-  "Reproductive Health",
+  "Care Navigation",
   "Telehealth",
   "Wellness",
   "Your Team",
