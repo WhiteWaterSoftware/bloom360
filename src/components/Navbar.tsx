@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useWaitlist } from "./WaitlistProvider";
-import { useAccent } from "./AccentProvider";
 
 const links = [
   { label: "About", href: "#about" },
@@ -16,7 +15,6 @@ const links = [
 
 export default function Navbar() {
   const openWaitlist = useWaitlist();
-  const accent = useAccent();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -41,7 +39,7 @@ export default function Navbar() {
         <div className="flex h-20 items-center justify-between">
           <a href="#" className="flex items-center">
             <Image
-              src={accent === "salmon" ? "/logo-salmon.svg" : "/logo.svg"}
+              src="/logo.svg"
               alt="bloom360"
               width={140}
               height={32}

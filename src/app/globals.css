@@ -25,6 +25,11 @@
   --color-ink: #1a1a1a;
   --color-ink-light: #4a4a4a;
   --color-ink-muted: #8a8a8a;
+  --color-sage: #4a6741;
+  --color-sage-light: #5d8252;
+  --color-sage-dark: #3a5233;
+  --color-sage-muted: #e8ede6;
+  --color-sage-50: #f1f5ef;
   --color-warm: #c4956a;
   --color-warm-light: #dbb592;
 
@@ -32,23 +37,7 @@
   --font-serif: "Instrument Serif", "Georgia", serif;
 }
 
-@theme inline {
-  --color-sage: #4a6741;
-  --color-sage-light: #5d8252;
-  --color-sage-dark: #3a5233;
-  --color-sage-muted: #e8ede6;
-  --color-sage-50: #f1f5ef;
-}
-
 @layer base {
-  html[data-accent="salmon"] {
-    --color-sage: #f26a6c;
-    --color-sage-light: #f4898b;
-    --color-sage-dark: #d45456;
-    --color-sage-muted: #fde8e8;
-    --color-sage-50: #fef2f2;
-  }
-
   html {
     scroll-behavior: smooth;
   }
