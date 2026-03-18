@@ -84,7 +84,7 @@ export default function About() {
           className="grid grid-cols-3 gap-8 pt-12 border-t border-ink/10"
         >
           {[
-            { value: "1", label: "Integrated team", sublabel: "Physician, dietitian, and care navigator on every team" },
+            { value: "1", label: "Integrated team", sublabel: "Physician, dietitian, physical therapist, and care navigator on every team" },
             { value: "$0", label: "Copays, ever" },
             { value: "100%", label: "Virtual", sublabel: "No commute, no waiting room" },
           ].map((stat, i) => (

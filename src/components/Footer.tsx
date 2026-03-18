@@ -8,7 +8,7 @@ const footerLinks = {
     { label: "Primary Care", href: "#services" },
     { label: "Nutrition", href: "#services" },
     { label: "Physical Therapy", href: "#services" },
-    { label: "Reproductive Health", href: "#services" },
+    { label: "Care Navigation", href: "#services" },
   ],
   Company: [
     { label: "About", href: "#about" },
