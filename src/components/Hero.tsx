@@ -94,20 +94,27 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             style={{ y: subY }}
-            className="lg:col-span-4 flex flex-col gap-4 lg:items-end"
+            className="lg:col-span-4 flex flex-col gap-6 lg:items-end"
           >
-            <button
-              onClick={openWaitlist}
-              className="group inline-flex items-center gap-3 bg-ink text-cream px-8 py-4 rounded-full text-sm tracking-wide uppercase hover:bg-sage transition-colors duration-500"
-            >
-              Become a Member
-              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                &rarr;
-              </span>
-            </button>
-            <p className="text-ink-muted text-xs tracking-wide lg:text-right">
-              Available across the U.S. via telehealth
-            </p>
+            <div className="w-full aspect-[4/3] rounded-2xl border-2 border-dashed border-ink/15 flex items-center justify-center bg-ink/[0.02]">
+              <p className="text-ink-muted/50 text-sm tracking-wide">
+                Image coming soon
+              </p>
+            </div>
+            <div className="flex flex-col gap-4 lg:items-end">
+              <button
+                onClick={openWaitlist}
+                className="group inline-flex items-center gap-3 bg-ink text-cream px-8 py-4 rounded-full text-sm tracking-wide uppercase hover:bg-sage transition-colors duration-500"
+              >
+                Become a Member
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                  &rarr;
+                </span>
+              </button>
+              <p className="text-ink-muted text-xs tracking-wide lg:text-right">
+                Available across the U.S. via telehealth
+              </p>
+            </div>
           </motion.div>
         </div>
 

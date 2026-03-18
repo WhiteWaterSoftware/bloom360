@@ -23,7 +23,7 @@ const services = [
     title: "Movement",
     description:
       "Physical therapist-led exercise and movement coaching designed to keep you strong, prevent injury, and support the life you want to live.",
-    details: ["Custom programs", "Injury prevention", "Rehab support", "Mobility"],
+    details: ["Custom programs", "Injury prevention", "Rehab support", "Mobility", "Coordination"],
   },
   {
     number: "04",

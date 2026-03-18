@@ -52,11 +52,10 @@ export default function About() {
                 <div className="w-12 h-12 rounded-full bg-sage/10 flex items-center justify-center mb-5">
                   <Stethoscope size={22} weight="duotone" className="text-sage" />
                 </div>
+                <h3 className="text-lg font-serif mb-3">One team. One plan.</h3>
                 <p className="text-ink-light leading-relaxed">
-                  bloom360 is proactive, relationship-based care led by a
-                  physician and backed by a dietitian and physical therapist.
-                  We&apos;re focused on where your health is going, not just
-                  where it&apos;s been.
+                  Your doctor, dietitian, physical therapist, and care navigator
+                  all work together on you. Nothing falls through the cracks.
                 </p>
               </div>
 
@@ -64,9 +63,10 @@ export default function About() {
                 <div className="w-12 h-12 rounded-full bg-sage/10 flex items-center justify-center mb-5">
                   <UsersThree size={22} weight="duotone" className="text-sage" />
                 </div>
+                <h3 className="text-lg font-serif mb-3">Built to keep you well.</h3>
                 <p className="text-ink-light leading-relaxed">
-                  No waiting rooms. No runaround. Everything happens virtually,
-                  on your schedule. But collaboratively, without the silos.
+                  We help you catch the small things before they become big ones,
+                  and build habits that last in between visits.
                 </p>
               </div>
             </div>

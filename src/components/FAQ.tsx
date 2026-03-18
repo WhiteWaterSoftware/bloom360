@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "What does a bloom360 membership include?",
     answer:
-      "A dedicated primary care physician, registered dietician, exercise coach, and reproductive health adviser. Unlimited messaging, scheduled video visits, preventive screenings, and prescription management — all included in your monthly fee.",
+      "A dedicated primary care physician, registered dietitian, exercise coach, and care navigator. Unlimited messaging, scheduled video visits, preventive screenings, and prescription management — all included in your monthly fee.",
   },
   {
     question: "Is this available in my state?",
