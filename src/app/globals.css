@@ -32,21 +32,29 @@
   --font-serif: "Instrument Serif", "Georgia", serif;
 }
 
-@theme inline {
-  --color-sage: #4a6741;
-  --color-sage-light: #5d8252;
-  --color-sage-dark: #3a5233;
-  --color-sage-muted: #e8ede6;
-  --color-sage-50: #f1f5ef;
+@theme {
+  --color-sage: var(--sage);
+  --color-sage-light: var(--sage-light);
+  --color-sage-dark: var(--sage-dark);
+  --color-sage-muted: var(--sage-muted);
+  --color-sage-50: var(--sage-50);
 }
 
 @layer base {
+  :root {
+    --sage: #4a6741;
+    --sage-light: #5d8252;
+    --sage-dark: #3a5233;
+    --sage-muted: #e8ede6;
+    --sage-50: #f1f5ef;
+  }
+
   html[data-accent="salmon"] {
-    --color-sage: #f26a6c;
-    --color-sage-light: #f4898b;
-    --color-sage-dark: #d45456;
-    --color-sage-muted: #fde8e8;
-    --color-sage-50: #fef2f2;
+    --sage: #f26a6c;
+    --sage-light: #f4898b;
+    --sage-dark: #d45456;
+    --sage-muted: #fde8e8;
+    --sage-50: #fef2f2;
   }
 
   html {
