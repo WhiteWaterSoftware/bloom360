@@ -145,7 +145,7 @@ const CONSENT_ITEMS = [
   {
     type: "communication_consent",
     label:
-      "I consent to receive appointment reminders, health tips, and care communications via phone, email, and/or SMS. Message frequency varies, up to 10 messages per month. Reply STOP to unsubscribe. Msg & data rates may apply. My mobile opt-in data will not be shared with third parties. US carriers are not liable for delayed or undelivered messages.",
+      "I consent to receive appointment reminders, health tips, and care communications from Bloom360 via phone, email, and/or SMS. Message frequency varies, up to 10 messages per month. Reply STOP to unsubscribe. Reply HELP for help. Msg & data rates may apply. My mobile opt-in data will not be shared with third parties. US carriers are not liable for delayed or undelivered messages.",
     heading: "Communication Consent",
   },
 ];
