@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useAccent } from "./AccentProvider";
 
 const footerLinks = {
   Care: [
@@ -26,13 +27,14 @@ const footerLinks = {
 };
 
 export default function Footer() {
+  const accent = useAccent();
   return (
     <footer className="bg-ink text-cream/40">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-20">
         <div className="grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
             <Image
-              src="/logo-white.svg"
+              src={accent === "salmon" ? "/logo-white-salmon.svg" : "/logo-white.svg"}
               alt="bloom360"
               width={120}
               height={28}
