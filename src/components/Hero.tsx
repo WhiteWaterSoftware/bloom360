@@ -53,7 +53,8 @@ export default function Hero() {
         >
           <h1 className="text-[clamp(3.5rem,10vw,9rem)] leading-[0.88] tracking-[-0.04em] font-serif">
             Your health,{" "}
-            <em className="text-sage">in full</em> bloom.
+            <em className="text-sage">in full</em>{" "}
+            bloom.
           </h1>
         </motion.div>
 

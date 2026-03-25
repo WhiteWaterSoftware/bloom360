@@ -19,8 +19,8 @@ export default function Home() {
       <Marquee />
       <About />
       <Services />
-      <Philosophy />
       <HowItWorks />
+      <Philosophy />
       <FAQ />
       <CTA />
       <Footer />

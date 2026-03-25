@@ -1,8 +1,25 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, type ReactNode } from "react";
 import { Camera } from "@phosphor-icons/react";
+
+function PopIn({ children, className }: { children: ReactNode; className?: string }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, scale: 0.92, y: 30 }}
+      animate={inView ? { opacity: 1, scale: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 export default function About() {
   const ref = useRef(null);
@@ -39,12 +56,7 @@ export default function About() {
           </motion.div>
 
           {/* Card 1 — with image */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="rounded-3xl bg-sage/[0.07] overflow-hidden flex flex-col"
-          >
+          <PopIn className="rounded-3xl bg-sage/[0.07] overflow-hidden flex flex-col">
             <div className="flex-1 flex flex-col items-center justify-center min-h-[280px] text-ink/20">
               <Camera size={36} weight="duotone" />
               <span className="mt-2 text-xs tracking-wide uppercase">
@@ -60,15 +72,10 @@ export default function About() {
                 work together on you. Nothing falls through the cracks.
               </p>
             </div>
-          </motion.div>
+          </PopIn>
 
           {/* Card 2 — dark with image */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            className="rounded-3xl bg-ink text-cream overflow-hidden flex flex-col"
-          >
+          <PopIn className="rounded-3xl bg-ink text-cream overflow-hidden flex flex-col">
             <div className="flex-1 flex flex-col items-center justify-center min-h-[120px] text-cream/20">
               <Camera size={28} weight="duotone" />
               <span className="mt-2 text-xs tracking-wide uppercase">
@@ -84,15 +91,10 @@ export default function About() {
                 habits that hold up between visits.
               </p>
             </div>
-          </motion.div>
+          </PopIn>
 
           {/* Card 3 — bordered with image */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="rounded-3xl border border-ink/10 overflow-hidden flex flex-col"
-          >
+          <PopIn className="rounded-3xl border border-ink/10 overflow-hidden flex flex-col">
             <div className="flex-1 flex flex-col items-center justify-center min-h-[120px] text-ink/20">
               <Camera size={28} weight="duotone" />
               <span className="mt-2 text-xs tracking-wide uppercase">
@@ -108,7 +110,7 @@ export default function About() {
                 relationships, without the friction.
               </p>
             </div>
-          </motion.div>
+          </PopIn>
         </div>
       </div>
     </section>
