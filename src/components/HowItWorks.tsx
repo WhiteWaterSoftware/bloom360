@@ -35,40 +35,78 @@ export default function HowItWorks() {
   });
 
   return (
-    <section id="how-it-works" ref={sectionRef} className="relative" style={{ height: "300vh" }}>
-      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-10 w-full">
-          {/* Headline */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7 }}
-            className="max-w-3xl mb-16 md:mb-20"
-          >
+    <>
+      {/* Desktop — sticky scroll */}
+      <section
+        id="how-it-works"
+        ref={sectionRef}
+        className="relative hidden lg:block"
+        style={{ height: "300vh" }}
+      >
+        <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+          <div className="mx-auto max-w-[1400px] px-6 lg:px-10 w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7 }}
+              className="max-w-3xl mb-16 md:mb-20"
+            >
+              <p className="text-ink-muted text-[13px] tracking-[0.2em] uppercase mb-6">
+                How It Works
+              </p>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-[1.08] tracking-tight">
+                From signup to{" "}
+                <em className="text-sage">feeling taken care of</em> — in days,
+                not months.
+              </h2>
+            </motion.div>
+
+            <div className="grid lg:grid-cols-4 gap-8">
+              {steps.map((step, i) => (
+                <StepItem
+                  key={step.title}
+                  step={step}
+                  index={i}
+                  scrollProgress={scrollYProgress}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mobile — simple stacked layout */}
+      <section className="lg:hidden py-24 md:py-40">
+        <div className="mx-auto max-w-[1400px] px-6">
+          <div className="mb-12">
             <p className="text-ink-muted text-[13px] tracking-[0.2em] uppercase mb-6">
               How It Works
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-[1.08] tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-serif leading-[1.08] tracking-tight">
               From signup to{" "}
               <em className="text-sage">feeling taken care of</em> — in days,
               not months.
             </h2>
-          </motion.div>
+          </div>
 
-          {/* Steps */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+          <div className="space-y-10">
             {steps.map((step, i) => (
-              <StepItem
-                key={step.title}
-                step={step}
-                index={i}
-                scrollProgress={scrollYProgress}
-              />
+              <div key={step.title} className="flex gap-5">
+                <div className="w-10 h-10 rounded-full bg-sage text-cream flex items-center justify-center text-sm font-mono shrink-0">
+                  {i + 1}
+                </div>
+                <div>
+                  <h3 className="text-xl font-serif mb-2">{step.title}</h3>
+                  <p className="text-ink-muted leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
@@ -81,7 +119,6 @@ function StepItem({
   index: number;
   scrollProgress: ReturnType<typeof useScroll>["scrollYProgress"];
 }) {
-  // Each step gets an equal portion of scroll
   const stepStart = index * 0.25;
   const fadeInEnd = stepStart + 0.08;
 
@@ -115,7 +152,6 @@ function StepItem({
 
   return (
     <motion.div style={{ opacity, scale }} className="origin-top-left">
-      {/* Number + line */}
       <div className="flex items-center gap-4 mb-6">
         <motion.div
           style={{ opacity: circleOpacity }}

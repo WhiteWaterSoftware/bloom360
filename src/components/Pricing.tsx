@@ -32,7 +32,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-24 md:py-40 bg-sage/[0.08]" ref={ref}>
+    <section id="pricing" className="py-24 md:py-40 bg-sage/[0.08] overflow-hidden" ref={ref}>
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
           {/* Left — header */}
@@ -90,7 +90,7 @@ export default function Pricing() {
           >
             <div className="rounded-3xl bg-cream text-ink shadow-xl shadow-ink/[0.04] overflow-hidden">
               {/* Top bar — plan toggle + billing toggle */}
-              <div className="flex items-center justify-between p-6 pb-0">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-6 pb-0">
                 {/* Plan selector */}
                 <div className="flex gap-1 bg-ink/[0.05] rounded-full p-1">
                   {plans.map((plan, i) => (
