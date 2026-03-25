@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, type ReactNode } from "react";
 import Image from "next/image";
 import { useWaitlist } from "./WaitlistProvider";
 import { Camera } from "@phosphor-icons/react";
@@ -9,7 +9,9 @@ import { Camera } from "@phosphor-icons/react";
 export default function CTA() {
   const openWaitlist = useWaitlist();
   const ref = useRef(null);
+  const contentRef = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const contentInView = useInView(contentRef, { once: true, margin: "-80px" });
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -53,14 +55,15 @@ export default function CTA() {
 
       {/* Content — overlaps the image */}
       <motion.div
+        ref={contentRef}
         style={{ y: contentY }}
         className="relative -mt-32 md:-mt-40 pb-24 md:pb-40"
       >
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 40, scale: 0.95 }}
+            animate={contentInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="text-cream/40 text-[13px] tracking-[0.2em] uppercase mb-6">
               Get Started
@@ -74,8 +77,8 @@ export default function CTA() {
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            animate={contentInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-8 text-cream/50 text-lg md:text-xl leading-relaxed max-w-xl mx-auto"
           >
             Join the waitlist and be first to access Bloom360 when we launch in
@@ -84,8 +87,8 @@ export default function CTA() {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            animate={contentInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-12 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button
