@@ -6,6 +6,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Philosophy from "@/components/Philosophy";
 import HowItWorks from "@/components/HowItWorks";
+import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -21,6 +22,7 @@ export default function Home() {
       <Services />
       <HowItWorks />
       <Philosophy />
+      <Pricing />
       <FAQ />
       <CTA />
       <Footer />
