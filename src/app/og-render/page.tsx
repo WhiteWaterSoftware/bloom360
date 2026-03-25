@@ -79,10 +79,19 @@ export default function OGRender() {
               letterSpacing: "-0.03em",
             }}
           >
-            Your health,{" "}
-            <span className="italic" style={{ color: "#4a6741" }}>
-              finally
-            </span>
+            Your health,
+          </div>
+          <div
+            className="font-serif italic"
+            style={{
+              fontSize: 110,
+              fontWeight: 400,
+              color: "#4a6741",
+              lineHeight: 1.1,
+              letterSpacing: "-0.03em",
+            }}
+          >
+            in full
           </div>
           <div
             className="font-serif"
@@ -94,7 +103,7 @@ export default function OGRender() {
               letterSpacing: "-0.03em",
             }}
           >
-            in good hands.
+            bloom.
           </div>
         </div>
       </div>

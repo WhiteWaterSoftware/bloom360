@@ -61,10 +61,11 @@ export default function Hero() {
               style={{ y: headlineY }}
               className="text-[clamp(3rem,8vw,7.5rem)] leading-[0.92] tracking-[-0.03em] font-serif"
             >
-              Your health,{" "}
-              <em className="text-sage">finally</em>
+              Your health,
               <br />
-              in good hands.
+              <em className="text-sage">in full</em>
+              <br />
+              bloom.
             </motion.h1>
 
             <motion.p
@@ -74,8 +75,8 @@ export default function Hero() {
               style={{ y: subY }}
               className="mt-8 text-ink-muted text-lg md:text-xl leading-relaxed max-w-xl"
             >
-              One dedicated doctor. A full care team. Nutrition, movement,
-              reproductive health — all coordinated, all virtual, all yours.
+              One membership. Your doctor, dietitian, physical therapist, and
+              care navigator. All coordinated. All virtual. All yours.
             </motion.p>
           </div>
 
@@ -117,13 +118,7 @@ export default function Hero() {
           style={{ y: tickerY }}
           className="mt-6 flex items-center gap-12 text-[13px] text-ink-muted tracking-wide"
         >
-          <span>Primary Care</span>
-          <span className="text-ink/20">/</span>
-          <span>Nutrition</span>
-          <span className="text-ink/20">/</span>
-          <span>Physical Therapy</span>
-          <span className="text-ink/20">/</span>
-          <span>Reproductive Health</span>
+          <span>Most care waits for something to go wrong. We don&apos;t.</span>
         </motion.div>
       </div>
     </section>
