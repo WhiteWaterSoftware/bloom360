@@ -4,14 +4,18 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const words = [
-  "Preventive Care",
-  "Your Doctor",
-  "Nutrition",
-  "Movement",
-  "Reproductive Health",
-  "Telehealth",
-  "Wellness",
-  "Your Team",
+  "Coming to Michigan",
+  "May 2026",
+  "Coming to Michigan",
+  "May 2026",
+  "Coming to Michigan",
+  "May 2026",
+  "Coming to Michigan",
+  "May 2026",
+  "Coming to Michigan",
+  "May 2026",
+  "Coming to Michigan",
+  "May 2026",
 ];
 
 export default function Marquee() {

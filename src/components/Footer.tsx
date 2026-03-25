@@ -7,12 +7,13 @@ const footerLinks = {
   Care: [
     { label: "Primary Care", href: "#services" },
     { label: "Nutrition", href: "#services" },
-    { label: "Physical Therapy", href: "#services" },
-    { label: "Reproductive Health", href: "#services" },
+    { label: "Movement", href: "#services" },
+    { label: "Care Navigation", href: "#services" },
   ],
   Company: [
     { label: "About", href: "#about" },
     { label: "How It Works", href: "#how-it-works" },
+    { label: "Pricing", href: "#pricing" },
     { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "mailto:care@bloom360.com" },
   ],
@@ -41,8 +42,8 @@ export default function Footer() {
               className="h-6 w-auto mb-5 opacity-80"
             />
             <p className="text-sm leading-relaxed max-w-xs">
-              Tech-powered, physician-led preventive care built for the way you
-              actually live.
+              Proactive, relationship-based care led by a physician and backed
+              by a full team. Your health, in full bloom.
             </p>
             <p className="mt-6 text-xs text-cream/20">
               care@bloom360.com

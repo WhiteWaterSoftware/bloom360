@@ -17,16 +17,16 @@ export default function Philosophy() {
           className="max-w-4xl mx-auto text-center"
         >
           <p className="text-cream/50 text-[13px] tracking-[0.2em] uppercase mb-8">
-            Our philosophy
+            Our Philosophy
           </p>
-          <blockquote className="text-3xl md:text-5xl lg:text-6xl font-serif leading-[1.15] tracking-tight">
-            &ldquo;We use technology to make great care{" "}
-            <em>accessible</em>, and relationships to make it{" "}
-            <em>stick.</em>&rdquo;
+          <blockquote className="text-3xl md:text-4xl lg:text-5xl font-serif leading-[1.2] tracking-tight">
+            &ldquo;Most care shows up when you&apos;re sick.
+            <br />
+            <em>Ours</em> shows up before.&rdquo;
           </blockquote>
           <div className="mt-10 h-px w-16 bg-cream/30 mx-auto" />
           <p className="mt-6 text-cream/50 text-sm tracking-wide">
-            Prevention first. Always.
+            Preventive first. Always.
           </p>
         </motion.div>
       </div>
