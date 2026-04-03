@@ -411,6 +411,18 @@ function StepDemographics({
     [setState]
   );
 
+  const toggleConsent = useCallback(
+    (type: string) =>
+      setState((s) => ({
+        ...s,
+        consentChecks: {
+          ...s.consentChecks,
+          [type]: !s.consentChecks[type],
+        },
+      })),
+    [setState]
+  );
+
   const computedAge = useMemo(() => {
     if (!state.dateOfBirth) return null;
     const dob = new Date(state.dateOfBirth + "T00:00:00");
@@ -466,16 +478,9 @@ function StepDemographics({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <Input label="Phone (Mobile)" required type="tel" value={state.phoneMobile} onChange={(e) => set("phoneMobile", e.target.value)} />
           <Input label="Phone (Home/Other)" type="tel" value={state.phoneHome} onChange={(e) => set("phoneHome", e.target.value)} />
-          <Input label="Email Address" type="email" value={state.email} onChange={(e) => set("email", e.target.value)} />
-          <Select
-            label="Preferred Contact Method"
-            options={CONTACT_METHODS.map((m) => ({ value: m, label: m }))}
-            value={state.preferredContactMethod}
-            onChange={(e) => set("preferredContactMethod", e.target.value)}
-          />
         </div>
         <label
-          className={`mt-4 flex items-start gap-4 p-5 rounded-lg border cursor-pointer transition-all ${
+          className={`mt-4 mb-4 flex items-start gap-4 p-5 rounded-lg border cursor-pointer transition-all ${
             state.consentChecks["communication_consent"]
               ? "border-sage/30 bg-sage-50"
               : "border-ink/5 bg-cream hover:border-ink/15"
@@ -488,7 +493,7 @@ function StepDemographics({
             className="rounded border-ink/20 text-sage focus:ring-sage/30 mt-0.5 flex-shrink-0"
           />
           <div>
-            <p className="text-sm font-medium text-ink mb-1">Communication Consent</p>
+            <p className="text-sm font-medium text-ink mb-1">Communication Consent <span className="text-warm ml-0.5">*</span></p>
             <p className="text-sm text-ink-muted leading-relaxed">
               I consent to receive appointment reminders, health tips, and care
               communications via phone, email, and/or SMS. Message frequency
@@ -497,6 +502,15 @@ function StepDemographics({
             </p>
           </div>
         </label>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <Input label="Email Address" type="email" value={state.email} onChange={(e) => set("email", e.target.value)} />
+          <Select
+            label="Preferred Contact Method"
+            options={CONTACT_METHODS.map((m) => ({ value: m, label: m }))}
+            value={state.preferredContactMethod}
+            onChange={(e) => set("preferredContactMethod", e.target.value)}
+          />
+        </div>
       </div>
 
       <div>
