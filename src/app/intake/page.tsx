@@ -411,6 +411,18 @@ function StepDemographics({
     [setState]
   );
 
+  const toggleConsent = useCallback(
+    (type: string) =>
+      setState((s) => ({
+        ...s,
+        consentChecks: {
+          ...s.consentChecks,
+          [type]: !s.consentChecks[type],
+        },
+      })),
+    [setState]
+  );
+
   const computedAge = useMemo(() => {
     if (!state.dateOfBirth) return null;
     const dob = new Date(state.dateOfBirth + "T00:00:00");
@@ -488,7 +500,7 @@ function StepDemographics({
             className="rounded border-ink/20 text-sage focus:ring-sage/30 mt-0.5 flex-shrink-0"
           />
           <div>
-            <p className="text-sm font-medium text-ink mb-1">Communication Consent</p>
+            <p className="text-sm font-medium text-ink mb-1">Communication Consent <span className="text-warm ml-0.5">*</span></p>
             <p className="text-sm text-ink-muted leading-relaxed">
               I consent to receive appointment reminders, health tips, and care
               communications via phone, email, and/or SMS. Message frequency
