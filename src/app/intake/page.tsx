@@ -474,6 +474,29 @@ function StepDemographics({
             onChange={(e) => set("preferredContactMethod", e.target.value)}
           />
         </div>
+        <label
+          className={`mt-4 flex items-start gap-4 p-5 rounded-lg border cursor-pointer transition-all ${
+            state.consentChecks["communication_consent"]
+              ? "border-sage/30 bg-sage-50"
+              : "border-ink/5 bg-cream hover:border-ink/15"
+          }`}
+        >
+          <input
+            type="checkbox"
+            checked={state.consentChecks["communication_consent"]}
+            onChange={() => toggleConsent("communication_consent")}
+            className="rounded border-ink/20 text-sage focus:ring-sage/30 mt-0.5 flex-shrink-0"
+          />
+          <div>
+            <p className="text-sm font-medium text-ink mb-1">Communication Consent</p>
+            <p className="text-sm text-ink-muted leading-relaxed">
+              I consent to receive appointment reminders, health tips, and care
+              communications via phone, email, and/or SMS. Message frequency
+              varies, up to 10 messages per month. Reply STOP to unsubscribe.
+              Msg &amp; data rates may apply.
+            </p>
+          </div>
+        </label>
       </div>
 
       <div>
@@ -996,7 +1019,7 @@ function StepConsents({
       </div>
 
       <div className="space-y-3">
-        {CONSENT_ITEMS.map((item) => (
+        {CONSENT_ITEMS.filter((item) => item.type !== "communication_consent").map((item) => (
           <label
             key={item.type}
             className={`flex items-start gap-4 p-5 rounded-lg border cursor-pointer transition-all ${
