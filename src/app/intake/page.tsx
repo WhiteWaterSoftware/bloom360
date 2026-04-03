@@ -505,7 +505,9 @@ function StepDemographics({
               I consent to receive appointment reminders, health tips, and care
               communications via phone, email, and/or SMS. Message frequency
               varies, up to 10 messages per month. Reply STOP to unsubscribe.
-              Msg &amp; data rates may apply.
+              Msg &amp; data rates may apply. My mobile opt-in data will not be
+              shared with third parties. US carriers are not liable for delayed
+              or undelivered messages.
             </p>
           </div>
         </label>
