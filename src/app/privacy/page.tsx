@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
       <p>We do not sell your personal information. We may share your information in the following circumstances:</p>
       <ul>
         <li><strong>Service Providers:</strong> We share information with trusted third-party vendors who perform services on our behalf, such as payment processing, cloud hosting, analytics, customer support, and IT security. These providers are contractually obligated to protect your information and use it only for the purposes we specify.</li>
-        <li><strong>Affiliates:</strong> We may share information with our corporate affiliates and subsidiaries for purposes consistent with this Privacy Policy.</li>
+        <li><strong>Affiliates:</strong> We may share information with our corporate affiliates and subsidiaries for purposes consistent with this Privacy Policy. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</li>
         <li><strong>Legal Requirements:</strong> We may disclose information when required by law, regulation, legal process, or governmental request, including in response to subpoenas, court orders, or law enforcement requests.</li>
         <li><strong>Business Transactions:</strong> In connection with a merger, acquisition, reorganization, sale of assets, or bankruptcy, your information may be transferred as part of the transaction. We will notify you of any such change in ownership or control.</li>
         <li><strong>With Your Consent:</strong> We may share information with third parties when you have provided your explicit consent to do so.</li>

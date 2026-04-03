@@ -476,8 +476,6 @@ function StepDemographics({
       <div>
         <SectionHeading>Contact Information</SectionHeading>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <Input label="Phone (Mobile)" required type="tel" value={state.phoneMobile} onChange={(e) => set("phoneMobile", e.target.value)} />
-          <Input label="Phone (Home/Other)" type="tel" value={state.phoneHome} onChange={(e) => set("phoneHome", e.target.value)} />
           <Input label="Email Address" type="email" value={state.email} onChange={(e) => set("email", e.target.value)} />
           <Select
             label="Preferred Contact Method"
@@ -485,6 +483,8 @@ function StepDemographics({
             value={state.preferredContactMethod}
             onChange={(e) => set("preferredContactMethod", e.target.value)}
           />
+          <Input label="Phone (Mobile)" required type="tel" value={state.phoneMobile} onChange={(e) => set("phoneMobile", e.target.value)} />
+          <Input label="Phone (Home/Other)" type="tel" value={state.phoneHome} onChange={(e) => set("phoneHome", e.target.value)} />
         </div>
         <label
           className={`mt-4 flex items-start gap-4 p-5 rounded-lg border cursor-pointer transition-all ${
