@@ -83,77 +83,70 @@ export default function FAQ() {
               </h2>
             </div>
 
-            <div className="items-start">
-            {[faqs].map((column, colIndex) => (
-              <div key={colIndex}>
-                {column.map((faq, i) => {
-                  const globalIndex = i;
-                  return (
-                    <div
-                      key={globalIndex}
-                      className="border-t border-ink/10 last:border-b"
+            <div>
+              {faqs.map((faq, i) => (
+                <div
+                  key={i}
+                  className="border-t border-ink/10 last:border-b"
+                >
+                  {/* Desktop — hover to show answer */}
+                  <div
+                    onMouseEnter={() => setActiveIndex(i)}
+                    className={`hidden lg:flex items-center justify-between w-full py-5 cursor-default transition-colors duration-300 ${
+                      activeIndex === i ? "text-ink" : "text-ink/40"
+                    }`}
+                  >
+                    <span className="text-base font-serif">
+                      {faq.question}
+                    </span>
+                    <span
+                      className={`text-xs tracking-wide uppercase transition-opacity duration-300 ${
+                        activeIndex === i ? "opacity-100 text-sage" : "opacity-0"
+                      }`}
                     >
-                      {/* Desktop — hover to show answer */}
-                      <div
-                        onMouseEnter={() => setActiveIndex(globalIndex)}
-                        className={`hidden lg:flex items-center justify-between w-full py-5 cursor-default transition-colors duration-300 ${
-                          activeIndex === globalIndex ? "text-ink" : "text-ink/40"
-                        }`}
-                      >
-                        <span className="text-base font-serif">
-                          {faq.question}
-                        </span>
-                        <span
-                          className={`text-xs tracking-wide uppercase transition-opacity duration-300 ${
-                            activeIndex === globalIndex ? "opacity-100 text-sage" : "opacity-0"
-                          }`}
-                        >
-                          &rarr;
-                        </span>
-                      </div>
+                      &rarr;
+                    </span>
+                  </div>
 
-                      {/* Mobile — accordion */}
-                      <div className="lg:hidden">
-                        <button
-                          onClick={() =>
-                            setMobileOpen(mobileOpen === globalIndex ? null : globalIndex)
-                          }
-                          className="flex items-start justify-between w-full py-5 text-left group"
+                  {/* Mobile — accordion */}
+                  <div className="lg:hidden">
+                    <button
+                      onClick={() =>
+                        setMobileOpen(mobileOpen === i ? null : i)
+                      }
+                      className="flex items-start justify-between w-full py-5 text-left group"
+                    >
+                      <span className="text-base font-serif pr-6 group-hover:text-sage transition-colors duration-300">
+                        {faq.question}
+                      </span>
+                      <span
+                        className="flex-shrink-0 mt-1 text-ink-muted text-lg leading-none transition-transform duration-300"
+                        style={{
+                          transform:
+                            mobileOpen === i ? "rotate(45deg)" : "rotate(0deg)",
+                        }}
+                      >
+                        +
+                      </span>
+                    </button>
+                    <AnimatePresence>
+                      {mobileOpen === i && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
                         >
-                          <span className="text-base font-serif pr-6 group-hover:text-sage transition-colors duration-300">
-                            {faq.question}
-                          </span>
-                          <span
-                            className="flex-shrink-0 mt-1 text-ink-muted text-lg leading-none transition-transform duration-300"
-                            style={{
-                              transform:
-                                mobileOpen === globalIndex ? "rotate(45deg)" : "rotate(0deg)",
-                            }}
-                          >
-                            +
-                          </span>
-                        </button>
-                        <AnimatePresence>
-                          {mobileOpen === globalIndex && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.3 }}
-                              className="overflow-hidden"
-                            >
-                              <p className="pb-5 text-ink-muted text-sm leading-relaxed">
-                                {faq.answer}
-                              </p>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            ))}
+                          <p className="pb-5 text-ink-muted text-sm leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </div>
+              ))}
             </div>
           </motion.div>
 

@@ -23,24 +23,41 @@ export default function FloatingVideo() {
   const [dims, setDims] = useState({ vw: 0, vh: 0 });
   const [ctaOffset, setCtaOffset] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(min-width: 1024px)").matches;
+  });
 
   useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const update = (e: MediaQueryListEvent | MediaQueryList) =>
+      setIsDesktop(e.matches);
+    update(mq);
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) return;
     const update = () =>
       setDims({ vw: window.innerWidth, vh: window.innerHeight });
     update();
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
-  }, []);
+  }, [isDesktop]);
 
   useEffect(() => {
+    if (!isDesktop) return;
     if ((stage === "podcast" || stage === "explainer") && videoRef.current) {
       videoRef.current.play().catch(() => {});
     }
-  }, [stage]);
+  }, [stage, isDesktop]);
 
   // Preload the podcast in the background so it's cached when the user
-  // finishes the explainer and clicks "Play podcast".
+  // finishes the explainer and clicks "Play podcast". Desktop only — we
+  // don't want to burn mobile bandwidth on a video that will never show.
   useEffect(() => {
+    if (!isDesktop) return;
     const controller = new AbortController();
     const t = setTimeout(() => {
       fetch("/videos/podcast.mp4", {
@@ -52,9 +69,10 @@ export default function FloatingVideo() {
       clearTimeout(t);
       controller.abort();
     };
-  }, []);
+  }, [isDesktop]);
 
   useEffect(() => {
+    if (!isDesktop) return;
     const cta = document.getElementById("join");
     if (!cta) return;
     const measure = () => {
@@ -70,7 +88,7 @@ export default function FloatingVideo() {
       window.removeEventListener("load", measure);
       clearTimeout(t);
     };
-  }, []);
+  }, [isDesktop]);
 
   const { scrollY } = useScroll();
 
@@ -157,6 +175,8 @@ export default function FloatingVideo() {
       setStage("explainer");
     }
   };
+
+  if (!isDesktop) return null;
 
   const showingPodcastSrc = stage === "podcast" || stage === "promptExplainer";
   const videoSrc = showingPodcastSrc
