@@ -22,6 +22,7 @@ export default function FloatingVideo() {
   const [muted, setMuted] = useState(true);
   const [dims, setDims] = useState({ vw: 0, vh: 0 });
   const [ctaOffset, setCtaOffset] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const update = () =>
@@ -36,6 +37,22 @@ export default function FloatingVideo() {
       videoRef.current.play().catch(() => {});
     }
   }, [stage]);
+
+  // Preload the podcast in the background so it's cached when the user
+  // finishes the explainer and clicks "Play podcast".
+  useEffect(() => {
+    const controller = new AbortController();
+    const t = setTimeout(() => {
+      fetch("/videos/podcast.mp4", {
+        signal: controller.signal,
+        cache: "force-cache",
+      }).catch(() => {});
+    }, 2000);
+    return () => {
+      clearTimeout(t);
+      controller.abort();
+    };
+  }, []);
 
   useEffect(() => {
     const cta = document.getElementById("join");
@@ -132,6 +149,7 @@ export default function FloatingVideo() {
     if (old) {
       old.pause();
     }
+    setLoading(true);
     if (stage === "promptPodcast") {
       setMuted(false);
       setStage("podcast");
@@ -177,13 +195,32 @@ export default function FloatingVideo() {
         muted={muted}
         playsInline
         onEnded={handleEnded}
+        onLoadedMetadata={() => setLoading(false)}
+        onLoadedData={() => setLoading(false)}
+        onCanPlay={() => setLoading(false)}
+        onPlaying={() => setLoading(false)}
         className="w-full h-full object-cover"
         style={{
-          objectPosition: showingPodcastSrc ? "center 28%" : "center top",
+          objectPosition: showingPodcastSrc ? "center 28%" : "center 18%",
         }}
       >
         <source src={videoSrc} type="video/mp4" />
       </video>
+
+      {/* Loading indicator */}
+      {loading && !promptVisible && (
+        <div className="absolute inset-0 flex items-center justify-center bg-ink pointer-events-none">
+          <motion.div
+            animate={{ opacity: [0.3, 1, 0.3] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+            className="flex gap-2"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-cream" />
+            <span className="w-1.5 h-1.5 rounded-full bg-cream" />
+            <span className="w-1.5 h-1.5 rounded-full bg-cream" />
+          </motion.div>
+        </div>
+      )}
 
       {/* Mute toggle */}
       <button
