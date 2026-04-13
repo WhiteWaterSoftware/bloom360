@@ -23,10 +23,7 @@ export default function FloatingVideo() {
   const [dims, setDims] = useState({ vw: 0, vh: 0 });
   const [ctaOffset, setCtaOffset] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.matchMedia("(min-width: 1024px)").matches;
-  });
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 1024px)");
@@ -197,6 +194,9 @@ export default function FloatingVideo() {
     <div className="hidden lg:block absolute inset-0 pointer-events-none z-40">
       <div className="sticky top-0 h-screen">
         <motion.div
+          initial={{ opacity: 0, y: 40, scale: 0.97 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           style={{
             top,
             right,
