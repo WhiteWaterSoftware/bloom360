@@ -48,12 +48,12 @@ export default function OGRender() {
           alt=""
           style={{
             position: "absolute",
-            right: -50,
+            right: 120,
             top: "50%",
             transform: "translateY(-50%)",
-            width: 550,
-            height: 550,
-            opacity: 0.035,
+            width: 680,
+            height: 680,
+            opacity: 0.05,
           }}
         />
 
@@ -66,43 +66,38 @@ export default function OGRender() {
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: 4,
+            gap: 0,
           }}
         >
           <div
             className="font-serif"
             style={{
-              fontSize: 110,
+              fontSize: 150,
               fontWeight: 400,
               color: "#1a1a1a",
-              lineHeight: 1.1,
-              letterSpacing: "-0.03em",
+              lineHeight: 1,
+              letterSpacing: "-0.035em",
             }}
           >
             Your health,
           </div>
           <div
-            className="font-serif italic"
-            style={{
-              fontSize: 110,
-              fontWeight: 400,
-              color: "#4a6741",
-              lineHeight: 1.1,
-              letterSpacing: "-0.03em",
-            }}
-          >
-            in full
-          </div>
-          <div
             className="font-serif"
             style={{
-              fontSize: 110,
+              fontSize: 150,
               fontWeight: 400,
               color: "#1a1a1a",
-              lineHeight: 1.1,
-              letterSpacing: "-0.03em",
+              lineHeight: 1,
+              letterSpacing: "-0.035em",
+              whiteSpace: "nowrap",
             }}
           >
+            <span
+              className="italic"
+              style={{ color: "#4a6741" }}
+            >
+              in full
+            </span>{" "}
             bloom.
           </div>
         </div>
