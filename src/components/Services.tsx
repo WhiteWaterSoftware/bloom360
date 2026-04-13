@@ -2,8 +2,6 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Camera } from "@phosphor-icons/react";
-
 const services = [
   {
     number: "01",
@@ -41,37 +39,27 @@ const services = [
 
 function ServiceCard({ service }: { service: typeof services[number] }) {
   return (
-    <div className="rounded-3xl bg-[#1e1e1e] overflow-hidden">
-
-      {/* Image placeholder */}
-      <div className="relative flex flex-col items-center justify-center min-h-[240px] md:min-h-[300px] bg-cream/[0.02] text-cream/15 overflow-hidden">
-        <span className="absolute -right-4 -bottom-8 text-[12rem] md:text-[16rem] font-serif leading-none text-cream/[0.03] select-none pointer-events-none">
-          {service.number}
-        </span>
-        <Camera size={36} weight="duotone" className="relative z-10" />
-        <span className="relative z-10 mt-2 text-xs tracking-wide uppercase">
-          {service.imageLabel}
-        </span>
-      </div>
-
-      {/* Content */}
-      <div className="p-8 md:p-10">
-        <div className="flex items-baseline gap-4 mb-4">
-          <span className="text-sage-light/40 text-sm font-mono">
+    <div className="relative rounded-3xl bg-[#1e1e1e] overflow-hidden p-6 md:p-8">
+      <span className="absolute -right-4 -bottom-10 text-[10rem] font-serif leading-none text-cream/[0.03] select-none pointer-events-none">
+        {service.number}
+      </span>
+      <div className="relative">
+        <div className="flex items-baseline gap-3 mb-3">
+          <span className="text-sage-light/40 text-xs font-mono">
             {service.number}
           </span>
-          <h3 className="text-2xl md:text-3xl font-serif">
+          <h3 className="text-xl md:text-2xl font-serif">
             {service.title}
           </h3>
         </div>
-        <p className="text-cream/50 leading-relaxed mb-6 max-w-lg">
+        <p className="text-cream/50 leading-relaxed text-sm mb-5 max-w-lg">
           {service.description}
         </p>
         <div className="flex flex-wrap gap-2">
           {service.details.map((d) => (
             <span
               key={d}
-              className="text-xs tracking-wide text-cream/30 border border-cream/10 rounded-full px-3 py-1.5"
+              className="text-[11px] tracking-wide text-cream/30 border border-cream/10 rounded-full px-2.5 py-1"
             >
               {d}
             </span>
@@ -88,14 +76,14 @@ export default function Services() {
 
   return (
     <section id="services" className="pt-40 md:pt-64 pb-24 md:pb-40 bg-ink text-cream" ref={ref}>
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-10 lg:pr-[min(calc(38vw_+_5rem),38rem)]">
+        <div className="grid xl:grid-cols-[5fr_7fr] gap-12 xl:gap-16">
           {/* Left — sticky headline */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-5 lg:sticky lg:top-1/2 lg:-translate-y-[40%] lg:self-start"
+            className="xl:sticky xl:top-1/2 xl:-translate-y-[40%] xl:self-start"
           >
             <p className="text-cream/40 text-[13px] tracking-[0.2em] uppercase mb-6">
               Your Care Team
@@ -114,7 +102,7 @@ export default function Services() {
           </motion.div>
 
           {/* Right — scrolling cards */}
-          <div className="lg:col-span-7 flex flex-col gap-8">
+          <div className="flex flex-col gap-8">
             {services.map((service, i) => (
               <ServiceCard key={service.number} service={service} />
             ))}

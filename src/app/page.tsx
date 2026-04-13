@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import FloatingVideo from "@/components/FloatingVideo";
 import Statement from "@/components/Statement";
 import Marquee from "@/components/Marquee";
 import About from "@/components/About";
@@ -15,15 +16,18 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Statement />
-      <Marquee />
-      <About />
-      <Services />
-      <HowItWorks />
-      <Philosophy />
-      <Pricing />
-      <FAQ />
+      <div className="relative">
+        <FloatingVideo />
+        <Hero />
+        <Statement />
+        <Marquee />
+        <About />
+        <Services />
+        <HowItWorks />
+        <Philosophy />
+        <Pricing />
+        <FAQ />
+      </div>
       <CTA />
       <Footer />
     </>

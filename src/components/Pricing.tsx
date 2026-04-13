@@ -33,14 +33,12 @@ export default function Pricing() {
 
   return (
     <section id="pricing" className="py-24 md:py-40 bg-sage/[0.08] overflow-hidden" ref={ref}>
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
-          {/* Left — header */}
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-10 lg:pr-[min(calc(38vw_+_5rem),38rem)]">
+        <div className="grid gap-10 xl:grid-cols-2 xl:gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-5"
           >
             <p className="text-ink-muted text-[13px] tracking-[0.2em] uppercase mb-6">
               Membership Pricing
@@ -81,16 +79,15 @@ export default function Pricing() {
             </div>
           </motion.div>
 
-          {/* Right — pricing card */}
+          {/* Pricing card */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.93, y: 40 }}
+            initial={{ opacity: 0, scale: 0.97, y: 30 }}
             animate={inView ? { opacity: 1, scale: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:col-span-7 lg:flex lg:flex-col"
           >
             <div className="rounded-3xl bg-cream text-ink shadow-xl shadow-ink/[0.04] overflow-hidden">
               {/* Top bar — plan toggle + billing toggle */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-6 pb-0">
+              <div className="flex flex-wrap items-center justify-between gap-3 p-5 pb-0">
                 {/* Plan selector */}
                 <div className="flex gap-1 bg-ink/[0.05] rounded-full p-1">
                   {plans.map((plan, i) => (
@@ -134,7 +131,7 @@ export default function Pricing() {
               </div>
 
               {/* Price area */}
-              <div className="p-8 md:p-10">
+              <div className="p-5 md:p-6">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={`${activePlan}-${annual}`}
@@ -144,25 +141,25 @@ export default function Pricing() {
                     transition={{ duration: 0.25 }}
                   >
                     <div className="flex items-baseline gap-2">
-                      <span className="text-ink/30 text-xl">$</span>
-                      <span className="text-6xl md:text-7xl font-serif tracking-tighter leading-none">
+                      <span className="text-ink/30 text-lg">$</span>
+                      <span className="text-5xl md:text-6xl font-serif tracking-tighter leading-none">
                         {annual
                           ? plans[activePlan].annual
                           : plans[activePlan].monthly}
                       </span>
-                      <span className="text-ink/30 text-lg">/mo</span>
+                      <span className="text-ink/30 text-base">/mo</span>
                       {annual && (
                         <span className="ml-2 text-sage text-xs tracking-wide uppercase">
                           ~2 months free
                         </span>
                       )}
                     </div>
-                    <p className="mt-2 text-ink-muted text-sm">
+                    <p className="mt-1.5 text-ink-muted text-sm">
                       {plans[activePlan].sub} &middot; billed{" "}
                       {annual ? "annually" : "monthly"}
                     </p>
 
-                    <p className="mt-6 text-ink-muted leading-relaxed max-w-lg">
+                    <p className="mt-4 text-ink-muted leading-relaxed text-sm max-w-lg">
                       {planDetails[activePlan]}
                     </p>
                   </motion.div>
@@ -170,7 +167,7 @@ export default function Pricing() {
 
                 <button
                   onClick={openWaitlist}
-                  className="group mt-8 w-full inline-flex items-center justify-center gap-3 bg-ink text-cream px-8 py-4 rounded-full text-sm tracking-wide uppercase hover:bg-sage transition-colors duration-500"
+                  className="group mt-5 w-full inline-flex items-center justify-center gap-3 bg-ink text-cream px-6 py-3.5 rounded-full text-sm tracking-wide uppercase hover:bg-sage transition-colors duration-500"
                 >
                   Join as Founding Member
                   <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -178,7 +175,7 @@ export default function Pricing() {
                   </span>
                 </button>
 
-                <p className="mt-4 text-center text-[11px] text-ink/30 leading-relaxed">
+                <p className="mt-3 text-center text-[11px] text-ink/30 leading-relaxed">
                   Founding member pricing locked for 12 months. $99 enrollment
                   fee waived.
                 </p>

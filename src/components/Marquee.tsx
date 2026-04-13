@@ -5,17 +5,17 @@ import { useRef } from "react";
 
 const words = [
   "Coming to Michigan",
-  "May 2026",
+  "June 2026",
   "Coming to Michigan",
-  "May 2026",
+  "June 2026",
   "Coming to Michigan",
-  "May 2026",
+  "June 2026",
   "Coming to Michigan",
-  "May 2026",
+  "June 2026",
   "Coming to Michigan",
-  "May 2026",
+  "June 2026",
   "Coming to Michigan",
-  "May 2026",
+  "June 2026",
 ];
 
 export default function Marquee() {

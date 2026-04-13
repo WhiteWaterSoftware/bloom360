@@ -19,12 +19,12 @@ export default function Statement() {
   return (
     <section
       ref={ref}
-      className="relative z-20 -mt-48 md:-mt-64 pt-20 pb-28 md:pb-40 flex items-center justify-center"
+      className="relative z-20 pt-16 pb-28 md:pb-40 flex items-center justify-center"
     >
       {/* Gradient overlay to blend onto the image */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cream/80 to-cream pointer-events-none" />
 
-      <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 text-center">
+      <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 lg:pr-[min(calc(38vw_+_5rem),38rem)] text-center">
         <motion.p
           style={{ opacity: line1Opacity, y: line1Y }}
           className="text-ink/50 text-2xl md:text-3xl lg:text-4xl leading-relaxed tracking-tight"
