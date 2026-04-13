@@ -9,7 +9,7 @@ export default function Philosophy() {
 
   return (
     <section className="py-24 md:py-40 bg-sage text-cream overflow-hidden" ref={ref}>
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-10 lg:pr-[min(calc(38vw_+_5rem),38rem)]">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -19,9 +19,8 @@ export default function Philosophy() {
           <p className="text-cream/50 text-[13px] tracking-[0.2em] uppercase mb-8">
             Our Philosophy
           </p>
-          <blockquote className="text-3xl md:text-4xl lg:text-5xl font-serif leading-[1.2] tracking-tight">
-            &ldquo;Most care shows up when you&apos;re sick.
-            <br />
+          <blockquote className="text-2xl md:text-3xl lg:text-[2.5rem] font-serif leading-[1.25] tracking-tight text-balance">
+            &ldquo;Most care shows up when you&apos;re sick.{" "}
             <em>Ours</em> shows up before.&rdquo;
           </blockquote>
           <div className="mt-10 h-px w-16 bg-cream/30 mx-auto" />

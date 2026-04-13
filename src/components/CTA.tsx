@@ -1,10 +1,9 @@
 "use client";
 
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { useRef, type ReactNode } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import { useWaitlist } from "./WaitlistProvider";
-import { Camera } from "@phosphor-icons/react";
 
 export default function CTA() {
   const openWaitlist = useWaitlist();
@@ -19,7 +18,6 @@ export default function CTA() {
 
   const emblemY = useTransform(scrollYProgress, [0, 1], [-100, 100]);
   const emblemScale = useTransform(scrollYProgress, [0, 1], [0.9, 1.15]);
-  const imageY = useTransform(scrollYProgress, [0, 1], [-40, 40]);
   const contentY = useTransform(scrollYProgress, [0, 1], [30, -20]);
 
   return (
@@ -38,26 +36,11 @@ export default function CTA() {
         />
       </motion.div>
 
-      {/* Image area with gradient overlay */}
-      <div className="relative">
-        <motion.div
-          style={{ y: imageY }}
-          className="flex flex-col items-center justify-center min-h-[400px] md:min-h-[500px] text-cream/10"
-        >
-          <Camera size={56} weight="duotone" />
-          <span className="mt-3 text-xs tracking-wide uppercase">
-            Community photo
-          </span>
-        </motion.div>
-        {/* Gradient fade into content */}
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/0 via-ink/60 to-ink pointer-events-none" />
-      </div>
-
-      {/* Content — overlaps the image */}
+      {/* Content */}
       <motion.div
         ref={contentRef}
         style={{ y: contentY }}
-        className="relative -mt-32 md:-mt-40 pb-24 md:pb-40"
+        className="relative pt-24 md:pt-40 pb-24 md:pb-40"
       >
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10 text-center">
           <motion.div

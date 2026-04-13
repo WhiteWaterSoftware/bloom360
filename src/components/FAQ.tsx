@@ -65,14 +65,13 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="py-24 md:py-40" ref={ref}>
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-10 lg:pr-[min(calc(38vw_+_5rem),38rem)]">
+        <div className="grid lg:grid-cols-[5fr_7fr] gap-12 lg:gap-6">
           {/* Left — heading + questions */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-6"
           >
             <div className="mb-12 md:mb-16">
               <p className="text-ink-muted text-[13px] tracking-[0.2em] uppercase mb-6">
@@ -84,12 +83,11 @@ export default function FAQ() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-x-8 items-start"
-          >
-            {[faqs.slice(0, 5), faqs.slice(5)].map((column, colIndex) => (
+            <div className="items-start">
+            {[faqs].map((column, colIndex) => (
               <div key={colIndex}>
                 {column.map((faq, i) => {
-                  const globalIndex = colIndex * 5 + i;
+                  const globalIndex = i;
                   return (
                     <div
                       key={globalIndex}
@@ -164,9 +162,9 @@ export default function FAQ() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="lg:col-span-5 lg:col-start-8 lg:sticky lg:top-32 lg:self-start"
+            className="lg:sticky lg:top-32 lg:self-start"
           >
-            <div className="hidden lg:block relative min-h-[480px] rounded-3xl bg-ink text-cream p-10 md:p-12 overflow-hidden">
+            <div className="hidden lg:block relative min-h-[560px] rounded-3xl bg-ink text-cream p-8 md:p-10 overflow-hidden">
               {/* Large watermark number */}
               <AnimatePresence mode="wait">
                 <motion.span
@@ -193,11 +191,11 @@ export default function FAQ() {
                   <p className="text-cream/30 text-sm font-mono mb-4">
                     {String(activeIndex + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="text-2xl md:text-3xl font-serif leading-tight mb-6">
+                  <h3 className="text-xl md:text-2xl font-serif leading-tight mb-5">
                     {faqs[activeIndex].question}
                   </h3>
-                  <div className="h-px w-12 bg-sage-light/40 mb-6" />
-                  <p className="text-cream/60 text-base leading-relaxed">
+                  <div className="h-px w-12 bg-sage-light/40 mb-5" />
+                  <p className="text-cream/60 text-sm md:text-base leading-relaxed">
                     {faqs[activeIndex].answer}
                   </p>
                 </motion.div>
