@@ -48,7 +48,7 @@ export default function Hero() {
           style={{ y: contentY }}
           className="mb-12 md:mb-16"
         >
-          <h1 className="text-[clamp(2.75rem,6.5vw,6.5rem)] leading-[0.95] tracking-[-0.03em] font-serif">
+          <h1 className="text-[clamp(3.75rem,9.5vw,8.5rem)] leading-[0.9] tracking-[-0.035em] font-serif">
             Your health,{" "}
             <em className="text-sage">in full</em>{" "}
             bloom.
