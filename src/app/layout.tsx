@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import WaitlistProvider from "@/components/WaitlistProvider";
-import AccentProvider from "@/components/AccentProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -48,7 +47,7 @@ const jsonLd = {
   "@type": "MedicalBusiness",
   name: "bloom360",
   url: "https://bloom360.com",
-  logo: "https://bloom360.com/logo.svg",
+  logo: "https://bloom360.com/logo-salmon.svg",
   description:
     "Tech-powered, physician-led preventive care membership. A dedicated primary care physician at the center of your care, supported by nutrition, physical therapy, and reproductive health.",
   email: "care@bloom360.com",
@@ -97,11 +96,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <AccentProvider>
-          <WaitlistProvider>
-            {children}
-          </WaitlistProvider>
-        </AccentProvider>
+        <WaitlistProvider>
+          {children}
+        </WaitlistProvider>
       </body>
     </html>
   );

@@ -39,13 +39,13 @@ const services = [
 
 function ServiceCard({ service }: { service: typeof services[number] }) {
   return (
-    <div className="relative rounded-3xl bg-[#1e1e1e] overflow-hidden p-6 md:p-8">
+    <div className="relative rounded-3xl bg-forest-light overflow-hidden p-6 md:p-8">
       <span className="absolute -right-4 -bottom-10 text-[10rem] font-serif leading-none text-cream/[0.03] select-none pointer-events-none">
         {service.number}
       </span>
       <div className="relative">
         <div className="flex items-baseline gap-3 mb-3">
-          <span className="text-sage-light/40 text-xs font-mono">
+          <span className="text-salmon-light/40 text-xs font-mono">
             {service.number}
           </span>
           <h3 className="text-xl md:text-2xl font-serif">
@@ -75,7 +75,7 @@ export default function Services() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="services" className="pt-40 md:pt-64 pb-24 md:pb-40 bg-ink text-cream" ref={ref}>
+    <section id="services" className="pt-40 md:pt-64 pb-24 md:pb-40 bg-forest text-cream" ref={ref}>
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10 lg:pr-[min(calc(38vw_+_5rem),38rem)]">
         <div className="grid xl:grid-cols-[5fr_7fr] gap-12 xl:gap-16">
           {/* Left — sticky headline */}
@@ -91,7 +91,7 @@ export default function Services() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-[1] tracking-tight">
               Your whole health,
               <br />
-              <em className="text-sage-light">one team.</em>
+              <em className="text-salmon-light">one team.</em>
             </h2>
             <p className="mt-8 text-cream/50 text-lg leading-relaxed max-w-md">
               We believe preventive care has to account for the whole person —

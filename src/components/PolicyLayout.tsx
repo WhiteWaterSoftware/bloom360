@@ -19,7 +19,7 @@ export default function PolicyLayout({
           <div className="flex h-16 items-center justify-between">
             <a href="/" className="flex items-center">
               <Image
-                src="/logo.svg"
+                src="/logo-salmon.svg"
                 alt="bloom360"
                 width={130}
                 height={30}

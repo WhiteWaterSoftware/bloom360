@@ -50,7 +50,7 @@ export default function Hero() {
         >
           <h1 className="text-[clamp(3.75rem,9.5vw,8.5rem)] leading-[0.9] tracking-[-0.035em] font-serif">
             Your health,{" "}
-            <em className="text-sage">in full</em>{" "}
+            <em className="text-salmon">in full</em>{" "}
             bloom.
           </h1>
         </motion.div>
@@ -68,7 +68,7 @@ export default function Hero() {
           </p>
           <button
             onClick={openWaitlist}
-            className="group inline-flex items-center gap-3 bg-ink text-cream px-8 py-4 rounded-full text-sm tracking-wide uppercase hover:bg-sage transition-colors duration-500 self-start"
+            className="group inline-flex items-center gap-3 bg-ink text-cream px-8 py-4 rounded-full text-sm tracking-wide uppercase hover:bg-salmon transition-colors duration-500 self-start"
           >
             Join the Waitlist
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">

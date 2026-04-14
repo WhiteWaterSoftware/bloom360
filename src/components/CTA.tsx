@@ -54,7 +54,7 @@ export default function CTA() {
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif leading-[0.95] tracking-tight">
               Your health,
               <br />
-              <em className="text-sage-light">in full bloom.</em>
+              <em className="text-salmon-light">in full bloom.</em>
             </h2>
           </motion.div>
 
@@ -76,7 +76,7 @@ export default function CTA() {
           >
             <button
               onClick={openWaitlist}
-              className="group inline-flex items-center justify-center gap-3 bg-cream text-ink px-10 py-5 rounded-full text-sm tracking-wide uppercase hover:bg-sage-light hover:text-cream transition-colors duration-500"
+              className="group inline-flex items-center justify-center gap-3 bg-cream text-ink px-10 py-5 rounded-full text-sm tracking-wide uppercase hover:bg-salmon-light hover:text-cream transition-colors duration-500"
             >
               Join the Waitlist
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">

@@ -32,7 +32,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-24 md:py-40 bg-sage/[0.08] overflow-hidden" ref={ref}>
+    <section id="pricing" className="py-24 md:py-40 bg-salmon/[0.08] overflow-hidden" ref={ref}>
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10 lg:pr-[min(calc(38vw_+_5rem),38rem)]">
         <div className="grid gap-10 xl:grid-cols-2 xl:gap-12 items-start">
           <motion.div
@@ -46,7 +46,7 @@ export default function Pricing() {
             <h2 className="text-4xl md:text-5xl font-serif leading-[1.05] tracking-tight">
               Simple pricing.
               <br />
-              <em className="text-sage">No surprises.</em>
+              <em className="text-salmon">No surprises.</em>
             </h2>
             <p className="mt-6 text-ink-muted leading-relaxed max-w-md">
               Founding member pricing is locked in for your first 12 months, and
@@ -60,7 +60,7 @@ export default function Pricing() {
                   key={feature}
                   className="flex items-center gap-2 text-sm text-ink-muted"
                 >
-                  <Check size={14} weight="bold" className="text-sage shrink-0" />
+                  <Check size={14} weight="bold" className="text-salmon shrink-0" />
                   {feature}
                 </div>
               ))}
@@ -96,7 +96,7 @@ export default function Pricing() {
                       onClick={() => setActivePlan(i)}
                       className={`px-5 py-2 rounded-full text-sm tracking-wide transition-all duration-300 ${
                         activePlan === i
-                          ? "bg-sage text-cream"
+                          ? "bg-salmon text-cream"
                           : "text-ink-muted hover:text-ink"
                       }`}
                     >
@@ -149,7 +149,7 @@ export default function Pricing() {
                       </span>
                       <span className="text-ink/30 text-base">/mo</span>
                       {annual && (
-                        <span className="ml-2 text-sage text-xs tracking-wide uppercase">
+                        <span className="ml-2 text-salmon text-xs tracking-wide uppercase">
                           ~2 months free
                         </span>
                       )}
@@ -167,7 +167,7 @@ export default function Pricing() {
 
                 <button
                   onClick={openWaitlist}
-                  className="group mt-5 w-full inline-flex items-center justify-center gap-3 bg-ink text-cream px-6 py-3.5 rounded-full text-sm tracking-wide uppercase hover:bg-sage transition-colors duration-500"
+                  className="group mt-5 w-full inline-flex items-center justify-center gap-3 bg-ink text-cream px-6 py-3.5 rounded-full text-sm tracking-wide uppercase hover:bg-salmon transition-colors duration-500"
                 >
                   Join as Founding Member
                   <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">

@@ -271,7 +271,7 @@ export default function FloatingVideo() {
           </p>
           <button
             onClick={playNext}
-            className="group inline-flex items-center gap-2 bg-cream text-ink px-6 py-3 rounded-full text-xs tracking-wide uppercase hover:bg-sage hover:text-cream transition-colors duration-300"
+            className="group inline-flex items-center gap-2 bg-cream text-ink px-6 py-3 rounded-full text-xs tracking-wide uppercase hover:bg-salmon hover:text-cream transition-colors duration-300"
           >
             <Play size={14} weight="fill" />
             {promptCta}

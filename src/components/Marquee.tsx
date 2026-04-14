@@ -37,7 +37,7 @@ export default function Marquee() {
             className="mx-8 text-cream/60 text-sm tracking-[0.15em] uppercase flex items-center gap-8"
           >
             {word}
-            <span className="w-1.5 h-1.5 rounded-full bg-sage inline-block" />
+            <span className="w-1.5 h-1.5 rounded-full bg-salmon inline-block" />
           </span>
         ))}
       </div>

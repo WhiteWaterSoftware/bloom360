@@ -25,11 +25,14 @@
   --color-ink: #1a1a1a;
   --color-ink-light: #4a4a4a;
   --color-ink-muted: #8a8a8a;
-  --color-sage: var(--color-sage);
-  --color-sage-light: var(--color-sage-light);
-  --color-sage-dark: var(--color-sage-dark);
-  --color-sage-muted: var(--color-sage-muted);
-  --color-sage-50: var(--color-sage-50);
+  --color-salmon: var(--color-salmon);
+  --color-salmon-light: var(--color-salmon-light);
+  --color-salmon-dark: var(--color-salmon-dark);
+  --color-salmon-muted: var(--color-salmon-muted);
+  --color-salmon-50: var(--color-salmon-50);
+  --color-forest: #15302a;
+  --color-forest-light: #1c3d36;
+  --color-forest-dark: #0d1f1a;
   --color-warm: #c4956a;
   --color-warm-light: #dbb592;
 
@@ -39,19 +42,11 @@
 
 @layer base {
   :root {
-    --color-sage: #4a6741;
-    --color-sage-light: #5d8252;
-    --color-sage-dark: #3a5233;
-    --color-sage-muted: #e8ede6;
-    --color-sage-50: #f1f5ef;
-  }
-
-  html[data-accent="salmon"] {
-    --color-sage: #f26a6c;
-    --color-sage-light: #f4898b;
-    --color-sage-dark: #d45456;
-    --color-sage-muted: #fde8e8;
-    --color-sage-50: #fef2f2;
+    --color-salmon: #f26a6c;
+    --color-salmon-light: #f4898b;
+    --color-salmon-dark: #d45456;
+    --color-salmon-muted: #fde8e8;
+    --color-salmon-50: #fef2f2;
   }
 
   html {

@@ -54,7 +54,7 @@ export default function HowItWorks() {
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif leading-[1.08] tracking-tight">
             From signup to{" "}
-            <em className="text-sage">feeling taken care of</em> — in days,
+            <em className="text-salmon">feeling taken care of</em> — in days,
             not months.
           </h2>
         </motion.div>
@@ -66,7 +66,7 @@ export default function HowItWorks() {
           {/* Progress line */}
           <motion.div
             style={{ scaleY: lineScale }}
-            className="absolute left-[19px] top-3 bottom-3 w-px bg-sage origin-top"
+            className="absolute left-[19px] top-3 bottom-3 w-px bg-salmon origin-top"
           />
 
           <div className="space-y-12 md:space-y-16">
@@ -107,7 +107,7 @@ function TimelineStep({
     <div className="relative pl-14">
       <motion.div
         style={{ opacity: dotOpacity, scale: dotScale }}
-        className="absolute left-0 top-1 w-10 h-10 rounded-full bg-sage text-cream flex items-center justify-center text-sm font-mono origin-center"
+        className="absolute left-0 top-1 w-10 h-10 rounded-full bg-salmon text-cream flex items-center justify-center text-sm font-mono origin-center"
       >
         {index + 1}
       </motion.div>

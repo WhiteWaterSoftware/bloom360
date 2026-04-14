@@ -79,8 +79,8 @@ export default function WaitlistModal({
 
             {status === "success" ? (
               <div className="text-center py-4">
-                <div className="w-14 h-14 rounded-full bg-sage/10 flex items-center justify-center mx-auto mb-5">
-                  <svg className="w-7 h-7 text-sage" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <div className="w-14 h-14 rounded-full bg-salmon/10 flex items-center justify-center mx-auto mb-5">
+                  <svg className="w-7 h-7 text-salmon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
@@ -106,7 +106,7 @@ export default function WaitlistModal({
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full rounded-lg border border-ink/10 bg-cream-dark px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-sage focus:ring-1 focus:ring-sage/30"
+                      className="w-full rounded-lg border border-ink/10 bg-cream-dark px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-salmon focus:ring-1 focus:ring-salmon/30"
                       placeholder="Your full name"
                     />
                   </div>
@@ -119,7 +119,7 @@ export default function WaitlistModal({
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full rounded-lg border border-ink/10 bg-cream-dark px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-sage focus:ring-1 focus:ring-sage/30"
+                      className="w-full rounded-lg border border-ink/10 bg-cream-dark px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-salmon focus:ring-1 focus:ring-salmon/30"
                       placeholder="you@email.com"
                     />
                   </div>
@@ -129,7 +129,7 @@ export default function WaitlistModal({
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="w-full rounded-lg border border-ink/10 bg-cream-dark px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-sage focus:ring-1 focus:ring-sage/30"
+                      className="w-full rounded-lg border border-ink/10 bg-cream-dark px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-salmon focus:ring-1 focus:ring-salmon/30"
                       placeholder="(555) 123-4567"
                     />
                   </div>
@@ -162,7 +162,7 @@ export default function WaitlistModal({
                   <button
                     type="submit"
                     disabled={status === "submitting"}
-                    className="w-full mt-2 py-3.5 rounded-full bg-sage text-cream text-sm tracking-wide uppercase hover:bg-sage-dark transition-colors disabled:opacity-60"
+                    className="w-full mt-2 py-3.5 rounded-full bg-salmon text-cream text-sm tracking-wide uppercase hover:bg-salmon-dark transition-colors disabled:opacity-60"
                   >
                     {status === "submitting" ? "Joining..." : "Join the Waitlist"}
                   </button>

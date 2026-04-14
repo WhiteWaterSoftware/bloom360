@@ -79,7 +79,7 @@ export default function FAQ() {
               </p>
               <h2 className="text-4xl md:text-5xl font-serif leading-[1.08] tracking-tight">
                 The questions{" "}
-                <em className="text-sage">you&apos;re thinking.</em>
+                <em className="text-salmon">you&apos;re thinking.</em>
               </h2>
             </div>
 
@@ -101,7 +101,7 @@ export default function FAQ() {
                     </span>
                     <span
                       className={`text-xs tracking-wide uppercase transition-opacity duration-300 ${
-                        activeIndex === i ? "opacity-100 text-sage" : "opacity-0"
+                        activeIndex === i ? "opacity-100 text-salmon" : "opacity-0"
                       }`}
                     >
                       &rarr;
@@ -116,7 +116,7 @@ export default function FAQ() {
                       }
                       className="flex items-start justify-between w-full py-5 text-left group"
                     >
-                      <span className="text-base font-serif pr-6 group-hover:text-sage transition-colors duration-300">
+                      <span className="text-base font-serif pr-6 group-hover:text-salmon transition-colors duration-300">
                         {faq.question}
                       </span>
                       <span
@@ -187,7 +187,7 @@ export default function FAQ() {
                   <h3 className="text-xl md:text-2xl font-serif leading-tight mb-5">
                     {faqs[activeIndex].question}
                   </h3>
-                  <div className="h-px w-12 bg-sage-light/40 mb-5" />
+                  <div className="h-px w-12 bg-salmon-light/40 mb-5" />
                   <p className="text-cream/60 text-sm md:text-base leading-relaxed">
                     {faqs[activeIndex].answer}
                   </p>

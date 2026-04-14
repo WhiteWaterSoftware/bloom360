@@ -319,7 +319,7 @@ function Input({
       )}
       <input
         {...props}
-        className={`w-full rounded-lg border border-ink/10 bg-cream px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-sage focus:ring-1 focus:ring-sage/30 ${props.className ?? ""}`}
+        className={`w-full rounded-lg border border-ink/10 bg-cream px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-salmon focus:ring-1 focus:ring-salmon/30 ${props.className ?? ""}`}
       />
     </div>
   );
@@ -345,7 +345,7 @@ function Select({
       )}
       <select
         {...props}
-        className={`w-full rounded-lg border border-ink/10 bg-cream px-4 py-3 text-sm text-ink outline-none transition-all focus:border-sage focus:ring-1 focus:ring-sage/30 appearance-none ${props.className ?? ""}`}
+        className={`w-full rounded-lg border border-ink/10 bg-cream px-4 py-3 text-sm text-ink outline-none transition-all focus:border-salmon focus:ring-1 focus:ring-salmon/30 appearance-none ${props.className ?? ""}`}
       >
         <option value="">Select...</option>
         {options.map((o) => (
@@ -371,7 +371,7 @@ function Textarea({
       )}
       <textarea
         {...props}
-        className={`w-full rounded-lg border border-ink/10 bg-cream px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-sage focus:ring-1 focus:ring-sage/30 resize-none ${props.className ?? ""}`}
+        className={`w-full rounded-lg border border-ink/10 bg-cream px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-salmon focus:ring-1 focus:ring-salmon/30 resize-none ${props.className ?? ""}`}
       />
     </div>
   );
@@ -489,7 +489,7 @@ function StepDemographics({
         <label
           className={`mt-4 flex items-start gap-4 p-5 rounded-lg border cursor-pointer transition-all ${
             state.consentChecks["communication_consent"]
-              ? "border-sage/30 bg-sage-50"
+              ? "border-salmon/30 bg-salmon-50"
               : "border-ink/5 bg-cream hover:border-ink/15"
           }`}
         >
@@ -497,7 +497,7 @@ function StepDemographics({
             type="checkbox"
             checked={state.consentChecks["communication_consent"]}
             onChange={() => toggleConsent("communication_consent")}
-            className="rounded border-ink/20 text-sage focus:ring-sage/30 mt-0.5 flex-shrink-0"
+            className="rounded border-ink/20 text-salmon focus:ring-salmon/30 mt-0.5 flex-shrink-0"
           />
           <div>
             <p className="text-sm font-medium text-ink mb-1">Communication Consent <span className="text-warm ml-0.5">*</span></p>
@@ -529,7 +529,7 @@ function StepDemographics({
                 type="checkbox"
                 checked={state.raceEthnicity.includes(option)}
                 onChange={() => toggleRace(option)}
-                className="rounded border-ink/20 text-sage focus:ring-sage/30"
+                className="rounded border-ink/20 text-salmon focus:ring-salmon/30"
               />
               <span className="group-hover:text-ink transition-colors">{option}</span>
             </label>
@@ -590,8 +590,8 @@ function StepHealthGoals({
               onClick={() => set("overallHealthRating", option.value)}
               className={`px-5 py-2.5 rounded-full text-sm border transition-all ${
                 state.overallHealthRating === option.value
-                  ? "bg-sage text-cream border-sage"
-                  : "border-ink/10 text-ink-light hover:border-sage/40"
+                  ? "bg-salmon text-cream border-salmon"
+                  : "border-ink/10 text-ink-light hover:border-salmon/40"
               }`}
             >
               {option.label}
@@ -678,7 +678,7 @@ function StepMedicalHistory({
             type="checkbox"
             checked={state.hasNoConditions}
             onChange={(e) => set("hasNoConditions", e.target.checked)}
-            className="rounded border-ink/20 text-sage focus:ring-sage/30"
+            className="rounded border-ink/20 text-salmon focus:ring-salmon/30"
           />
           None &mdash; I have no active medical conditions
         </label>
@@ -694,7 +694,7 @@ function StepMedicalHistory({
                       type="checkbox"
                       checked={cond.checked}
                       onChange={(e) => updateCondition(condName, "checked", e.target.checked)}
-                      className="rounded border-ink/20 text-sage focus:ring-sage/30"
+                      className="rounded border-ink/20 text-salmon focus:ring-salmon/30"
                     />
                     <span className="text-ink">{condName}</span>
                   </label>
@@ -758,7 +758,7 @@ function StepMedicalHistory({
                 type="checkbox"
                 checked={state.familyConditions.includes(cond)}
                 onChange={() => toggleFamilyCondition(cond)}
-                className="rounded border-ink/20 text-sage focus:ring-sage/30"
+                className="rounded border-ink/20 text-salmon focus:ring-salmon/30"
               />
               <span className="group-hover:text-ink transition-colors">{cond}</span>
             </label>
@@ -819,8 +819,8 @@ function StepSocialHistory({
               onClick={() => set("tobaccoUse", option)}
               className={`px-4 py-2 rounded-full text-sm border transition-all ${
                 state.tobaccoUse === option
-                  ? "bg-sage text-cream border-sage"
-                  : "border-ink/10 text-ink-light hover:border-sage/40"
+                  ? "bg-salmon text-cream border-salmon"
+                  : "border-ink/10 text-ink-light hover:border-salmon/40"
               }`}
             >
               {option}
@@ -840,8 +840,8 @@ function StepSocialHistory({
               onClick={() => set("alcoholUse", option)}
               className={`px-4 py-2 rounded-full text-sm border transition-all ${
                 state.alcoholUse === option
-                  ? "bg-sage text-cream border-sage"
-                  : "border-ink/10 text-ink-light hover:border-sage/40"
+                  ? "bg-salmon text-cream border-salmon"
+                  : "border-ink/10 text-ink-light hover:border-salmon/40"
               }`}
             >
               {option}
@@ -860,7 +860,7 @@ function StepSocialHistory({
                 type="checkbox"
                 checked={state.substanceUse.includes(option)}
                 onChange={() => toggleSubstance(option)}
-                className="rounded border-ink/20 text-sage focus:ring-sage/30"
+                className="rounded border-ink/20 text-salmon focus:ring-salmon/30"
               />
               <span className="group-hover:text-ink transition-colors">{option}</span>
             </label>
@@ -891,8 +891,8 @@ function StepSocialHistory({
               onClick={() => set("livingSituation", option)}
               className={`px-4 py-2 rounded-full text-sm border transition-all ${
                 state.livingSituation === option
-                  ? "bg-sage text-cream border-sage"
-                  : "border-ink/10 text-ink-light hover:border-sage/40"
+                  ? "bg-salmon text-cream border-salmon"
+                  : "border-ink/10 text-ink-light hover:border-salmon/40"
               }`}
             >
               {option}
@@ -948,8 +948,8 @@ function StepMentalHealth({
                   onClick={() => setMhResponse(qIdx, score)}
                   className={`px-3 py-1.5 rounded-full text-xs border transition-all ${
                     state.mhResponses[qIdx] === score
-                      ? "bg-sage text-cream border-sage"
-                      : "border-ink/10 text-ink-muted hover:border-sage/40"
+                      ? "bg-salmon text-cream border-salmon"
+                      : "border-ink/10 text-ink-muted hover:border-salmon/40"
                   }`}
                 >
                   {label} ({score})
@@ -960,9 +960,9 @@ function StepMentalHealth({
         ))}
       </div>
 
-      <div className="flex items-center justify-between rounded-lg bg-sage-50 p-4">
+      <div className="flex items-center justify-between rounded-lg bg-salmon-50 p-4">
         <span className="text-sm text-ink-light">Total Score</span>
-        <span className="text-2xl font-serif text-sage">{mhTotal} <span className="text-sm text-ink-muted font-sans">/ 27</span></span>
+        <span className="text-2xl font-serif text-salmon">{mhTotal} <span className="text-sm text-ink-muted font-sans">/ 27</span></span>
       </div>
 
       <div>
@@ -983,8 +983,8 @@ function StepMentalHealth({
               }
               className={`px-4 py-2 rounded-full text-sm border transition-all ${
                 state.seeingProvider === option.value
-                  ? "bg-sage text-cream border-sage"
-                  : "border-ink/10 text-ink-light hover:border-sage/40"
+                  ? "bg-salmon text-cream border-salmon"
+                  : "border-ink/10 text-ink-light hover:border-salmon/40"
               }`}
             >
               {option.label}
@@ -1036,7 +1036,7 @@ function StepConsents({
             key={item.type}
             className={`flex items-start gap-4 p-5 rounded-lg border cursor-pointer transition-all ${
               state.consentChecks[item.type]
-                ? "border-sage/30 bg-sage-50"
+                ? "border-salmon/30 bg-salmon-50"
                 : "border-ink/5 bg-cream hover:border-ink/15"
             }`}
           >
@@ -1044,7 +1044,7 @@ function StepConsents({
               type="checkbox"
               checked={state.consentChecks[item.type]}
               onChange={() => toggleConsent(item.type)}
-              className="rounded border-ink/20 text-sage focus:ring-sage/30 mt-0.5 flex-shrink-0"
+              className="rounded border-ink/20 text-salmon focus:ring-salmon/30 mt-0.5 flex-shrink-0"
             />
             <div>
               <p className="text-sm font-medium text-ink mb-1">{item.heading}</p>
@@ -1111,8 +1111,8 @@ export default function IntakePage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center max-w-md"
         >
-          <div className="w-16 h-16 rounded-full bg-sage/10 flex items-center justify-center mx-auto mb-6">
-            <svg className="w-8 h-8 text-sage" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <div className="w-16 h-16 rounded-full bg-salmon/10 flex items-center justify-center mx-auto mb-6">
+            <svg className="w-8 h-8 text-salmon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
@@ -1123,7 +1123,7 @@ export default function IntakePage() {
           </p>
           <Link
             href="/"
-            className="inline-block px-8 py-3 rounded-full bg-sage text-cream text-sm hover:bg-sage-dark transition-colors"
+            className="inline-block px-8 py-3 rounded-full bg-salmon text-cream text-sm hover:bg-salmon-dark transition-colors"
           >
             Back to Home
           </Link>
@@ -1159,9 +1159,9 @@ export default function IntakePage() {
                 <div
                   className={`w-9 h-9 rounded-full flex items-center justify-center text-sm transition-all ${
                     step.number === currentStep
-                      ? "bg-sage text-cream"
+                      ? "bg-salmon text-cream"
                       : step.number < currentStep
-                      ? "bg-sage/20 text-sage"
+                      ? "bg-salmon/20 text-salmon"
                       : "bg-ink/5 text-ink-muted"
                   }`}
                 >
@@ -1175,7 +1175,7 @@ export default function IntakePage() {
                 </div>
                 <span
                   className={`text-xs hidden md:block transition-colors ${
-                    step.number === currentStep ? "text-sage font-medium" : "text-ink-muted"
+                    step.number === currentStep ? "text-salmon font-medium" : "text-ink-muted"
                   }`}
                 >
                   {step.label}
@@ -1185,7 +1185,7 @@ export default function IntakePage() {
           </div>
           <div className="w-full bg-ink/5 rounded-full h-1">
             <div
-              className="bg-sage h-1 rounded-full transition-all duration-500"
+              className="bg-salmon h-1 rounded-full transition-all duration-500"
               style={{ width: `${((currentStep - 1) / (STEPS.length - 1)) * 100}%` }}
             />
           </div>
@@ -1225,7 +1225,7 @@ export default function IntakePage() {
             <button
               type="button"
               onClick={() => setCurrentStep((s) => Math.min(STEPS.length, s + 1))}
-              className="px-8 py-3 rounded-full text-sm bg-sage text-cream hover:bg-sage-dark transition-colors"
+              className="px-8 py-3 rounded-full text-sm bg-salmon text-cream hover:bg-salmon-dark transition-colors"
             >
               Continue
             </button>
@@ -1233,7 +1233,7 @@ export default function IntakePage() {
             <button
               type="button"
               onClick={handleSubmit}
-              className="px-8 py-3 rounded-full text-sm bg-sage text-cream hover:bg-sage-dark transition-colors"
+              className="px-8 py-3 rounded-full text-sm bg-salmon text-cream hover:bg-salmon-dark transition-colors"
             >
               Submit Intake Form
             </button>

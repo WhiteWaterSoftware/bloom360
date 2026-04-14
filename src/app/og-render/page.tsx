@@ -59,7 +59,7 @@ export default function OGRender() {
 
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="" style={{ height: 56 }} />
+          <img src="/logo-salmon.svg" alt="" style={{ height: 56 }} />
         </div>
 
         <div
@@ -94,7 +94,7 @@ export default function OGRender() {
           >
             <span
               className="italic"
-              style={{ color: "#4a6741" }}
+              style={{ color: "#f26a6c" }}
             >
               in full
             </span>{" "}

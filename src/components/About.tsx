@@ -41,7 +41,7 @@ export default function About() {
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif leading-[1.05] tracking-tight">
               Care that{" "}
-              <em className="text-sage">keeps</em>
+              <em className="text-salmon">keeps</em>
               <br />
               you well,
               <br />
@@ -54,7 +54,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          <PopIn className="rounded-3xl bg-sage/[0.07] p-6 md:p-8 flex flex-col justify-end min-h-[220px]">
+          <PopIn className="rounded-3xl bg-salmon/[0.07] p-6 md:p-8 flex flex-col justify-end min-h-[220px]">
             <h3 className="text-xl md:text-2xl font-serif mb-3">
               One team. One plan.
             </h3>

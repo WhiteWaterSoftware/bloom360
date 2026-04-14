@@ -8,7 +8,7 @@ export default function Philosophy() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 md:py-40 bg-sage text-cream overflow-hidden" ref={ref}>
+    <section className="py-24 md:py-40 bg-salmon text-cream overflow-hidden" ref={ref}>
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10 lg:pr-[min(calc(38vw_+_5rem),38rem)]">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

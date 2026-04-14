@@ -35,7 +35,7 @@ export default function Statement() {
           style={{ opacity: line2Opacity, y: line2Y, scale: line2Scale }}
           className="mt-4 md:mt-6 text-5xl md:text-7xl lg:text-8xl font-serif tracking-tight"
         >
-          We <em className="text-sage">don&apos;t.</em>
+          We <em className="text-salmon">don&apos;t.</em>
         </motion.p>
       </div>
     </section>
