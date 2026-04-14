@@ -112,25 +112,25 @@ export default function WaitlistModal({
                   </div>
                   <div className="space-y-1.5">
                     <label className="block text-sm text-ink-light">
-                      Email <span className="text-warm">*</span>
+                      Phone <span className="text-warm">*</span>
                     </label>
                     <input
-                      type="email"
-                      required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="w-full rounded-lg border border-ink/10 bg-cream-dark px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-salmon focus:ring-1 focus:ring-salmon/30"
-                      placeholder="you@email.com"
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <label className="block text-sm text-ink-light">Phone</label>
-                    <input
                       type="tel"
+                      required
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       className="w-full rounded-lg border border-ink/10 bg-cream-dark px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-salmon focus:ring-1 focus:ring-salmon/30"
                       placeholder="(555) 123-4567"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="block text-sm text-ink-light">Email</label>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full rounded-lg border border-ink/10 bg-cream-dark px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-salmon focus:ring-1 focus:ring-salmon/30"
+                      placeholder="you@email.com"
                     />
                   </div>
 

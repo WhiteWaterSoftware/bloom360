@@ -14,19 +14,19 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const { name, email, phone } = body;
 
-  if (!name || !email) {
+  if (!name || !phone) {
     return NextResponse.json(
-      { error: "Name and email are required" },
+      { error: "Name and phone are required" },
       { status: 400 }
     );
   }
 
   const fields: Record<string, string> = {
     fld1bouPauGaqgiti: name,
-    fldZQn0N8TNCKPwdV: email,
+    fldYEPNu4bPw2OVLH: phone,
   };
-  if (phone) {
-    fields.fldYEPNu4bPw2OVLH = phone;
+  if (email) {
+    fields.fldZQn0N8TNCKPwdV = email;
   }
 
   const res = await fetch(
