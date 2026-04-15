@@ -185,7 +185,7 @@ export default function FloatingVideo() {
     stage === "promptPodcast" ? "Up next" : "Start over";
   const promptTitle =
     stage === "promptPodcast"
-      ? "Meet Dr. Adam & Dr. Nadine"
+      ? "Meet Dr. Shurbaji & Dr. Jawad"
       : "Watch the explainer again";
   const promptCta =
     stage === "promptPodcast" ? "Play podcast" : "Replay explainer";
