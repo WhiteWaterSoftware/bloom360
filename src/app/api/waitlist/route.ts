@@ -12,17 +12,18 @@ export async function POST(req: NextRequest) {
   }
 
   const body = await req.json();
-  const { name, email, phone } = body;
+  const { name, state, email, phone } = body;
 
-  if (!name || !phone) {
+  if (!name || !state || !phone) {
     return NextResponse.json(
-      { error: "Name and phone are required" },
+      { error: "Name, state, and phone are required" },
       { status: 400 }
     );
   }
 
   const fields: Record<string, string> = {
     fld1bouPauGaqgiti: name,
+    fldcV8Co14MteWqKN: state,
     fldYEPNu4bPw2OVLH: phone,
   };
   if (email) {
@@ -37,7 +38,7 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${pat}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ records: [{ fields }] }),
+      body: JSON.stringify({ records: [{ fields }], typecast: true }),
     }
   );
 

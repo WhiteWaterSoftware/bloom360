@@ -3,6 +3,18 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const US_STATES = [
+  "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
+  "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia",
+  "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky",
+  "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
+  "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire",
+  "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota",
+  "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",
+  "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia",
+  "Washington", "West Virginia", "Wisconsin", "Wyoming",
+];
+
 export default function WaitlistModal({
   open,
   onClose,
@@ -11,6 +23,7 @@ export default function WaitlistModal({
   onClose: () => void;
 }) {
   const [name, setName] = useState("");
+  const [state, setState] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -23,7 +36,7 @@ export default function WaitlistModal({
       const res = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone }),
+        body: JSON.stringify({ name, state, email, phone }),
       });
 
       if (!res.ok) throw new Error();
@@ -38,6 +51,7 @@ export default function WaitlistModal({
     // Reset after animation
     setTimeout(() => {
       setName("");
+      setState("");
       setEmail("");
       setPhone("");
       setStatus("idle");
@@ -109,6 +123,26 @@ export default function WaitlistModal({
                       className="w-full rounded-lg border border-ink/10 bg-cream-dark px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 outline-none transition-all focus:border-salmon focus:ring-1 focus:ring-salmon/30"
                       placeholder="Your full name"
                     />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="block text-sm text-ink-light">
+                      State <span className="text-warm">*</span>
+                    </label>
+                    <select
+                      required
+                      value={state}
+                      onChange={(e) => setState(e.target.value)}
+                      className="w-full rounded-lg border border-ink/10 bg-cream-dark px-4 py-3 text-sm text-ink outline-none transition-all focus:border-salmon focus:ring-1 focus:ring-salmon/30 appearance-none bg-[url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2020%2020%22%20stroke%3D%22currentColor%22%20stroke-width%3D%221.5%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M6%208l4%204%204-4%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_0.875rem_center] bg-[length:1.1rem_1.1rem] pr-10"
+                    >
+                      <option value="" disabled>
+                        Select your state
+                      </option>
+                      {US_STATES.map((s) => (
+                        <option key={s} value={s}>
+                          {s}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                   <div className="space-y-1.5">
                     <label className="block text-sm text-ink-light">
