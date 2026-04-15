@@ -9,12 +9,24 @@ export default function Pricing() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const openWaitlist = useWaitlist();
-  const [annual, setAnnual] = useState(false);
+  const [annual, setAnnual] = useState(true);
   const [activePlan, setActivePlan] = useState(0);
 
   const plans = [
-    { name: "Individual", monthly: 129, annual: 109, sub: "One member" },
-    { name: "Couple", monthly: 209, annual: 179, sub: "Two members" },
+    {
+      name: "Individual",
+      monthly: 149,
+      annual: 125,
+      annualTotal: 1490,
+      sub: "One member",
+    },
+    {
+      name: "Couple",
+      monthly: 249,
+      annual: 208,
+      annualTotal: 2490,
+      sub: "Two members",
+    },
   ];
 
   const allFeatures = [
@@ -28,7 +40,7 @@ export default function Pricing() {
 
   const planDetails = [
     "Access your care team whenever you need it. Primary care physician, dietitian, physical therapist, and care navigator — all included.",
-    "Everything in Individual, for two members. Add any household member 16+ for $80/mo each. Shared care navigator and coordinated care plans.",
+    "Everything in Individual, for two members. Add any household member 16+ for $100/mo each. Shared care navigator and coordinated care plans.",
   ];
 
   return (
@@ -156,7 +168,16 @@ export default function Pricing() {
                     </div>
                     <p className="mt-1.5 text-ink-muted text-sm">
                       {plans[activePlan].sub} &middot; billed{" "}
-                      {annual ? "annually" : "monthly"}
+                      {annual ? (
+                        <>
+                          annually at{" "}
+                          <span className="text-ink font-medium">
+                            ${plans[activePlan].annualTotal.toLocaleString()}
+                          </span>
+                        </>
+                      ) : (
+                        "monthly"
+                      )}
                     </p>
 
                     <p className="mt-4 text-ink-muted leading-relaxed text-sm max-w-lg">
