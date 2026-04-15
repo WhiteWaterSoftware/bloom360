@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import { useWaitlist } from "./WaitlistProvider";
+import MobileVideo from "./MobileVideo";
 
 export default function Hero() {
   const openWaitlist = useWaitlist();
@@ -21,7 +22,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-x-clip pt-32 md:pt-40 pb-24 md:pb-32"
+      className="relative overflow-x-clip pt-28 md:pt-40 pb-20 md:pb-32"
     >
       {/* Background emblem */}
       <motion.div
@@ -46,29 +47,35 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           style={{ y: contentY }}
-          className="mb-12 md:mb-16"
+          className="mb-8 md:mb-16"
         >
-          <h1 className="text-[clamp(3.75rem,9.5vw,8.5rem)] leading-[0.9] tracking-[-0.035em] font-serif">
+          <h1 className="text-[clamp(3rem,9.5vw,8.5rem)] leading-[0.92] tracking-[-0.035em] font-serif">
             Your health,{" "}
             <em className="text-salmon">in full</em>{" "}
             bloom.
           </h1>
         </motion.div>
 
+        {/* Inline mobile/tablet video — the visual anchor on phones. Hidden
+            on lg+ where FloatingVideo takes over. */}
+        <div className="mb-10 lg:hidden">
+          <MobileVideo />
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           style={{ y: contentY }}
-          className="flex flex-col gap-8 max-w-xl"
+          className="flex flex-col gap-7 md:gap-8 max-w-xl"
         >
-          <p className="text-ink-muted text-lg md:text-xl leading-relaxed">
+          <p className="text-ink-muted text-base md:text-xl leading-relaxed">
             One membership. Your doctor, dietitian, physical therapist, and
             care navigator. All coordinated. All virtual. All yours.
           </p>
           <button
             onClick={openWaitlist}
-            className="group inline-flex items-center gap-3 bg-ink text-cream px-8 py-4 rounded-full text-sm tracking-wide uppercase hover:bg-salmon transition-colors duration-500 self-start"
+            className="group inline-flex items-center gap-3 bg-ink text-cream px-7 py-3.5 md:px-8 md:py-4 rounded-full text-sm tracking-wide uppercase hover:bg-salmon transition-colors duration-500 self-start"
           >
             Join the Waitlist
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">

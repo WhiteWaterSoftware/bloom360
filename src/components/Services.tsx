@@ -75,9 +75,9 @@ export default function Services() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="services" className="pt-40 md:pt-64 pb-24 md:pb-40 bg-forest text-cream" ref={ref}>
+    <section id="services" className="pt-24 md:pt-64 pb-24 md:pb-40 bg-forest text-cream" ref={ref}>
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10 lg:pr-[min(calc(38vw_+_5rem),38rem)]">
-        <div className="grid xl:grid-cols-[5fr_7fr] gap-12 xl:gap-16">
+        <div className="grid xl:grid-cols-[5fr_7fr] gap-10 xl:gap-16">
           {/* Left — sticky headline */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}

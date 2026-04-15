@@ -54,7 +54,7 @@ export default function Pricing() {
             </p>
 
             {/* Features grid */}
-            <div className="mt-10 grid grid-cols-2 gap-3">
+            <div className="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
               {allFeatures.map((feature) => (
                 <div
                   key={feature}
@@ -87,7 +87,7 @@ export default function Pricing() {
           >
             <div className="rounded-3xl bg-cream text-ink shadow-xl shadow-ink/[0.04] overflow-hidden">
               {/* Top bar — plan toggle + billing toggle */}
-              <div className="flex flex-wrap items-center justify-between gap-3 p-5 pb-0">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-5 pb-0">
                 {/* Plan selector */}
                 <div className="flex gap-1 bg-ink/[0.05] rounded-full p-1">
                   {plans.map((plan, i) => (

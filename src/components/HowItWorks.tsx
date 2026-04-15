@@ -62,11 +62,11 @@ export default function HowItWorks() {
         {/* Vertical timeline */}
         <div className="relative max-w-2xl">
           {/* Full line background */}
-          <div className="absolute left-[19px] top-3 bottom-3 w-px bg-ink/10" />
+          <div className="absolute left-[17px] md:left-[19px] top-3 bottom-3 w-px bg-ink/10" />
           {/* Progress line */}
           <motion.div
             style={{ scaleY: lineScale }}
-            className="absolute left-[19px] top-3 bottom-3 w-px bg-salmon origin-top"
+            className="absolute left-[17px] md:left-[19px] top-3 bottom-3 w-px bg-salmon origin-top"
           />
 
           <div className="space-y-12 md:space-y-16">
@@ -104,16 +104,16 @@ function TimelineStep({
   const textY = useTransform(progress, [fadeStart, fadeEnd], [12, 0]);
 
   return (
-    <div className="relative pl-14">
+    <div className="relative pl-12 md:pl-14">
       <motion.div
         style={{ opacity: dotOpacity, scale: dotScale }}
-        className="absolute left-0 top-1 w-10 h-10 rounded-full bg-salmon text-cream flex items-center justify-center text-sm font-mono origin-center"
+        className="absolute left-0 top-0.5 md:top-1 w-9 h-9 md:w-10 md:h-10 rounded-full bg-salmon text-cream flex items-center justify-center text-[13px] md:text-sm font-mono origin-center"
       >
         {index + 1}
       </motion.div>
       <motion.div style={{ opacity: textOpacity, y: textY }}>
         <h3 className="text-xl md:text-2xl font-serif mb-2">{step.title}</h3>
-        <p className="text-ink-muted leading-relaxed">{step.description}</p>
+        <p className="text-ink-muted leading-relaxed text-[15px] md:text-base">{step.description}</p>
       </motion.div>
     </div>
   );
