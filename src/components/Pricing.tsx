@@ -98,8 +98,10 @@ export default function Pricing() {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="rounded-3xl bg-cream text-ink shadow-xl shadow-ink/[0.04] overflow-hidden">
-              {/* Top bar — plan toggle + billing toggle */}
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-5 pb-0">
+              {/* Top bar — plan toggle + billing toggle.
+                  Wraps when the card is too narrow (e.g. right column of
+                  the xl:grid-cols-2 layout where card inner ≈ 273px). */}
+              <div className="flex flex-wrap items-center gap-3 p-5 pb-0 sm:justify-between">
                 {/* Plan selector */}
                 <div className="flex gap-1 bg-ink/[0.05] rounded-full p-1">
                   {plans.map((plan, i) => (
