@@ -67,9 +67,7 @@ function PlanCard({
       {/* Card content — only interactive when front */}
       <div className={`h-full flex flex-col ${isFront ? "" : "pointer-events-none"}`}>
         {/* Header */}
-        <div className="flex items-center justify-between p-6 md:p-5 pb-0">
-          <h3 className="text-xl md:text-lg font-serif">{plan.name}</h3>
-
+        <div className="flex items-center justify-end p-6 md:p-5 pb-0">
           {/* Billing toggle */}
           <div className="flex gap-1 bg-ink/[0.05] rounded-full p-1">
             <button
