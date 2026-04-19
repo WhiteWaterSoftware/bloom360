@@ -272,7 +272,7 @@ export default function Pricing() {
               </button>
             </div>
 
-            <div className="relative min-h-[480px]">
+            <div className="relative min-h-[540px]">
               {plans.map((plan, i) => (
                 <PlanCard
                   key={plan.name}
