@@ -331,26 +331,17 @@ export default function MobileVideo() {
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 className="absolute inset-0 pointer-events-none"
               >
-                <div className="pointer-events-auto absolute top-3 right-3 flex gap-2">
-                  <button
-                    onClick={toggleMute}
-                    aria-label={muted ? "Unmute video" : "Mute video"}
-                    className="w-10 h-10 rounded-full bg-ink/60 text-cream backdrop-blur-sm flex items-center justify-center transition-colors duration-300 active:bg-ink/80"
-                  >
-                    {muted ? (
-                      <SpeakerSlash size={18} weight="fill" />
-                    ) : (
-                      <SpeakerHigh size={18} weight="fill" />
-                    )}
-                  </button>
-                  <button
-                    onClick={() => setDismissed(true)}
-                    aria-label="Close video"
-                    className="w-10 h-10 rounded-full bg-ink/60 text-cream backdrop-blur-sm flex items-center justify-center transition-colors duration-300 active:bg-ink/80"
-                  >
-                    <X size={18} weight="bold" />
-                  </button>
-                </div>
+                <button
+                  onClick={toggleMute}
+                  aria-label={muted ? "Unmute video" : "Mute video"}
+                  className="pointer-events-auto absolute top-3 right-3 w-10 h-10 rounded-full bg-ink/60 text-cream backdrop-blur-sm flex items-center justify-center transition-colors duration-300 active:bg-ink/80"
+                >
+                  {muted ? (
+                    <SpeakerSlash size={18} weight="fill" />
+                  ) : (
+                    <SpeakerHigh size={18} weight="fill" />
+                  )}
+                </button>
 
                 {promptVisible && (
                   <motion.div
