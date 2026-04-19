@@ -10,14 +10,14 @@ const steps = [
       "Pick your membership and create your account. Takes just a few minutes.",
   },
   {
+    title: "Complete your intake",
+    description:
+      "We'll email you a short health intake form — about 10 minutes. It helps your physician get to know you before you even meet.",
+  },
+  {
     title: "Meet your doctor",
     description:
       "Book your initial appointment with your dedicated physician. Most new members are seen within 2–3 days.",
-  },
-  {
-    title: "Complete your intake",
-    description:
-      "We'll email you a short health intake form before your appointment — about 10 minutes. It helps your physician get to know you before you even meet.",
   },
   {
     title: "Stay well",

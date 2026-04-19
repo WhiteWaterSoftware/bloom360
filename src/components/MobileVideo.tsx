@@ -7,6 +7,7 @@ import {
   SpeakerSlash,
   Play,
   Pause,
+  X,
 } from "@phosphor-icons/react";
 
 type VideoStage =
@@ -38,6 +39,8 @@ export default function MobileVideo() {
   const [vw, setVw] = useState(0);
   const [vh, setVh] = useState(0);
   const [transitioning, setTransitioning] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 1023px)");
@@ -108,6 +111,14 @@ export default function MobileVideo() {
     }
   }, [slotRect, mode]);
 
+  // Restore video when user scrolls back to the slot area
+  useEffect(() => {
+    if (!dismissed || !slotRect) return;
+    if (slotRect.top > 0 && slotRect.bottom < vh) {
+      setDismissed(false);
+    }
+  }, [dismissed, slotRect, vh]);
+
   useEffect(() => {
     if (!isMobile) return;
     if (
@@ -148,6 +159,7 @@ export default function MobileVideo() {
     const old = videoRef.current;
     if (old) old.pause();
     setLoading(true);
+    setVideoReady(false);
     if (stage === "promptPodcast") {
       setMuted(false);
       setStage("podcast");
@@ -169,7 +181,7 @@ export default function MobileVideo() {
   const promptLabel = stage === "promptPodcast" ? "Up next" : "Start over";
   const promptTitle =
     stage === "promptPodcast"
-      ? "Meet Dr. Shurbaji & Dr. Jawad"
+      ? "Meet Dr.\u00a0Shurbaji &\nDr.\u00a0Jawad"
       : "Watch the explainer again";
   const promptCta =
     stage === "promptPodcast" ? "Play podcast" : "Replay explainer";
@@ -231,11 +243,11 @@ export default function MobileVideo() {
       }
     : { duration: 0 };
 
-  const shouldRenderPlayer = isMobile && slotRect;
+  const shouldRenderPlayer = isMobile && slotRect && !dismissed;
 
   return (
     <>
-      {/* Slot placeholder — reserves layout space in Hero flow */}
+      {/* Slot placeholder — always rendered so scroll tracking works */}
       <div
         ref={slotRef}
         className="mx-auto w-[min(78%,340px)] aspect-[4/5]"
@@ -244,9 +256,23 @@ export default function MobileVideo() {
       {/* Actual player — fixed-position, morphs between inline card and
           mini bottom bar. Keeps a single <video> element so playback state
           persists across mode changes. */}
+      <AnimatePresence>
       {shouldRenderPlayer && (
         <motion.div
           animate={containerAnim}
+          exit={
+            mode === "mini"
+              ? {
+                  y: 80,
+                  opacity: 0,
+                  transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+                }
+              : {
+                  opacity: 0,
+                  scale: 0.95,
+                  transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] },
+                }
+          }
           transition={transition}
           onAnimationComplete={() => setTransitioning(false)}
           className="fixed z-40 bg-ink shadow-[0_40px_70px_-30px_rgba(20,25,35,0.45)] overflow-hidden lg:hidden"
@@ -265,8 +291,8 @@ export default function MobileVideo() {
               preload="auto"
               onEnded={handleEnded}
               onLoadedData={() => setLoading(false)}
-              onPlaying={() => setLoading(false)}
-              className="w-full h-full object-cover"
+              onPlaying={() => { setLoading(false); setVideoReady(true); }}
+              className={`w-full h-full object-cover transition-opacity duration-700 ${videoReady ? "opacity-100" : "opacity-0"}`}
               style={{
                 objectPosition: showingPodcastSrc
                   ? "center 28%"
@@ -305,17 +331,26 @@ export default function MobileVideo() {
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 className="absolute inset-0 pointer-events-none"
               >
-                <button
-                  onClick={toggleMute}
-                  aria-label={muted ? "Unmute video" : "Mute video"}
-                  className="pointer-events-auto absolute top-3 right-3 w-10 h-10 rounded-full bg-ink/60 text-cream backdrop-blur-sm flex items-center justify-center transition-colors duration-300 active:bg-ink/80"
-                >
-                  {muted ? (
-                    <SpeakerSlash size={18} weight="fill" />
-                  ) : (
-                    <SpeakerHigh size={18} weight="fill" />
-                  )}
-                </button>
+                <div className="pointer-events-auto absolute top-3 right-3 flex gap-2">
+                  <button
+                    onClick={toggleMute}
+                    aria-label={muted ? "Unmute video" : "Mute video"}
+                    className="w-10 h-10 rounded-full bg-ink/60 text-cream backdrop-blur-sm flex items-center justify-center transition-colors duration-300 active:bg-ink/80"
+                  >
+                    {muted ? (
+                      <SpeakerSlash size={18} weight="fill" />
+                    ) : (
+                      <SpeakerHigh size={18} weight="fill" />
+                    )}
+                  </button>
+                  <button
+                    onClick={() => setDismissed(true)}
+                    aria-label="Close video"
+                    className="w-10 h-10 rounded-full bg-ink/60 text-cream backdrop-blur-sm flex items-center justify-center transition-colors duration-300 active:bg-ink/80"
+                  >
+                    <X size={18} weight="bold" />
+                  </button>
+                </div>
 
                 {promptVisible && (
                   <motion.div
@@ -327,7 +362,7 @@ export default function MobileVideo() {
                     <p className="text-[10px] tracking-[0.22em] uppercase text-cream/60 mb-3">
                       {promptLabel}
                     </p>
-                    <p className="font-serif text-xl leading-snug mb-6 max-w-[240px]">
+                    <p className="font-serif text-xl leading-snug mb-6 max-w-[240px] whitespace-pre-line">
                       {promptTitle}
                     </p>
                     <button
@@ -356,7 +391,7 @@ export default function MobileVideo() {
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 onClick={scrollBackToInline}
-                className="absolute inset-0 flex items-center pl-[72px] pr-2 cursor-pointer select-none"
+                className="absolute inset-0 flex items-center pl-[72px] pr-3 gap-2 cursor-pointer select-none"
               >
                 <div className="flex-1 min-w-0 mr-2 text-left">
                   <p
@@ -390,7 +425,7 @@ export default function MobileVideo() {
                       ? "Play"
                       : "Pause"
                   }
-                  className={`flex-shrink-0 w-10 h-10 mr-1 rounded-full flex items-center justify-center transition-colors ${
+                  className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
                     promptVisible
                       ? "bg-salmon text-cream active:bg-salmon-dark"
                       : "bg-cream text-ink active:bg-salmon-light"
@@ -402,11 +437,22 @@ export default function MobileVideo() {
                     <Pause size={13} weight="fill" />
                   )}
                 </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setDismissed(true);
+                  }}
+                  aria-label="Close video"
+                  className="flex-shrink-0 w-10 h-10 rounded-full bg-cream/15 flex items-center justify-center text-cream active:bg-cream/25 transition-colors"
+                >
+                  <X size={13} weight="bold" />
+                </button>
               </motion.div>
             )}
           </AnimatePresence>
         </motion.div>
       )}
+      </AnimatePresence>
     </>
   );
 }

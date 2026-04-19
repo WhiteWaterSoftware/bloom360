@@ -21,7 +21,7 @@ export default function FloatingVideo() {
   const [stage, setStage] = useState<VideoStage>("explainer");
   const [muted, setMuted] = useState(true);
   const [dims, setDims] = useState({ vw: 0, vh: 0 });
-  const [ctaOffset, setCtaOffset] = useState(0);
+  const [ctaOffset, setCtaOffset] = useState(99999);
   const [loading, setLoading] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -185,7 +185,7 @@ export default function FloatingVideo() {
     stage === "promptPodcast" ? "Up next" : "Start over";
   const promptTitle =
     stage === "promptPodcast"
-      ? "Meet Dr. Shurbaji & Dr. Jawad"
+      ? "Meet Dr.\u00a0Shurbaji &\nDr.\u00a0Jawad"
       : "Watch the explainer again";
   const promptCta =
     stage === "promptPodcast" ? "Play podcast" : "Replay explainer";
@@ -266,7 +266,7 @@ export default function FloatingVideo() {
           <p className="text-xs tracking-[0.2em] uppercase text-cream/60 mb-4">
             {promptLabel}
           </p>
-          <p className="font-serif text-2xl md:text-3xl leading-snug mb-8">
+          <p className="font-serif text-2xl md:text-3xl leading-snug mb-8 whitespace-pre-line">
             {promptTitle}
           </p>
           <button

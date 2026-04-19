@@ -7,7 +7,7 @@ const footerLinks = {
     { label: "Primary Care", href: "#services" },
     { label: "Nutrition", href: "#services" },
     { label: "Movement", href: "#services" },
-    { label: "Care Navigation", href: "#services" },
+    { label: "Concierge Health Assistant", href: "#services" },
   ],
   Company: [
     { label: "About", href: "#about" },
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
 
           {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category} className="md:col-span-2 md:col-start-auto">
+            <div key={category} className="md:col-span-2 md:col-start-auto md:min-w-[170px]">
               <h4 className="text-[11px] font-medium text-cream/20 tracking-[0.2em] uppercase mb-5">
                 {category}
               </h4>

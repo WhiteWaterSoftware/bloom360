@@ -70,8 +70,8 @@ export default function Hero() {
           className="flex flex-col gap-7 md:gap-8 max-w-xl"
         >
           <p className="text-ink-muted text-base md:text-xl leading-relaxed">
-            One membership. Your doctor, dietitian, physical therapist, and
-            care navigator. All coordinated. All virtual. All yours.
+            Bloom360 combines primary care, nutrition, and movement with 24/7
+            access to help you stay ahead of your health.
           </p>
           <button
             onClick={openWaitlist}
