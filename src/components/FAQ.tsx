@@ -31,28 +31,8 @@ const faqSections: FAQSection[] = [
       },
       {
         question: "How is Bloom360 different from traditional primary care?",
-        answer: (
-          <table className="w-full text-sm border-collapse">
-            <thead>
-              <tr>
-                <th className="text-left pb-2 pr-3 text-cream/40 font-normal border-b border-cream/10">Experience</th>
-                <th className="text-left pb-2 pr-3 text-cream/40 font-normal border-b border-cream/10">Traditional</th>
-                <th className="text-left pb-2 text-cream/40 font-normal border-b border-cream/10">Bloom360</th>
-              </tr>
-            </thead>
-            <tbody className="text-cream/60">
-              <tr className="border-b border-cream/5"><td className="py-2 pr-3 text-cream/40">How you pay</td><td className="py-2 pr-3">Insurance billing, copays, deductibles, surprise bills</td><td className="py-2">Flat monthly membership. No copays, ever.</td></tr>
-              <tr className="border-b border-cream/5"><td className="py-2 pr-3 text-cream/40">Wait time</td><td className="py-2 pr-3">Days to weeks to months</td><td className="py-2">Same day or next day</td></tr>
-              <tr className="border-b border-cream/5"><td className="py-2 pr-3 text-cream/40">Appointment times</td><td className="py-2 pr-3">Rushed appointments</td><td className="py-2">Longer visits. Your doctor actually has time for you</td></tr>
-              <tr className="border-b border-cream/5"><td className="py-2 pr-3 text-cream/40">Access between visits</td><td className="py-2 pr-3">Call the front desk. Leave a voicemail. Wait.</td><td className="py-2">Message your care team directly. Response within 24 hours.</td></tr>
-              <tr className="border-b border-cream/5"><td className="py-2 pr-3 text-cream/40">Nutrition support</td><td className="py-2 pr-3">Forget it</td><td className="py-2">Dietitian-led nutrition program, included in your membership</td></tr>
-              <tr className="border-b border-cream/5"><td className="py-2 pr-3 text-cream/40">Movement &amp; PT</td><td className="py-2 pr-3">Separate referral. Separate bill.</td><td className="py-2">Physical therapist-led movement program, included in your membership</td></tr>
-              <tr className="border-b border-cream/5"><td className="py-2 pr-3 text-cream/40">Prevention focus</td><td className="py-2 pr-3">Reactive. You come in when something&apos;s already wrong.</td><td className="py-2">Proactive. Built to keep you well before you ever get sick</td></tr>
-              <tr className="border-b border-cream/5"><td className="py-2 pr-3 text-cream/40">Care coordination</td><td className="py-2 pr-3">You figure it out.</td><td className="py-2">Your Concierge Health Assistant handles it for you.</td></tr>
-              <tr><td className="py-2 pr-3 text-cream/40">Virtual care</td><td className="py-2 pr-3">Limited or inconsistent</td><td className="py-2">100% virtual. See your doctor from home, work, or anywhere</td></tr>
-            </tbody>
-          </table>
-        ),
+        answer:
+          "Traditional primary care means insurance billing, copays, deductibles, and surprise bills. Bloom360 is a flat monthly membership with no copays, ever. Traditional care has days-to-weeks wait times \u2014 we offer same day or next day. Traditional visits are rushed \u2014 yours are longer, because your doctor actually has time for you. You can message your care team directly and get a response within 24 hours. You get a dietitian-led nutrition program and physical therapist-led movement program included. And your Concierge Health Assistant handles care coordination for you.",
       },
       {
         question: "What is the difference between primary and preventive care?",
@@ -474,7 +454,7 @@ export default function FAQ() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="lg:sticky lg:top-32 lg:self-start"
           >
-            <div className="hidden lg:block relative min-h-[560px] rounded-3xl bg-ink text-cream p-8 md:p-10 overflow-hidden">
+            <div className="hidden lg:block relative min-h-[670px] rounded-3xl bg-ink text-cream p-8 md:p-10 overflow-hidden">
               {/* Large watermark number */}
               <AnimatePresence mode="wait">
                 <motion.span

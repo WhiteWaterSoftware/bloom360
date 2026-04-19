@@ -21,7 +21,7 @@ export default function FloatingVideo() {
   const [stage, setStage] = useState<VideoStage>("explainer");
   const [muted, setMuted] = useState(true);
   const [dims, setDims] = useState({ vw: 0, vh: 0 });
-  const [ctaOffset, setCtaOffset] = useState(0);
+  const [ctaOffset, setCtaOffset] = useState(99999);
   const [loading, setLoading] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 

@@ -68,19 +68,22 @@ export default function CTA() {
   const emblemScale = useTransform(scrollYProgress, [0, 1], [0.9, 1.15]);
   const contentY = useTransform(scrollYProgress, [0, 1], [30, -20]);
 
-  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+  const [timeLeft, setTimeLeft] = useState<ReturnType<typeof getTimeLeft> | null>(null);
 
   useEffect(() => {
+    setTimeLeft(getTimeLeft());
     const timer = setInterval(() => setTimeLeft(getTimeLeft()), 1000);
     return () => clearInterval(timer);
   }, []);
 
-  const units: { value: number; label: string }[] = [
-    { value: timeLeft.days, label: "Days" },
-    { value: timeLeft.hours, label: "Hours" },
-    { value: timeLeft.minutes, label: "Min" },
-    { value: timeLeft.seconds, label: "Sec" },
-  ];
+  const units: { value: number; label: string }[] = timeLeft
+    ? [
+        { value: timeLeft.days, label: "Days" },
+        { value: timeLeft.hours, label: "Hours" },
+        { value: timeLeft.minutes, label: "Min" },
+        { value: timeLeft.seconds, label: "Sec" },
+      ]
+    : [];
 
   return (
     <section id="join" className="relative bg-ink text-cream overflow-hidden" ref={ref}>

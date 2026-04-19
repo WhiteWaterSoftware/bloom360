@@ -65,9 +65,13 @@ function PlanCard({
       )}
 
       {/* Card content — only interactive when front */}
-      <div className={isFront ? "" : "pointer-events-none"}>
-        <div className="flex items-center justify-between p-5 pb-0">
-          <h3 className="text-lg font-serif">{plan.name}</h3>
+      <div className={`h-full flex flex-col ${isFront ? "" : "pointer-events-none"}`}>
+        {/* Header */}
+        <div className="flex items-center justify-between p-6 md:p-5 pb-0">
+          <div>
+            <p className="text-ink/40 text-[11px] tracking-[0.18em] uppercase mb-1">Plan</p>
+            <h3 className="text-xl md:text-lg font-serif">{plan.name}</h3>
+          </div>
 
           {/* Billing toggle */}
           <div className="flex gap-1 bg-ink/[0.05] rounded-full p-1">
@@ -100,8 +104,8 @@ function PlanCard({
           </div>
         </div>
 
-        {/* Dynamic content area — fixed height so CTA never shifts */}
-        <div className="px-5 md:px-6 pt-5 md:pt-6 min-h-[210px]">
+        {/* Dynamic content area — grows to fill, pushes CTA to bottom */}
+        <div className="px-6 md:px-5 pt-5 md:pt-6 flex-1">
           <AnimatePresence mode="wait">
             <motion.div
               key={`${plan.name}-${annual}`}
@@ -112,7 +116,7 @@ function PlanCard({
             >
               <div className="flex items-baseline gap-2">
                 <span className="text-ink/30 text-lg">$</span>
-                <span className="text-5xl md:text-6xl font-serif tracking-tighter leading-none">
+                <span className="text-6xl md:text-6xl font-serif tracking-tighter leading-none">
                   {annual ? plan.annual : plan.monthly}
                 </span>
                 <span className="text-ink/30 text-base">/mo</span>
@@ -122,7 +126,7 @@ function PlanCard({
                   </span>
                 )}
               </div>
-              <p className="mt-1.5 text-ink-muted text-sm">
+              <p className="mt-2 text-ink-muted text-sm">
                 {plan.sub} &middot; billed{" "}
                 {annual ? (
                   <>
@@ -136,18 +140,18 @@ function PlanCard({
                 )}
               </p>
 
-              <p className="mt-4 text-ink-muted leading-relaxed text-sm max-w-lg">
+              <p className="mt-5 text-ink-muted leading-relaxed text-sm max-w-lg">
                 {plan.detail}
               </p>
             </motion.div>
           </AnimatePresence>
         </div>
 
-        {/* Divider */}
-        <div className="mx-5 md:mx-6 h-px bg-ink/[0.07]" />
+        {/* Divider — desktop only */}
+        <div className="hidden md:block mx-5 mt-5 h-px bg-ink/[0.07]" />
 
         {/* Fixed CTA area — never moves */}
-        <div className="px-5 md:px-6 py-5 md:py-6">
+        <div className="px-6 md:px-5 py-5 md:py-6">
           <button
             onClick={openWaitlist}
             className="group w-full inline-flex items-center justify-center gap-3 bg-ink text-cream px-6 py-3.5 rounded-full text-sm tracking-wide uppercase hover:bg-salmon transition-colors duration-500"
