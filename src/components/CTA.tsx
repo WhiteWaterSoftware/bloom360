@@ -1,9 +1,57 @@
 "use client";
 
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { useWaitlist } from "./WaitlistProvider";
+
+function getTimeLeft() {
+  const target = new Date("2026-06-01T00:00:00-04:00");
+  const now = new Date();
+  const diff = Math.max(0, target.getTime() - now.getTime());
+  return {
+    days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((diff / (1000 * 60)) % 60),
+    seconds: Math.floor((diff / 1000) % 60),
+  };
+}
+
+function Digit({ value }: { value: string }) {
+  return (
+    <span className="relative inline-flex justify-center w-[0.6em] h-[1.1em] overflow-hidden align-bottom">
+      <AnimatePresence mode="popLayout" initial={false}>
+        <motion.span
+          key={value}
+          initial={{ y: "100%" }}
+          animate={{ y: "0%" }}
+          exit={{ y: "-100%" }}
+          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute inset-0 flex items-center justify-center"
+        >
+          {value}
+        </motion.span>
+      </AnimatePresence>
+    </span>
+  );
+}
+
+function CountdownUnit({ value, label }: { value: number; label: string }) {
+  const display = String(value).padStart(2, "0");
+  return (
+    <div className="flex flex-col items-center">
+      <div className="relative w-[56px] h-[72px] md:w-[76px] md:h-[96px] lg:w-[88px] lg:h-[108px] rounded-xl md:rounded-2xl bg-cream/[0.08] border border-cream/[0.08] flex items-center justify-center overflow-hidden">
+        <span className="text-2xl md:text-[2.5rem] lg:text-5xl font-serif tracking-tight leading-none text-cream">
+          <Digit value={display[0]} />
+          <Digit value={display[1]} />
+        </span>
+      </div>
+      <span className="text-cream/25 text-[9px] md:text-[10px] tracking-[0.2em] uppercase mt-2 md:mt-3">
+        {label}
+      </span>
+    </div>
+  );
+}
 
 export default function CTA() {
   const openWaitlist = useWaitlist();
@@ -19,6 +67,20 @@ export default function CTA() {
   const emblemY = useTransform(scrollYProgress, [0, 1], [-100, 100]);
   const emblemScale = useTransform(scrollYProgress, [0, 1], [0.9, 1.15]);
   const contentY = useTransform(scrollYProgress, [0, 1], [30, -20]);
+
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => setTimeLeft(getTimeLeft()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const units: { value: number; label: string }[] = [
+    { value: timeLeft.days, label: "Days" },
+    { value: timeLeft.hours, label: "Hours" },
+    { value: timeLeft.minutes, label: "Min" },
+    { value: timeLeft.seconds, label: "Sec" },
+  ];
 
   return (
     <section id="join" className="relative bg-ink text-cream overflow-hidden" ref={ref}>
@@ -64,15 +126,40 @@ export default function CTA() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-6 md:mt-8 text-cream/50 text-base md:text-xl leading-relaxed max-w-xl mx-auto"
           >
-            Join the waitlist and be first to access Bloom360 when we launch in
-            your area. Founding member spots are limited.
+            Live in Michigan June 2026. Expanding Fall 2026. Founding
+            member spots are limited.
           </motion.p>
+
+          {/* Countdown */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={contentInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-10 md:mt-12"
+          >
+            <p className="text-salmon-light/60 text-[11px] md:text-xs tracking-[0.2em] uppercase mb-4 md:mb-5">
+              Launching June 1
+            </p>
+            <div className="inline-flex items-start gap-2.5 md:gap-3.5">
+              {units.map((unit, i) => (
+                <div key={unit.label} className="flex items-start gap-2.5 md:gap-3.5">
+                  <CountdownUnit value={unit.value} label={unit.label} />
+                  {i < units.length - 1 && (
+                    <div className="flex flex-col items-center gap-1.5 md:gap-2 pt-5 md:pt-7 lg:pt-8">
+                      <span className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-salmon-light/30" />
+                      <span className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-salmon-light/30" />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={contentInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-10 md:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mt-10 md:mt-14 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
           >
             <button
               onClick={openWaitlist}

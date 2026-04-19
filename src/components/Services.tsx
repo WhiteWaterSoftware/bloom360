@@ -7,15 +7,15 @@ const services = [
     number: "01",
     title: "Primary Care",
     description:
-      "Your dedicated physician leads everything. They know your history, manage your health holistically, and are there when you need them — not just when something breaks.",
-    details: ["Annual wellness", "Chronic conditions", "Prescriptions", "Referrals"],
+      "Your dedicated physician leads your care. They know your history, manage your health holistically, and are there when you need them.",
+    details: ["Annual wellness", "Chronic conditions", "Prescriptions", "Referrals", "Routine labs"],
     imageLabel: "Doctor consultation",
   },
   {
     number: "02",
     title: "Nutrition",
     description:
-      "A registered dietitian who builds a plan around your actual life. Not a generic template. Something that lasts.",
+      "A registered dietitian who builds a plan around your real life, not just someone who uses a generic template to help you. Our team works with you longitudinally to make real changes to your eating habits.",
     details: ["Meal guidance", "Metabolic health", "Weight goals", "Gut health"],
     imageLabel: "Nutrition planning",
   },
@@ -23,15 +23,15 @@ const services = [
     number: "03",
     title: "Movement",
     description:
-      "Physical therapy and movement coaching designed to keep you strong, prevent injury, and support the life you want to live.",
+      "Physical therapy and movement coaching designed to keep you strong, prevent injury, and support how you want to live.",
     details: ["Custom programs", "Injury prevention", "Rehab support", "Mobility"],
     imageLabel: "Physical therapy",
   },
   {
     number: "04",
-    title: "Care Navigation",
+    title: "Concierge Health Assistant",
     description:
-      "Your care navigator ties everything together. They keep your team aligned, follow up between visits, and make sure nothing slips through.",
+      "Your Concierge Health Assistant keeps coordinating care simple. They help you arrange appointments with specialists, find community resources, and check-in on you to ensure any care outside of Bloom360 is seamless.",
     details: ["Coordination", "Follow-through", "Member support", "Continuity"],
     imageLabel: "Care coordination",
   },
@@ -94,7 +94,7 @@ export default function Services() {
               <em className="text-salmon-light">one team.</em>
             </h2>
             <p className="mt-8 text-cream/50 text-lg leading-relaxed max-w-md">
-              We believe preventive care has to account for the whole person —
+              We believe primary care has to account for the whole person —
               not just what shows up on a lab report. That means your nutrition,
               how you move, how you feel, and someone making sure it all stays
               connected.

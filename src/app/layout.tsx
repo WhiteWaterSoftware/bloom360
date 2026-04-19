@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "bloom360 — Preventive Care, Reimagined",
+  title: "bloom360 — Primary Care, Reimagined",
   description:
     "Tech-powered, physician-led preventive care membership. A dedicated primary care physician at the center of your care, supported by nutrition, physical therapy, and reproductive health.",
   metadataBase: new URL("https://bloom360.com"),
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
   },
   openGraph: {
-    title: "bloom360 — Preventive Care, Reimagined",
+    title: "bloom360 — Primary Care, Reimagined",
     description:
       "One dedicated doctor. A full care team. Nutrition, movement, reproductive health — all coordinated, all virtual, all yours.",
     url: "https://bloom360.com",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "bloom360 — Preventive Care, Reimagined",
+    title: "bloom360 — Primary Care, Reimagined",
     description:
       "One dedicated doctor. A full care team. Nutrition, movement, reproductive health — all coordinated, all virtual, all yours.",
     images: ["/og.png"],

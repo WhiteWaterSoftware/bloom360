@@ -110,7 +110,8 @@ export default function WaitlistModal({
               <>
                 <h3 className="font-serif text-3xl mb-2">Join the waitlist</h3>
                 <p className="text-ink-muted text-sm mb-8 leading-relaxed">
-                  bloom360 is launching soon. Leave your details and be the first to know.
+                  Live in Michigan June 2026. Expanding Fall 2026. Leave your
+                  details and be the first to know.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
