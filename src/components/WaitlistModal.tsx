@@ -41,7 +41,12 @@ export default function WaitlistModal({
 
       if (!res.ok) throw new Error();
       setStatus("success");
+    } catch {
+      setStatus("error");
+      return;
+    }
 
+    try {
       if (typeof window !== "undefined") {
         const w = window as typeof window & {
           dataLayer?: Record<string, unknown>[];
@@ -50,7 +55,7 @@ export default function WaitlistModal({
         w.dataLayer.push({ event: "waitlist_signup", state });
       }
     } catch {
-      setStatus("error");
+      // Analytics failures must not affect submission status
     }
   };
 
