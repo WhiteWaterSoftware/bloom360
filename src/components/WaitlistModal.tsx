@@ -41,6 +41,14 @@ export default function WaitlistModal({
 
       if (!res.ok) throw new Error();
       setStatus("success");
+
+      if (typeof window !== "undefined") {
+        const w = window as typeof window & {
+          dataLayer?: Record<string, unknown>[];
+        };
+        w.dataLayer = w.dataLayer || [];
+        w.dataLayer.push({ event: "waitlist_signup", state });
+      }
     } catch {
       setStatus("error");
     }

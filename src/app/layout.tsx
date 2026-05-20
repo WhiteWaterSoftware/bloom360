@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import WaitlistProvider from "@/components/WaitlistProvider";
 import "./globals.css";
+
+const GTM_ID = "GTM-KD5RPXTW";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,7 +15,7 @@ export const metadata: Metadata = {
   title: "bloom360 — Primary Care, Reimagined",
   description:
     "Tech-powered, physician-led preventive care membership. A dedicated primary care physician at the center of your care, supported by nutrition, physical therapy, and reproductive health.",
-  metadataBase: new URL("https://bloom360.com"),
+  metadataBase: new URL("https://www.bloom360.com"),
   icons: {
     icon: "/favicon.png",
   },
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
     title: "bloom360 — Primary Care, Reimagined",
     description:
       "One dedicated doctor. A full care team. Nutrition, movement, reproductive health — all coordinated, all virtual, all yours.",
-    url: "https://bloom360.com",
+    url: "https://www.bloom360.com",
     siteName: "bloom360",
     locale: "en_US",
     type: "website",
@@ -40,14 +43,17 @@ export const metadata: Metadata = {
       "One dedicated doctor. A full care team. Nutrition, movement, reproductive health — all coordinated, all virtual, all yours.",
     images: ["/og.png"],
   },
+  verification: {
+    google: "BxU-8PlFqqHDfFRIAJFf1zjflPyznszuhZdukvKfLRs",
+  },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
   name: "bloom360",
-  url: "https://bloom360.com",
-  logo: "https://bloom360.com/logo-salmon.svg",
+  url: "https://www.bloom360.com",
+  logo: "https://www.bloom360.com/logo-salmon.svg",
   description:
     "Tech-powered, physician-led preventive care membership. A dedicated primary care physician at the center of your care, supported by nutrition, physical therapy, and reproductive health.",
   email: "care@bloom360.com",
@@ -91,7 +97,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`}
+        </Script>
+      </head>
       <body className="font-sans text-ink bg-cream">
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

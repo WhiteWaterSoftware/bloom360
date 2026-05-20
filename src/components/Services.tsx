@@ -31,7 +31,7 @@ const services = [
     number: "04",
     title: "Concierge Health Assistant",
     description:
-      "Your Concierge Health Assistant keeps coordinating care simple. They help you arrange appointments with specialists, find community resources, and check-in on you to ensure any care outside of Bloom360 is seamless.",
+      "Your Concierge Health Assistant helps take the admin work off your plate. They send you reminders, help you arrange appointments with specialists, find community resources, and check in on you to ensure any care outside of bloom360 is seamless.",
     details: ["Coordination", "Follow-through", "Member support", "Continuity"],
     imageLabel: "Care coordination",
   },

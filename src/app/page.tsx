@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import FloatingVideo from "@/components/FloatingVideo";
@@ -8,6 +9,12 @@ import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.bloom360.com/",
+  },
+};
 
 export default function Home() {
   return (

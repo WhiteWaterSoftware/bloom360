@@ -7,7 +7,7 @@ export default function PrivacyPolicyPage() {
       lastUpdated="Last Updated: May 1, 2026 | Effective: May 1, 2026"
     >
       <p>
-        Welcome to Bloom360. This document combines our <strong>Platform Privacy Policy</strong> (Part One) and our{" "}
+        Welcome to bloom360. This document combines our <strong>Platform Privacy Policy</strong> (Part One) and our{" "}
         <strong>HIPAA Notice of Privacy Practices</strong> (Part Two) into a single resource so you can understand how
         we collect, use, share, and protect your information — both as a user of our digital platform and as a patient
         receiving healthcare services. We encourage you to read this document carefully. If you have questions, please
@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
 
       <h3>1. What This Policy Covers</h3>
       <p>
-        This Privacy Policy describes how Bloom360, Inc. (&quot;Bloom360,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;)
+        This Privacy Policy describes how Bloom360, Inc. (&quot;bloom360,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;)
         collects, uses, discloses, and protects information when you visit our website, use our mobile applications, access our
         telehealth platform, or otherwise interact with our services (collectively, the &quot;Services&quot;). This Policy applies
         to all users, including members, prospective members, website visitors, and anyone who communicates with us.
@@ -99,7 +99,7 @@ export default function PrivacyPolicyPage() {
         <li><strong>Account Management:</strong> To create and manage your account, process payments, verify your identity, and maintain your membership.</li>
         <li><strong>Improving Our Services:</strong> To analyze usage patterns, conduct research, develop new features, and enhance the quality of care and user experience.</li>
         <li><strong>Communications:</strong> To send appointment reminders, health tips, service updates, billing notices, and respond to your inquiries.</li>
-        <li><strong>Safety and Security:</strong> To detect and prevent fraud, unauthorized access, and other harmful activities; to protect the rights, safety, and property of Bloom360, our members, and the public.</li>
+        <li><strong>Safety and Security:</strong> To detect and prevent fraud, unauthorized access, and other harmful activities; to protect the rights, safety, and property of bloom360, our members, and the public.</li>
         <li><strong>Legal Compliance:</strong> To comply with applicable laws, regulations, legal processes, and governmental requests.</li>
         <li><strong>Marketing:</strong> With your consent where required, to send promotional materials about our services. You may opt out of marketing communications at any time.</li>
         <li><strong>Quality Assurance:</strong> To conduct internal audits, quality improvement activities, and training for our care team.</li>
@@ -154,7 +154,7 @@ export default function PrivacyPolicyPage() {
 
       <h3>8. Children&apos;s Privacy</h3>
       <p>
-        Bloom360 Services are available to individuals aged 16 and older. For members between the ages of 16 and 17, we require
+        bloom360 Services are available to individuals aged 16 and older. For members between the ages of 16 and 17, we require
         parental or legal guardian consent before the minor can create an account or receive services. We do not knowingly collect
         personal information from children under the age of 16. If we learn that we have collected information from a child under
         16 without appropriate consent, we will take steps to delete that information promptly. If you believe a child under 16
@@ -198,7 +198,7 @@ export default function PrivacyPolicyPage() {
 
       <h3>11. Third-Party Links</h3>
       <p>
-        Our Services may contain links to third-party websites, applications, or services that are not operated by Bloom360.
+        Our Services may contain links to third-party websites, applications, or services that are not operated by bloom360.
         This Privacy Policy does not apply to those third-party services. We encourage you to review the privacy policies of any
         third-party services you access through our platform. We are not responsible for the privacy practices or content of
         third-party services.
@@ -206,7 +206,7 @@ export default function PrivacyPolicyPage() {
 
       <h3>12. International Visitors</h3>
       <p>
-        Bloom360 is based in the United States and our Services are designed for use within the United States. If you access our
+        bloom360 is based in the United States and our Services are designed for use within the United States. If you access our
         Services from outside the United States, please be aware that your information may be transferred to, stored, and
         processed in the United States, where data protection laws may differ from those in your jurisdiction. By using our
         Services, you consent to the transfer of your information to the United States.
@@ -214,7 +214,7 @@ export default function PrivacyPolicyPage() {
 
       <h3>13. Artificial Intelligence</h3>
       <p>
-        Bloom360 may use artificial intelligence (AI) and machine learning tools to support our care team in delivering services
+        bloom360 may use artificial intelligence (AI) and machine learning tools to support our care team in delivering services
         to you. These tools may assist with tasks such as clinical documentation, care plan recommendations, health risk
         assessments, and administrative workflows.
       </p>
@@ -322,12 +322,12 @@ export default function PrivacyPolicyPage() {
 
       <h3>F. How to File a HIPAA Complaint</h3>
       <p>
-        If you believe your privacy rights have been violated, you may file a complaint with Bloom360 or with the U.S.
+        If you believe your privacy rights have been violated, you may file a complaint with bloom360 or with the U.S.
         Department of Health and Human Services (HHS) Office for Civil Rights (OCR).
       </p>
       <ul>
         <li>
-          <strong>File with Bloom360:</strong> Contact our Privacy Officer at{" "}
+          <strong>File with bloom360:</strong> Contact our Privacy Officer at{" "}
           <a href="mailto:privacy@bloom360.com">privacy@bloom360.com</a> or write to Bloom360, Inc., Attn: Privacy Officer,
           4444 2nd Ave Ste 30674, Detroit, MI 48201.
         </li>

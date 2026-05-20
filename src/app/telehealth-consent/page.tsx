@@ -9,16 +9,16 @@ export default function TelehealthConsentPage() {
       <h2>1. Purpose of This Consent</h2>
       <p>
         This Telehealth Informed Consent (&quot;Consent&quot;) provides you with important information about the nature,
-        benefits, risks, and limitations of telehealth services provided by Bloom360, Inc. (&quot;Bloom360,&quot;
+        benefits, risks, and limitations of telehealth services provided by Bloom360, Inc. (&quot;bloom360,&quot;
         &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By using our Services and accepting this Consent, you acknowledge
         that you have read, understood, and agree to the terms described herein. You are consenting to receive healthcare
-        services via telehealth technology as part of your Bloom360 membership.
+        services via telehealth technology as part of your bloom360 membership.
       </p>
 
       <h2>2. What Is Telehealth</h2>
       <p>
         Telehealth is the delivery of healthcare services using electronic communications, information technology, and
-        telecommunications technology when you and your healthcare provider are not in the same physical location. Bloom360 is
+        telecommunications technology when you and your healthcare provider are not in the same physical location. bloom360 is
         a preventive telehealth clinic — not a one-off urgent visit service. Our model is built on ongoing, relationship-based
         care delivered entirely through telehealth, including synchronous video visits and asynchronous messaging with your
         care team.
@@ -28,9 +28,9 @@ export default function TelehealthConsentPage() {
         monitoring, and other digital health tools to deliver care, communicate health information, and coordinate services.
       </p>
 
-      <h2>3. Your Bloom360 Care Team</h2>
+      <h2>3. Your bloom360 Care Team</h2>
       <p>
-        When you join Bloom360, you are assigned a dedicated care team that may include:
+        When you join bloom360, you are assigned a dedicated care team that may include:
       </p>
       <ul>
         <li><strong>Primary Care Provider (PCP):</strong> A licensed physician or advanced practice provider who oversees your preventive care, manages chronic conditions, orders tests and prescriptions, and coordinates your overall health plan.</li>
@@ -77,7 +77,7 @@ export default function TelehealthConsentPage() {
 
       <h2>6. Scope of Care</h2>
       <p>
-        Bloom360 provides preventive primary care services via telehealth. Our scope of care includes but is not limited to:
+        bloom360 provides preventive primary care services via telehealth. Our scope of care includes but is not limited to:
       </p>
       <ul>
         <li>Wellness visits and annual health assessments</li>
@@ -91,7 +91,7 @@ export default function TelehealthConsentPage() {
         <li>Referrals and care coordination</li>
       </ul>
       <p>
-        <strong>Bloom360 does NOT:</strong>
+        <strong>bloom360 does NOT:</strong>
       </p>
       <ul>
         <li>Prescribe controlled substances (see our <a href="/controlled-substances">Controlled Substances Policy</a>)</li>
@@ -103,7 +103,7 @@ export default function TelehealthConsentPage() {
 
       <h2>7. Privacy and Data Security</h2>
       <p>
-        Bloom360 is committed to protecting your health information. Our telehealth platform complies with the Health Insurance
+        bloom360 is committed to protecting your health information. Our telehealth platform complies with the Health Insurance
         Portability and Accountability Act (HIPAA) and applicable state privacy laws. We implement the following safeguards:
       </p>
       <ul>
@@ -118,14 +118,14 @@ export default function TelehealthConsentPage() {
 
       <h2>8. Access to Health Records</h2>
       <p>
-        You have the right to access your health records maintained by Bloom360. You may view your records through your
-        Bloom360 account or request copies by contacting us at{" "}
+        You have the right to access your health records maintained by bloom360. You may view your records through your
+        bloom360 account or request copies by contacting us at{" "}
         <a href="mailto:care@bloom360.com">care@bloom360.com</a>. We will provide your records in a timely manner in
         accordance with applicable law.
       </p>
 
       <h2>9. Your Rights as a Patient</h2>
-      <p>As a Bloom360 patient, you have the right to:</p>
+      <p>As a bloom360 patient, you have the right to:</p>
       <ul>
         <li>Receive information about your diagnosis, treatment options, and prognosis in terms you can understand.</li>
         <li>Participate in decisions about your care, including the right to refuse or withdraw consent for treatment at any time.</li>
@@ -138,36 +138,36 @@ export default function TelehealthConsentPage() {
       </ul>
 
       <h2>10. Your Responsibilities as a Member</h2>
-      <p>As a Bloom360 member, you agree to:</p>
+      <p>As a bloom360 member, you agree to:</p>
       <ul>
         <li>Provide accurate and complete health information to your care team, including your current medications, allergies, health history, and any changes in your condition.</li>
         <li>Follow the treatment plan agreed upon with your care team, or communicate with your team if you are unable to do so.</li>
         <li>Ensure you are in a private, secure, and appropriate location during telehealth visits.</li>
         <li>Use a device with a functioning camera, microphone, and stable internet connection for video visits.</li>
         <li>Notify your care team promptly of any adverse reactions, unexpected symptoms, or changes in your health status.</li>
-        <li>Treat all Bloom360 staff and providers with respect and courtesy.</li>
+        <li>Treat all bloom360 staff and providers with respect and courtesy.</li>
         <li>Keep your account and contact information up to date.</li>
         <li>Not record telehealth visits without the prior consent of all participants.</li>
       </ul>
 
       <h2>11. Emergencies and After-Hours</h2>
       <p>
-        <strong>Bloom360 does not provide emergency medical services.</strong> If you are experiencing a medical emergency,
+        <strong>bloom360 does not provide emergency medical services.</strong> If you are experiencing a medical emergency,
         please take the following steps:
       </p>
       <ul>
         <li><strong>Call 911</strong> or go to the nearest emergency room immediately for life-threatening situations.</li>
         <li><strong>Call 988</strong> (Suicide &amp; Crisis Lifeline) if you are experiencing a mental health crisis, suicidal thoughts, or emotional distress.</li>
-        <li><strong>Contact your local urgent care center</strong> for non-life-threatening conditions that require immediate attention outside of Bloom360&apos;s scope.</li>
+        <li><strong>Contact your local urgent care center</strong> for non-life-threatening conditions that require immediate attention outside of bloom360&apos;s scope.</li>
       </ul>
       <p>
-        Do not rely on Bloom360 for urgent or emergency care. Our Services are designed for scheduled and asynchronous
+        Do not rely on bloom360 for urgent or emergency care. Our Services are designed for scheduled and asynchronous
         preventive care, not real-time emergency response.
       </p>
 
       <h2>12. Minors</h2>
       <p>
-        Bloom360 provides services to individuals aged 16 and older. For members between the ages of 16 and 17, the following
+        bloom360 provides services to individuals aged 16 and older. For members between the ages of 16 and 17, the following
         applies:
       </p>
       <ul>
@@ -181,7 +181,7 @@ export default function TelehealthConsentPage() {
         Telehealth services are subject to state-specific laws and regulations. Depending on your state of residence or the
         state in which you are located at the time of your visit, additional consent requirements, disclosures, or limitations
         may apply. We will inform you of any state-specific requirements that are applicable to your care. By accepting this
-        Consent, you acknowledge that you are physically located in a state where Bloom360 providers are licensed to practice
+        Consent, you acknowledge that you are physically located in a state where bloom360 providers are licensed to practice
         at the time of each telehealth encounter.
       </p>
 
@@ -190,7 +190,7 @@ export default function TelehealthConsentPage() {
         You have the right to withdraw your consent for telehealth services at any time by notifying us in writing at{" "}
         <a href="mailto:care@bloom360.com">care@bloom360.com</a>. Withdrawing consent will not affect any services provided
         prior to the withdrawal. If you withdraw consent, you may not be able to continue receiving services through
-        Bloom360, as our care model is delivered exclusively via telehealth.
+        bloom360, as our care model is delivered exclusively via telehealth.
       </p>
       <p>
         We may update this Consent from time to time. When we make material changes, we will provide notice through our

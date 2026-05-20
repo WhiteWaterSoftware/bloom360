@@ -16,23 +16,23 @@ type FAQSection = {
 
 const faqSections: FAQSection[] = [
   {
-    title: "About Bloom360",
+    title: "About bloom360",
     shortTitle: "About",
     questions: [
       {
-        question: "What is Bloom360?",
+        question: "What is bloom360?",
         answer:
-          "Bloom360 is a 100% online primary care practice where prevention comes first. Led by a physician and supported by a full care team \u2014 including a dietitian and exercise coach \u2014 we give you 24/7 text access to your doctor, same-day refills, and same-week appointments.",
+          "bloom360 is a 100% online primary care practice where prevention comes first. Led by a physician and supported by a full care team \u2014 including a dietitian and exercise coach \u2014 we give you 24/7 text access to your doctor, same-day refills, and same-week appointments.",
       },
       {
         question: "Who will be my doctor?",
         answer:
-          "Bloom360 is led by licensed physicians who are passionate about preventive, patient-centered care. You will always see your real doctor \u2014 not a chatbot, not a random provider. You can learn more about our care team on the About page.",
+          "bloom360 is led by licensed physicians who are passionate about preventive, patient-centered care. You will always see your real doctor \u2014 not a chatbot, not a random provider. You can learn more about our care team on the About page.",
       },
       {
-        question: "How is Bloom360 different from traditional primary care?",
+        question: "How is bloom360 different from traditional primary care?",
         answer:
-          "Traditional primary care means insurance billing, copays, deductibles, and surprise bills. Bloom360 is a flat monthly membership with no copays, ever. Traditional care has days-to-weeks wait times \u2014 we offer same day or next day. Traditional visits are rushed \u2014 yours are longer, because your doctor actually has time for you. You can message your care team directly and get a response within 24 hours. You get a dietitian-led nutrition program and physical therapist-led movement program included. And your Concierge Health Assistant handles care coordination for you.",
+          "Traditional primary care means insurance billing, copays, deductibles, and surprise bills. bloom360 is a flat monthly membership with no copays, ever. Traditional care has days-to-weeks wait times \u2014 we offer same day or next day. Traditional visits are rushed \u2014 yours are longer, because your doctor actually has time for you. You can message your care team directly and get a response within 24 hours. You get a dietitian-led nutrition program and physical therapist-led movement program included. And your Concierge Health Assistant handles care coordination for you.",
       },
       {
         question: "What is the difference between primary and preventive care?",
@@ -40,22 +40,22 @@ const faqSections: FAQSection[] = [
           "Primary care is your first point of contact for health concerns \u2014 whether you\u2019re sick, managing a chronic condition, or just need a checkup. Preventive care is the proactive side of that: screenings, wellness visits, and health planning designed to catch problems early or prevent them altogether. Good news is that we do both!",
       },
       {
-        question: "Is Bloom360 fully virtual?",
+        question: "Is bloom360 fully virtual?",
         answer:
-          "Yes \u2014 Bloom360 is 100% virtual. Most primary care issues are completely manageable online. Remote care maximizes accessibility, increases efficiency, and lowers wait and turn around times. If something needs to be handled in person, we\u2019ll help you navigate where to go next.",
+          "Yes \u2014 bloom360 is 100% virtual. Most primary care issues are completely manageable online. Remote care maximizes accessibility, increases efficiency, and lowers wait and turn around times. If something needs to be handled in person, we\u2019ll help you navigate where to go next.",
       },
       {
-        question: "Who is Bloom360 best for?",
+        question: "Who is bloom360 best for?",
         answer:
-          "Bloom360 is for people 16 and older who want more from their healthcare. Whether you\u2019re generally healthy and want to stay that way, managing a chronic condition, needing a simple prescription refill, focused on weight loss, or just tired of waiting forever to see a doctor who barely knows you \u2014 you\u2019ll fit right in here.",
+          "bloom360 is for people 16 and older who want more from their healthcare. Whether you\u2019re generally healthy and want to stay that way, managing a chronic condition, needing a simple prescription refill, focused on weight loss, or just tired of waiting forever to see a doctor who barely knows you \u2014 you\u2019ll fit right in here.",
       },
       {
-        question: "Is Bloom360 good for families?",
+        question: "Is bloom360 good for families?",
         answer:
-          "Yes. Bloom360 works well for individuals, couples, and families who want consistent care and a provider who actually knows them. Please see bundled family pricing.",
+          "Yes. bloom360 works well for individuals, couples, and families who want consistent care and a provider who actually knows them. Please see bundled family pricing.",
       },
       {
-        question: "Where is Bloom360 available?",
+        question: "Where is bloom360 available?",
         answer:
           "We currently see patients in Michigan, but have plans to expand to California, Texas, Arizona, and New York within the next few months!",
       },
@@ -66,7 +66,7 @@ const faqSections: FAQSection[] = [
     shortTitle: "Pricing",
     questions: [
       {
-        question: "How much does Bloom360 cost?",
+        question: "How much does bloom360 cost?",
         answer: (
           <div>
             <table className="w-full text-sm border-collapse mb-4">
@@ -105,12 +105,12 @@ const faqSections: FAQSection[] = [
       {
         question: "What\u2019s not included?",
         answer:
-          "Bloom360 doesn\u2019t replace emergency care, hospital stays, in-person procedures, or specialist visits. If you\u2019re experiencing a medical emergency, always call 911 immediately. For everything else, your care team will help point you in the right direction. When those are needed, we help guide you to the right next step.",
+          "bloom360 doesn\u2019t replace emergency care, hospital stays, in-person procedures, or specialist visits. If you\u2019re experiencing a medical emergency, always call 911 immediately. For everything else, your care team will help point you in the right direction. When those are needed, we help guide you to the right next step.",
       },
       {
         question: "Can I use my HSA or FSA?",
         answer:
-          "Yes! Bloom360 membership fees are HSA- and FSA-eligible. You can use your pre-tax health savings to cover your membership. We recommend confirming with your plan administrator.",
+          "Yes! bloom360 membership fees are HSA- and FSA-eligible. You can use your pre-tax health savings to cover your membership. We recommend confirming with your plan administrator.",
       },
       {
         question: "Can I cancel anytime?",
@@ -140,7 +140,7 @@ const faqSections: FAQSection[] = [
       {
         question: "What happens if I need urgent or emergency care?",
         answer:
-          "If you have a medical emergency, always call 911. For things like in-person exams, lab draws, or imaging, your Bloom360 provider will guide you to the right place and follow up with you after.",
+          "If you have a medical emergency, always call 911. For things like in-person exams, lab draws, or imaging, your bloom360 provider will guide you to the right place and follow up with you after.",
       },
       {
         question: "How quickly can I see a provider?",
@@ -160,28 +160,28 @@ const faqSections: FAQSection[] = [
       {
         question: "Do you offer mental health services?",
         answer:
-          "Your Bloom360 physician can address mental health as part of your primary care \u2014 including screening, medication management for common conditions like anxiety and depression, and ongoing check-ins. If you need specialized therapy or psychiatric care beyond what primary care covers, we\u2019ll help coordinate a referral.",
+          "Your bloom360 physician can address mental health as part of your primary care \u2014 including screening, medication management for common conditions like anxiety and depression, and ongoing check-ins. If you need specialized therapy or psychiatric care beyond what primary care covers, we\u2019ll help coordinate a referral.",
       },
       {
         question: "How do I get a pap smear or other in-person tests?",
         answer:
-          "For anything that requires a hands-on exam \u2014 like a pap smear, physical exam, or in-person procedure \u2014 your Bloom360 team will help you find a trusted local clinic or specialist and coordinate the handoff. We stay in the loop and follow up with you after.",
+          "For anything that requires a hands-on exam \u2014 like a pap smear, physical exam, or in-person procedure \u2014 your bloom360 team will help you find a trusted local clinic or specialist and coordinate the handoff. We stay in the loop and follow up with you after.",
       },
       {
         question: "Do you offer specialist referrals?",
         answer:
-          "Absolutely. When your care requires a specialist, your Bloom360 team will coordinate a referral and provide a warm handoff \u2014 including a summary of your history and relevant records. We stay in the loop to ensure your specialist care integrates smoothly with your overall treatment plan.",
+          "Absolutely. When your care requires a specialist, your bloom360 team will coordinate a referral and provide a warm handoff \u2014 including a summary of your history and relevant records. We stay in the loop to ensure your specialist care integrates smoothly with your overall treatment plan.",
       },
       {
         question: "Do you offer weight loss programs?",
         answer:
-          "Yes and it\u2019s not a separate upsell. Weight management is built into your Bloom360 membership. Your primary care physician handles the medical side, including evaluation and medication management if appropriate. Your dietitian builds a personalized nutrition plan, and your physical therapist designs a movement program that fits your life. This is not an add-on. It\u2019s just good preventive and primary care.",
+          "Yes and it\u2019s not a separate upsell. Weight management is built into your bloom360 membership. Your primary care physician handles the medical side, including evaluation and medication management if appropriate. Your dietitian builds a personalized nutrition plan, and your physical therapist designs a movement program that fits your life. This is not an add-on. It\u2019s just good preventive and primary care.",
       },
       {
         question:
-          "Can Bloom360 prescribe ADHD medication, anxiety medication, or pain medication?",
+          "Can bloom360 prescribe ADHD medication, anxiety medication, or pain medication?",
         answer:
-          "Bloom360 does not prescribe controlled substances, including stimulants (like Adderall), benzodiazepines (like Xanax), or opioid pain medications. This is standard for telehealth-first primary care practices. If you need these medications, your Bloom360 physician can screen you, provide a clinical summary, and coordinate a referral to a psychiatrist or specialist who can prescribe and manage them. We stay in the loop to make sure your care is connected.",
+          "bloom360 does not prescribe controlled substances, including stimulants (like Adderall), benzodiazepines (like Xanax), or opioid pain medications. This is standard for telehealth-first primary care practices. If you need these medications, your bloom360 physician can screen you, provide a clinical summary, and coordinate a referral to a psychiatrist or specialist who can prescribe and manage them. We stay in the loop to make sure your care is connected.",
       },
     ],
   },
@@ -192,17 +192,17 @@ const faqSections: FAQSection[] = [
       {
         question: "What do I do if I need labs?",
         answer:
-          "We handle the order and walk you through it. We work with several labs around you, which accept most major insurance plans. If you don\u2019t have insurance, these facilities offer discounted cash-pay rates for Bloom360 members.",
+          "We handle the order and walk you through it. We work with several labs around you, which accept most major insurance plans. If you don\u2019t have insurance, these facilities offer discounted cash-pay rates for bloom360 members.",
       },
       {
         question: "What do I do if I need imaging?",
         answer:
-          "We handle the order and walk you through it. We work with several imaging centers around you, which accept most major insurance plans. If you don\u2019t have insurance, these facilities offer discounted cash-pay rates for Bloom360 members.",
+          "We handle the order and walk you through it. We work with several imaging centers around you, which accept most major insurance plans. If you don\u2019t have insurance, these facilities offer discounted cash-pay rates for bloom360 members.",
       },
       {
-        question: "Can Bloom360 prescribe medications?",
+        question: "Can bloom360 prescribe medications?",
         answer:
-          "Yes. We handle prescriptions just like any other primary care doctor. Tell us your preferred pharmacy and we\u2019ll send it electronically. Bloom360 does not prescribe controlled substances.",
+          "Yes. We handle prescriptions just like any other primary care doctor. Tell us your preferred pharmacy and we\u2019ll send it electronically. bloom360 does not prescribe controlled substances.",
       },
       {
         question: "How do I pay for my meds?",
@@ -238,7 +238,7 @@ const faqSections: FAQSection[] = [
           "Your first visit is a real conversation. Your provider gets to know your health history, current concerns, medications, lifestyle, and goals. From there, we build a personalized care plan that may include a diet program, an exercise program, preventive screenings, lab orders, and follow-up scheduling tailored to you. This isn\u2019t a rushed encounter. It\u2019s the start of an actual relationship.",
       },
       {
-        question: "Can I transfer my medical records to Bloom360?",
+        question: "Can I transfer my medical records to bloom360?",
         answer:
           "Yes. Our team will work with you to gather health records from previous providers.",
       },
@@ -254,7 +254,7 @@ const faqSections: FAQSection[] = [
     shortTitle: "Insurance",
     questions: [
       {
-        question: "How do I pay to be a Bloom360 patient?",
+        question: "How do I pay to be a bloom360 patient?",
         answer:
           "Membership is billed monthly or annually to the card on file. We accept all major credit and debit cards and HSA/FSA cards. It\u2019s automatic \u2014 no invoices, no billing department, no surprises.",
       },
@@ -266,18 +266,18 @@ const faqSections: FAQSection[] = [
       {
         question: "Why should I pay for this on top of my family\u2019s insurance?",
         answer:
-          "Insurance was never designed to keep you healthy. It was designed to cover you when something goes wrong. And even then, you\u2019re still meeting deductibles, paying copays, and waiting three weeks for a 10-minute visit with a doctor who has 2,000 other patients. Bloom360 is different. Same or next-day access. Longer visits. A doctor who actually knows you. No copays, no deductibles, no wondering if this question is worth a $40 fee. You just ask. You show up. You get taken care of. Your insurance still handles what it\u2019s supposed to \u2014 hospitals, specialists, emergencies. Bloom360 handles your everyday health, the way it should have always been handled.",
+          "Insurance was never designed to keep you healthy. It was designed to cover you when something goes wrong. And even then, you\u2019re still meeting deductibles, paying copays, and waiting three weeks for a 10-minute visit with a doctor who has 2,000 other patients. bloom360 is different. Same or next-day access. Longer visits. A doctor who actually knows you. No copays, no deductibles, no wondering if this question is worth a $40 fee. You just ask. You show up. You get taken care of. Your insurance still handles what it\u2019s supposed to \u2014 hospitals, specialists, emergencies. bloom360 handles your everyday health, the way it should have always been handled.",
       },
       {
         question:
           "Why should I do this if I already have Medicaid and no copay?",
         answer:
-          "No copay is a real benefit. But access is about more than cost. Many Medicaid patients still face long wait times, difficulty finding a provider who is actually accepting patients, and appointments that feel rushed the moment they start. Bloom360 gives you same or next day access, longer visits, a doctor who knows you, and a full care team including a dietitian, physical therapist, and Concierge Health Assistant. If that kind of attention matters to you, it\u2019s worth it.",
+          "No copay is a real benefit. But access is about more than cost. Many Medicaid patients still face long wait times, difficulty finding a provider who is actually accepting patients, and appointments that feel rushed the moment they start. bloom360 gives you same or next day access, longer visits, a doctor who knows you, and a full care team including a dietitian, physical therapist, and Concierge Health Assistant. If that kind of attention matters to you, it\u2019s worth it.",
       },
       {
-        question: "Do I still need health insurance if I join Bloom360?",
+        question: "Do I still need health insurance if I join bloom360?",
         answer:
-          "We strongly recommend it. Bloom360 is not meant to replace health insurance. We cover your preventive and primary care, but insurance can still be valuable for labs and prescriptions, hospital visits, surgeries, specialist care, and emergencies.",
+          "We strongly recommend it. bloom360 is not meant to replace health insurance. We cover your preventive and primary care, but insurance can still be valuable for labs and prescriptions, hospital visits, surgeries, specialist care, and emergencies.",
       },
       {
         question: "Are labs and imaging included in my membership fee?",
@@ -298,7 +298,7 @@ const faqSections: FAQSection[] = [
       {
         question: "Is my information private and secure?",
         answer:
-          "Yes. All Bloom360 visits run on a HIPAA-compliant platform. Your conversations, records, and health information are encrypted and accessible only to your care team. We don\u2019t share your data with third parties.",
+          "Yes. All bloom360 visits run on a HIPAA-compliant platform. Your conversations, records, and health information are encrypted and accessible only to your care team. We don\u2019t share your data with third parties.",
       },
       {
         question:

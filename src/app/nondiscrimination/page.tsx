@@ -8,7 +8,7 @@ export default function NondiscriminationPage() {
     >
       <h2>Our Commitment</h2>
       <p>
-        Bloom360, Inc. (&quot;Bloom360&quot;) complies with applicable federal and state civil rights laws and does not
+        Bloom360, Inc. (&quot;bloom360&quot;) complies with applicable federal and state civil rights laws and does not
         discriminate on the basis of race, color, national origin, age, disability, sex, sexual orientation, gender identity,
         gender expression, religion, creed, marital status, genetic information, veteran status, or any other characteristic
         protected by federal, state, or local law. This nondiscrimination policy applies to all of our programs, services,
@@ -16,13 +16,13 @@ export default function NondiscriminationPage() {
         and staff.
       </p>
       <p>
-        Bloom360 does not exclude people or treat them differently because of race, color, national origin, age, disability,
+        bloom360 does not exclude people or treat them differently because of race, color, national origin, age, disability,
         or sex. We provide equal access to our telehealth services for all eligible individuals.
       </p>
 
       <h2>Accommodations and Auxiliary Services</h2>
       <p>
-        Bloom360 is committed to providing reasonable modifications and auxiliary aids and services to individuals with
+        bloom360 is committed to providing reasonable modifications and auxiliary aids and services to individuals with
         disabilities to ensure effective communication and equal access to our Services. Available accommodations include but
         are not limited to:
       </p>
@@ -33,7 +33,7 @@ export default function NondiscriminationPage() {
         <li>Reasonable modifications to policies, practices, and procedures</li>
       </ul>
       <p>
-        Bloom360 also provides free language assistance services to individuals whose primary language is not English,
+        bloom360 also provides free language assistance services to individuals whose primary language is not English,
         including qualified interpreters and information written in other languages.
       </p>
       <p>
@@ -43,7 +43,7 @@ export default function NondiscriminationPage() {
 
       <h2>How to File a Grievance</h2>
       <p>
-        If you believe that Bloom360 has failed to provide these services or has discriminated in any way on the basis of
+        If you believe that bloom360 has failed to provide these services or has discriminated in any way on the basis of
         race, color, national origin, age, disability, sex, or any other protected characteristic, you may file a grievance
         with our Civil Rights Coordinator:
       </p>

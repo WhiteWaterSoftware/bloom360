@@ -3,6 +3,6 @@ import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://bloom360.com/sitemap.xml",
+    sitemap: "https://www.bloom360.com/sitemap.xml",
   };
 }
