@@ -7,24 +7,24 @@ export default function TermsOfServicePage() {
       lastUpdated="Last Updated: May 1, 2026 | Effective: May 1, 2026"
     >
       <p>
-        Welcome to Bloom360. These Terms of Service (&quot;Terms&quot;) govern your access to and use of the services provided
-        by Bloom360, Inc. (&quot;Bloom360,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), including our website,
+        Welcome to bloom360. These Terms of Service (&quot;Terms&quot;) govern your access to and use of the services provided
+        by Bloom360, Inc. (&quot;bloom360,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), including our website,
         mobile applications, telehealth platform, and all related services (collectively, the &quot;Services&quot;). By
         creating an account or using our Services, you agree to these Terms. If you do not agree, do not use our Services.
       </p>
       <p>
-        <strong>Bloom360 is a telehealth membership clinic. Our Services are not intended for medical emergencies.</strong> If
+        <strong>bloom360 is a telehealth membership clinic. Our Services are not intended for medical emergencies.</strong> If
         you are experiencing a medical emergency, call 911 or go to the nearest emergency room immediately. If you are
         experiencing a mental health crisis, call 988 (Suicide &amp; Crisis Lifeline) or go to your nearest emergency
         department.
       </p>
 
-      <h2>1. About Bloom360</h2>
+      <h2>1. About bloom360</h2>
       <p>
-        Bloom360 is a telehealth-only preventive primary care clinic currently serving eligible patients in Michigan, with
+        bloom360 is a telehealth-only preventive primary care clinic currently serving eligible patients in Michigan, with
         plans to expand to additional states. Our care team includes primary care providers (PCPs), registered dietitians,
         physical therapists, reproductive health specialists, and care navigators who work together to deliver comprehensive,
-        relationship-based preventive care. Bloom360 is headquartered in Detroit, Michigan, at 4444 2nd Ave Ste 30674,
+        relationship-based preventive care. bloom360 is headquartered in Detroit, Michigan, at 4444 2nd Ave Ste 30674,
         Detroit, MI 48201.
       </p>
 
@@ -36,7 +36,7 @@ export default function TermsOfServicePage() {
       </p>
       <h3>2.2 Geographic Eligibility</h3>
       <p>
-        Our Services are currently available to individuals who reside in states where Bloom360 providers are licensed to
+        Our Services are currently available to individuals who reside in states where bloom360 providers are licensed to
         practice. You must be physically located in an eligible state at the time of each telehealth encounter. Geographic
         eligibility may change as we expand to additional states.
       </p>
@@ -51,14 +51,14 @@ export default function TermsOfServicePage() {
       <h2>3. Membership, Fees, and Billing</h2>
       <h3>3.1 Membership Structure</h3>
       <p>
-        Bloom360 operates on a flat monthly membership fee model. Your membership provides access to your care team, scheduled
+        bloom360 operates on a flat monthly membership fee model. Your membership provides access to your care team, scheduled
         telehealth visits, asynchronous messaging, care coordination, and other benefits as described on our website at the
         time of enrollment. Membership fees are separate from any costs associated with external services such as lab work,
         prescriptions, specialist referrals, or imaging.
       </p>
       <h3>3.2 Not Insurance</h3>
       <p>
-        Bloom360 membership is not health insurance and does not replace health insurance coverage. We do not bill insurance
+        bloom360 membership is not health insurance and does not replace health insurance coverage. We do not bill insurance
         for our membership services. You are responsible for maintaining any health insurance coverage you need.
       </p>
       <h3>3.3 Billing and Payment</h3>
@@ -120,7 +120,7 @@ export default function TermsOfServicePage() {
       </p>
       <h3>4.4 No Emergency Services</h3>
       <p>
-        <strong>Bloom360 does not provide emergency medical services.</strong> If you are experiencing a medical emergency, call
+        <strong>bloom360 does not provide emergency medical services.</strong> If you are experiencing a medical emergency, call
         911 or go to the nearest emergency room immediately. If you are experiencing a mental health crisis, call 988 (Suicide
         &amp; Crisis Lifeline) or go to your nearest emergency department. Our Services are not a substitute for emergency care.
       </p>
@@ -134,9 +134,9 @@ export default function TermsOfServicePage() {
       <h2>5. The Provider-Patient Relationship</h2>
       <h3>5.1 Independent Medical Judgment</h3>
       <p>
-        Your Bloom360 healthcare providers exercise independent professional judgment in providing your care. Clinical decisions
+        Your bloom360 healthcare providers exercise independent professional judgment in providing your care. Clinical decisions
         are made by your providers based on their professional training, experience, and assessment of your individual health
-        needs. Bloom360 does not interfere with or override clinical decisions made by your providers.
+        needs. bloom360 does not interfere with or override clinical decisions made by your providers.
       </p>
       <h3>5.2 Availability</h3>
       <p>
@@ -146,26 +146,26 @@ export default function TermsOfServicePage() {
       </p>
       <h3>5.3 Scope of Services</h3>
       <p>
-        Bloom360 provides preventive primary care services via telehealth. Our scope of care includes wellness visits, chronic
+        bloom360 provides preventive primary care services via telehealth. Our scope of care includes wellness visits, chronic
         disease management, health coaching, nutritional counseling, physical therapy guidance, reproductive health services,
         and care coordination. We do not provide emergency care, inpatient care, surgical services, mental health crisis
         intervention, or controlled substance prescriptions.
       </p>
       <h3>5.4 Relationship with Other Providers</h3>
       <p>
-        Bloom360 may coordinate with your other healthcare providers, specialists, and facilities as part of your care. However,
-        Bloom360 is not responsible for the care, services, or actions of other providers or facilities. Any referrals to
+        bloom360 may coordinate with your other healthcare providers, specialists, and facilities as part of your care. However,
+        bloom360 is not responsible for the care, services, or actions of other providers or facilities. Any referrals to
         outside providers are for your convenience and do not constitute an endorsement or guarantee of their services.
       </p>
 
       <h2>6. Your Responsibilities as a Member</h2>
-      <p>As a Bloom360 member, you agree to:</p>
+      <p>As a bloom360 member, you agree to:</p>
       <ul>
         <li>Provide accurate and complete health information to your care team.</li>
         <li>Keep your account information up to date.</li>
         <li>Follow your care plan and communicate with your care team about any changes in your health.</li>
         <li>Use our Services in accordance with these Terms and applicable law.</li>
-        <li>Treat all Bloom360 staff and providers with respect and courtesy.</li>
+        <li>Treat all bloom360 staff and providers with respect and courtesy.</li>
         <li>Maintain a private, secure environment during telehealth visits.</li>
         <li>Notify us promptly of any changes to your contact information, insurance, or health status that may affect your care.</li>
         <li>Pay all applicable fees in a timely manner.</li>
@@ -174,7 +174,7 @@ export default function TermsOfServicePage() {
       <h2>7. Health Records and Data</h2>
       <h3>7.1 Access to Records</h3>
       <p>
-        You have the right to access your health records maintained by Bloom360. You may request copies of your records by
+        You have the right to access your health records maintained by bloom360. You may request copies of your records by
         contacting us at <a href="mailto:care@bloom360.com">care@bloom360.com</a>. We will provide your records in a timely
         manner in accordance with applicable law.
       </p>
@@ -198,7 +198,7 @@ export default function TermsOfServicePage() {
 
       <h2>9. Communications and Consent to Contact</h2>
       <p>
-        By creating an account, you consent to receive communications from Bloom360 via email, text message, push notification,
+        By creating an account, you consent to receive communications from bloom360 via email, text message, push notification,
         phone call, and through our platform. Communications may include appointment reminders, care team messages, billing
         notices, service updates, and health information. You may opt out of non-essential marketing communications at any time,
         but you may not opt out of communications necessary for the delivery of care or account management.
@@ -214,7 +214,7 @@ export default function TermsOfServicePage() {
         <li>Interfere with or disrupt the operation of our Services or the servers or networks used to make them available.</li>
         <li>Use automated means (bots, scrapers, etc.) to access or collect information from our Services without our express written consent.</li>
         <li>Transmit viruses, malware, or other harmful code through our platform.</li>
-        <li>Harass, threaten, or abuse Bloom360 staff, providers, or other members.</li>
+        <li>Harass, threaten, or abuse bloom360 staff, providers, or other members.</li>
         <li>Use our Services for purposes other than your own personal healthcare.</li>
         <li>Record telehealth visits without the prior consent of all participants.</li>
         <li>Share your account credentials with any other person.</li>
@@ -223,7 +223,7 @@ export default function TermsOfServicePage() {
       <h2>11. Intellectual Property</h2>
       <p>
         All content, materials, features, and functionality of our Services — including text, graphics, logos, icons, images,
-        audio, video, software, and the overall design and arrangement — are owned by Bloom360 or our licensors and are
+        audio, video, software, and the overall design and arrangement — are owned by bloom360 or our licensors and are
         protected by copyright, trademark, patent, trade secret, and other intellectual property laws. You may not copy,
         modify, distribute, sell, lease, or create derivative works based on our content without our prior written consent.
         Your use of our Services does not grant you any ownership rights in our intellectual property.
@@ -233,7 +233,7 @@ export default function TermsOfServicePage() {
       <p>
         Our Services may integrate with or link to third-party services, including but not limited to laboratory services,
         pharmacy services, payment processors, and health information exchanges. These third-party services are governed by
-        their own terms and privacy policies. Bloom360 is not responsible for the availability, accuracy, content, or practices
+        their own terms and privacy policies. bloom360 is not responsible for the availability, accuracy, content, or practices
         of third-party services. Your use of third-party services is at your own risk.
       </p>
 
@@ -273,7 +273,7 @@ export default function TermsOfServicePage() {
 
       <h2>15. Indemnification</h2>
       <p>
-        You agree to indemnify, defend, and hold harmless Bloom360, its officers, directors, employees, agents, affiliates,
+        You agree to indemnify, defend, and hold harmless bloom360, its officers, directors, employees, agents, affiliates,
         successors, and assigns from and against any and all claims, damages, losses, liabilities, costs, and expenses
         (including reasonable attorneys&apos; fees) arising out of or relating to: (a) your use of or access to our Services;
         (b) your violation of these Terms; (c) your violation of any applicable law or regulation; (d) your violation of any
@@ -289,7 +289,7 @@ export default function TermsOfServicePage() {
       </p>
       <h3>16.2 Binding Arbitration</h3>
       <p>
-        If we cannot resolve a dispute informally, you and Bloom360 agree that any dispute, claim, or controversy arising out
+        If we cannot resolve a dispute informally, you and bloom360 agree that any dispute, claim, or controversy arising out
         of or relating to these Terms or the breach, termination, enforcement, interpretation, or validity thereof, or your
         use of our Services, shall be resolved by binding arbitration administered by the American Arbitration Association
         (AAA) under its Consumer Arbitration Rules. The arbitration shall be conducted in Wayne County, Michigan, unless
@@ -322,7 +322,7 @@ export default function TermsOfServicePage() {
         You may terminate your account and cancel your membership at any time in accordance with our{" "}
         <a href="/cancellation">Cancellation Policy</a>.
       </p>
-      <h3>17.3 Termination by Bloom360</h3>
+      <h3>17.3 Termination by bloom360</h3>
       <p>
         We reserve the right to suspend or terminate your account and access to our Services at any time, with or without
         cause, upon notice to you. We will generally provide 30 days&apos; notice of termination, except in cases involving
@@ -347,7 +347,7 @@ export default function TermsOfServicePage() {
 
       <h2>19. Force Majeure</h2>
       <p>
-        Bloom360 shall not be liable for any failure or delay in performing our obligations under these Terms to the extent
+        bloom360 shall not be liable for any failure or delay in performing our obligations under these Terms to the extent
         such failure or delay results from circumstances beyond our reasonable control, including but not limited to natural
         disasters, pandemics, epidemics, government actions, war, terrorism, civil unrest, labor disputes, power outages,
         internet disruptions, cyberattacks, or failures of third-party service providers.
@@ -356,7 +356,7 @@ export default function TermsOfServicePage() {
       <h2>20. SMS/Text Messaging Terms</h2>
       <h3>20.1 Program Description</h3>
       <p>
-        By providing your phone number and opting in, you consent to receive recurring SMS/text messages from Bloom360
+        By providing your phone number and opting in, you consent to receive recurring SMS/text messages from bloom360
         related to your waitlist status, appointment reminders, health tips, and care communications. Message frequency
         varies and may include up to 10 messages per month.
       </p>
@@ -364,7 +364,7 @@ export default function TermsOfServicePage() {
       <p>
         You can opt out of receiving text messages at any time by replying STOP to any message you receive from us.
         After opting out, you will receive a one-time confirmation message. You will no longer receive text messages
-        from Bloom360 unless you opt in again.
+        from bloom360 unless you opt in again.
       </p>
       <h3>20.3 Help</h3>
       <p>
@@ -373,7 +373,7 @@ export default function TermsOfServicePage() {
       </p>
       <h3>20.4 Message and Data Rates</h3>
       <p>
-        Message and data rates may apply depending on your mobile carrier plan. Bloom360 is not responsible for any
+        Message and data rates may apply depending on your mobile carrier plan. bloom360 is not responsible for any
         charges incurred from your carrier for receiving text messages.
       </p>
       <h3>20.5 Carrier Liability</h3>
@@ -391,14 +391,14 @@ export default function TermsOfServicePage() {
       <h3>20.7 Supported Carriers</h3>
       <p>
         Our messaging program is supported on major US carriers. Carriers are not responsible for the content of
-        messages sent by Bloom360.
+        messages sent by bloom360.
       </p>
 
       <h2>21. Miscellaneous</h2>
       <h3>21.1 Entire Agreement</h3>
       <p>
         These Terms, together with our Privacy Policy, Cancellation Policy, Telehealth Consent, and any other policies
-        referenced herein, constitute the entire agreement between you and Bloom360 regarding your use of our Services and
+        referenced herein, constitute the entire agreement between you and bloom360 regarding your use of our Services and
         supersede all prior agreements, understandings, and communications, whether written or oral.
       </p>
       <h3>21.2 Severability</h3>
@@ -410,23 +410,23 @@ export default function TermsOfServicePage() {
       <h3>21.3 Waiver</h3>
       <p>
         Our failure to enforce any right or provision of these Terms shall not constitute a waiver of that right or provision.
-        Any waiver of any provision of these Terms will be effective only if in writing and signed by Bloom360.
+        Any waiver of any provision of these Terms will be effective only if in writing and signed by bloom360.
       </p>
       <h3>21.4 Assignment</h3>
       <p>
         You may not assign or transfer these Terms or your rights under these Terms without our prior written consent.
-        Bloom360 may assign these Terms without your consent in connection with a merger, acquisition, reorganization, or sale
+        bloom360 may assign these Terms without your consent in connection with a merger, acquisition, reorganization, or sale
         of all or substantially all of our assets.
       </p>
       <h3>21.5 Notices</h3>
       <p>
-        Notices to you may be sent to the email address associated with your account. Notices to Bloom360 should be sent to{" "}
+        Notices to you may be sent to the email address associated with your account. Notices to bloom360 should be sent to{" "}
         <a href="mailto:care@bloom360.com">care@bloom360.com</a> or mailed to Bloom360, Inc., 4444 2nd Ave Ste 30674,
         Detroit, MI 48201.
       </p>
       <h3>21.6 Accessibility</h3>
       <p>
-        Bloom360 is committed to making our Services accessible to individuals with disabilities. If you need assistance or
+        bloom360 is committed to making our Services accessible to individuals with disabilities. If you need assistance or
         have questions about accessibility, please contact us at <a href="mailto:care@bloom360.com">care@bloom360.com</a>.
       </p>
       <h3>21.7 No Third-Party Beneficiaries</h3>

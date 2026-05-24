@@ -8,13 +8,13 @@ export default function ControlledSubstancesPolicyPage() {
     >
       <h2>Our Position</h2>
       <p>
-        Bloom360 is a preventive primary care clinic focused on proactive, whole-person health. As part of our commitment to
-        safe, responsible care, <strong>Bloom360 providers do not prescribe controlled substances</strong>. This policy applies
-        to all Bloom360 healthcare providers across all states in which we operate.
+        bloom360 is a preventive primary care clinic focused on proactive, whole-person health. As part of our commitment to
+        safe, responsible care, <strong>bloom360 providers do not prescribe controlled substances</strong>. This policy applies
+        to all bloom360 healthcare providers across all states in which we operate.
       </p>
       <p>
         If you are currently taking a controlled substance prescribed by another healthcare provider, that is perfectly fine.
-        Your Bloom360 care team can work alongside your existing prescriber to coordinate your overall health plan. We simply
+        Your bloom360 care team can work alongside your existing prescriber to coordinate your overall health plan. We simply
         cannot initiate, refill, or manage prescriptions for controlled substances through our platform.
       </p>
 
@@ -35,7 +35,7 @@ export default function ControlledSubstancesPolicyPage() {
 
       <h2>Common Medications We Do Not Prescribe</h2>
       <p>
-        The following is a non-exhaustive list of commonly prescribed controlled substances that Bloom360 providers will not
+        The following is a non-exhaustive list of commonly prescribed controlled substances that bloom360 providers will not
         prescribe, refill, or manage:
       </p>
 
@@ -100,7 +100,7 @@ export default function ControlledSubstancesPolicyPage() {
       <h2>Non-Controlled Medications Prescribed With Extra Caution</h2>
       <p>
         Some medications are not classified as controlled substances by the DEA but may have abuse potential, significant side
-        effects, or require special monitoring. Bloom360 providers may prescribe these medications on a case-by-case basis with
+        effects, or require special monitoring. bloom360 providers may prescribe these medications on a case-by-case basis with
         appropriate clinical oversight:
       </p>
       <ul>
@@ -116,9 +116,9 @@ export default function ControlledSubstancesPolicyPage() {
         If you have a medical condition that requires a controlled substance, we recommend the following:
       </p>
       <ul>
-        <li><strong>Continue with your existing prescriber:</strong> If you currently receive a controlled substance from another healthcare provider, continue that relationship. Your Bloom360 care team can coordinate with your prescriber to ensure integrated care.</li>
+        <li><strong>Continue with your existing prescriber:</strong> If you currently receive a controlled substance from another healthcare provider, continue that relationship. Your bloom360 care team can coordinate with your prescriber to ensure integrated care.</li>
         <li><strong>Seek an in-person evaluation:</strong> Many controlled substances, particularly those for pain management and mental health, are best managed through an in-person clinical relationship with appropriate monitoring. Consider establishing care with a local primary care provider, psychiatrist, or pain management specialist.</li>
-        <li><strong>Request a referral:</strong> Your Bloom360 care team can help refer you to an appropriate specialist or provider who can manage your controlled substance needs. Let your provider know, and our care coordinator can assist with finding resources in your area.</li>
+        <li><strong>Request a referral:</strong> Your bloom360 care team can help refer you to an appropriate specialist or provider who can manage your controlled substance needs. Let your provider know, and our care coordinator can assist with finding resources in your area.</li>
       </ul>
 
       <h2>Legal and Regulatory Framework</h2>
@@ -132,7 +132,7 @@ export default function ControlledSubstancesPolicyPage() {
         <li><strong>State Laws:</strong> Individual states may impose additional restrictions on the prescribing of controlled substances via telehealth, including requirements for in-person evaluations, prescription drug monitoring program (PDMP) checks, and quantity limitations.</li>
       </ul>
       <p>
-        Bloom360&apos;s policy to not prescribe controlled substances is a clinical and operational decision designed to
+        bloom360&apos;s policy to not prescribe controlled substances is a clinical and operational decision designed to
         prioritize patient safety and responsible care, and to ensure compliance with the complex and evolving regulatory
         landscape governing controlled substance prescribing in telehealth.
       </p>

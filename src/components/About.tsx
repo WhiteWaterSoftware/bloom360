@@ -46,7 +46,7 @@ export default function About() {
               not reactive.
             </h2>
             <p className="mt-6 text-ink-muted text-base leading-relaxed">
-              Bloom360 is a 100% online primary care practice where prevention
+              bloom360 is a 100% online primary care practice where prevention
               comes first. Led by a physician and supported by a full care
               team&nbsp;&mdash; including a dietitian and exercise coach&nbsp;&mdash; we
               give you 24/7 text access to your doctor, same-day refills, and

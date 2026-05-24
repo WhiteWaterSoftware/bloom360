@@ -43,6 +43,19 @@ export default function WaitlistModal({
       setStatus("success");
     } catch {
       setStatus("error");
+      return;
+    }
+
+    try {
+      if (typeof window !== "undefined") {
+        const w = window as typeof window & {
+          dataLayer?: Record<string, unknown>[];
+        };
+        w.dataLayer = w.dataLayer || [];
+        w.dataLayer.push({ event: "waitlist_signup", state });
+      }
+    } catch {
+      // Analytics failures must not affect submission status
     }
   };
 

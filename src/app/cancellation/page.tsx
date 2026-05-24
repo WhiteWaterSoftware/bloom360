@@ -7,16 +7,16 @@ export default function CancellationPolicyPage() {
       lastUpdated="Last Updated: May 1, 2026"
     >
       <p>
-        We understand that circumstances change. This Cancellation Policy explains how to cancel your Bloom360 membership,
+        We understand that circumstances change. This Cancellation Policy explains how to cancel your bloom360 membership,
         what to expect during and after the cancellation process, and how billing is handled.
       </p>
 
       <h2>How to Cancel</h2>
       <p>
-        You may cancel your Bloom360 membership at any time through one of the following methods:
+        You may cancel your bloom360 membership at any time through one of the following methods:
       </p>
       <ul>
-        <li><strong>Account Settings:</strong> Log in to your Bloom360 account and navigate to your membership settings to initiate cancellation.</li>
+        <li><strong>Account Settings:</strong> Log in to your bloom360 account and navigate to your membership settings to initiate cancellation.</li>
         <li><strong>Email:</strong> Send a cancellation request to <a href="mailto:care@bloom360.com">care@bloom360.com</a> from the email address associated with your account.</li>
       </ul>
       <p>
@@ -26,7 +26,7 @@ export default function CancellationPolicyPage() {
 
       <h2>30-Day Notice Requirement</h2>
       <p>
-        Because Bloom360 provides relationship-based care, we require a minimum of thirty (30) days&apos; notice before your
+        Because bloom360 provides relationship-based care, we require a minimum of thirty (30) days&apos; notice before your
         cancellation takes effect. This notice period allows your care team to wrap up any ongoing care, provide referrals if
         needed, and ensure a smooth transition.
       </p>
@@ -49,13 +49,13 @@ export default function CancellationPolicyPage() {
         periods that begin after your cancellation takes effect.
       </p>
       <p>
-        <strong>Enrollment fees are non-refundable.</strong> The one-time enrollment fee you paid when joining Bloom360 is not
+        <strong>Enrollment fees are non-refundable.</strong> The one-time enrollment fee you paid when joining bloom360 is not
         eligible for refund upon cancellation.
       </p>
 
       <h2>Refunds</h2>
       <p>
-        Bloom360 does not provide prorated refunds for partial billing periods. If you cancel mid-cycle, you will retain access
+        bloom360 does not provide prorated refunds for partial billing periods. If you cancel mid-cycle, you will retain access
         to your membership benefits for the remainder of that billing period, but no refund will be issued for the unused
         portion.
       </p>
@@ -73,9 +73,9 @@ export default function CancellationPolicyPage() {
         effective date.
       </p>
 
-      <h2>Cancellation by Bloom360</h2>
+      <h2>Cancellation by bloom360</h2>
       <p>
-        Bloom360 reserves the right to cancel or suspend your membership under certain circumstances. In most cases, we will
+        bloom360 reserves the right to cancel or suspend your membership under certain circumstances. In most cases, we will
         provide at least thirty (30) days&apos; advance notice before cancelling your membership. However, we may cancel or
         suspend your membership immediately and without notice in the following situations:
       </p>
@@ -86,20 +86,20 @@ export default function CancellationPolicyPage() {
         <li><strong>Violation of Terms:</strong> Material violation of our Terms of Service, including prohibited conduct.</li>
       </ul>
       <p>
-        If Bloom360 cancels your membership, we will make reasonable efforts to assist with care transition, including
+        If bloom360 cancels your membership, we will make reasonable efforts to assist with care transition, including
         providing referrals and transferring your health records upon request.
       </p>
 
       <h2>Your Records After Cancellation</h2>
       <p>
-        After your membership ends, Bloom360 will retain your health records in accordance with applicable state and federal
+        After your membership ends, bloom360 will retain your health records in accordance with applicable state and federal
         law, which generally requires retention for a minimum of seven (7) years from the date of your last encounter. You
         may request copies of your health records at any time by contacting us at{" "}
         <a href="mailto:care@bloom360.com">care@bloom360.com</a>. We will process your request in accordance with applicable
         law and may charge a reasonable fee for copies as permitted.
       </p>
 
-      <h2>Rejoining Bloom360</h2>
+      <h2>Rejoining bloom360</h2>
       <p>
         If you cancel your membership and later wish to rejoin, you are welcome back. Rejoining members will be subject to the
         current membership pricing at the time of re-enrollment. A new enrollment fee will apply. Your previous health records
