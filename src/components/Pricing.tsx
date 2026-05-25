@@ -2,7 +2,7 @@
 
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
-import { useWaitlist } from "./WaitlistProvider";
+import { SIGNUP_URL, trackSignupClick } from "@/lib/signup";
 import { Check } from "@phosphor-icons/react";
 
 const plans = [
@@ -32,14 +32,12 @@ function PlanCard({
   setAnnual,
   isFront,
   onClick,
-  openWaitlist,
 }: {
   plan: (typeof plans)[number];
   annual: boolean;
   setAnnual: (v: boolean) => void;
   isFront: boolean;
   onClick: () => void;
-  openWaitlist: () => void;
 }) {
   return (
     <motion.div
@@ -147,15 +145,16 @@ function PlanCard({
 
         {/* Fixed CTA area — never moves */}
         <div className="px-6 md:px-5 py-5 md:py-6">
-          <button
-            onClick={openWaitlist}
+          <a
+            href={SIGNUP_URL}
+            onClick={() => trackSignupClick(`pricing_${plan.name.toLowerCase()}`)}
             className="group w-full inline-flex items-center justify-center gap-3 bg-ink text-cream px-6 py-3.5 rounded-full text-sm tracking-wide uppercase hover:bg-salmon transition-colors duration-500"
           >
             Join as Founding Member
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
               &rarr;
             </span>
-          </button>
+          </a>
 
           <p className="mt-3 text-center text-[11px] text-ink/30 leading-relaxed">
             Founding member pricing locked for 12 months. $99 enrollment
@@ -170,7 +169,6 @@ function PlanCard({
 export default function Pricing() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const openWaitlist = useWaitlist();
   const [annual, setAnnual] = useState(true);
   const [activePlan, setActivePlan] = useState(0);
 
@@ -281,7 +279,6 @@ export default function Pricing() {
                   setAnnual={setAnnual}
                   isFront={activePlan === i}
                   onClick={() => setActivePlan(i)}
-                  openWaitlist={openWaitlist}
                 />
               ))}
             </div>

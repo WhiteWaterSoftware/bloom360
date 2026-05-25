@@ -3,7 +3,7 @@
 import { motion, useInView, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import { useWaitlist } from "./WaitlistProvider";
+import { SIGNUP_URL, trackSignupClick } from "@/lib/signup";
 
 function getTimeLeft() {
   const target = new Date("2026-06-01T00:00:00-04:00");
@@ -54,7 +54,6 @@ function CountdownUnit({ value, label }: { value: number; label: string }) {
 }
 
 export default function CTA() {
-  const openWaitlist = useWaitlist();
   const ref = useRef(null);
   const contentRef = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
@@ -164,15 +163,16 @@ export default function CTA() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mt-10 md:mt-14 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
           >
-            <button
-              onClick={openWaitlist}
+            <a
+              href={SIGNUP_URL}
+              onClick={() => trackSignupClick("footer_cta")}
               className="group inline-flex items-center justify-center gap-3 bg-cream text-ink px-8 py-4 md:px-10 md:py-5 rounded-full text-sm tracking-wide uppercase hover:bg-salmon-light hover:text-cream transition-colors duration-500"
             >
-              Join the Waitlist
+              Sign Up
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                 &rarr;
               </span>
-            </button>
+            </a>
             <a
               href="mailto:care@bloom360.com"
               className="inline-flex items-center justify-center gap-2 border border-cream/20 text-cream px-8 py-4 md:px-10 md:py-5 rounded-full text-sm tracking-wide uppercase hover:border-cream/50 transition-colors duration-500"

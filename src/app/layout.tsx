@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
-import WaitlistProvider from "@/components/WaitlistProvider";
 import "./globals.css";
 
 const GTM_ID = "GTM-KD5RPXTW";
@@ -119,9 +118,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <WaitlistProvider>
-          {children}
-        </WaitlistProvider>
+        {children}
       </body>
     </html>
   );
