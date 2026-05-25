@@ -1,5 +1,5 @@
 // bloom360 is live — all CTAs send people to the signup app.
-export const SIGNUP_URL = "https://bloom360.haloemr.com";
+export const SIGNUP_URL = "https://bloom360.haloemr.com/signup";
 
 // Mirrors the old waitlist conversion event so we keep tracking CTA
 // conversions in GTM. `location` identifies which CTA was clicked.
