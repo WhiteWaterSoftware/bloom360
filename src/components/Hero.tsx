@@ -3,11 +3,10 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import { useWaitlist } from "./WaitlistProvider";
+import { SIGNUP_URL, trackSignupClick } from "@/lib/signup";
 import MobileVideo from "./MobileVideo";
 
 export default function Hero() {
-  const openWaitlist = useWaitlist();
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -74,15 +73,16 @@ export default function Hero() {
             access to help you stay ahead of your health &mdash; with no
             insurance needed.
           </p>
-          <button
-            onClick={openWaitlist}
+          <a
+            href={SIGNUP_URL}
+            onClick={() => trackSignupClick("hero")}
             className="group inline-flex items-center gap-3 bg-ink text-cream px-7 py-3.5 md:px-8 md:py-4 rounded-full text-sm tracking-wide uppercase hover:bg-salmon transition-colors duration-500 self-start"
           >
-            Join the Waitlist
+            Sign Up
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
               &rarr;
             </span>
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

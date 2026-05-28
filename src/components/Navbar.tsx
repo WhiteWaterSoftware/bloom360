@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import { useWaitlist } from "./WaitlistProvider";
+import { SIGNUP_URL, trackSignupClick } from "@/lib/signup";
 
 const links = [
   { label: "About", href: "#about" },
@@ -15,7 +15,6 @@ const links = [
 ];
 
 export default function Navbar() {
-  const openWaitlist = useWaitlist();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -59,12 +58,13 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <button
-              onClick={openWaitlist}
+            <a
+              href={SIGNUP_URL}
+              onClick={() => trackSignupClick("navbar")}
               className="text-[13px] tracking-wide uppercase bg-ink text-cream px-6 py-2.5 rounded-full hover:bg-ink-light transition-colors duration-300"
             >
-              Join
-            </button>
+              Sign Up
+            </a>
           </div>
 
           <button
@@ -95,12 +95,13 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <button
-                onClick={() => { setMobileOpen(false); openWaitlist(); }}
+              <a
+                href={SIGNUP_URL}
+                onClick={() => { setMobileOpen(false); trackSignupClick("navbar_mobile"); }}
                 className="block w-full text-center text-sm tracking-wide uppercase bg-ink text-cream px-6 py-3 rounded-full"
               >
-                Join
-              </button>
+                Sign Up
+              </a>
             </div>
           </motion.div>
         )}
