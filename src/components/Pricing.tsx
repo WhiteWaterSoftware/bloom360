@@ -169,7 +169,7 @@ function PlanCard({
 export default function Pricing() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const [annual, setAnnual] = useState(true);
+  const [annual, setAnnual] = useState(false);
   const [activePlan, setActivePlan] = useState(0);
 
   const allFeatures = [
