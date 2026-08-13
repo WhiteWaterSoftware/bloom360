@@ -3,7 +3,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import { trackSignupClick, useSignupUrl } from "@/lib/signup";
+import { trackSignupClick } from "@/lib/signup";
+import { useSignupUrl } from "@/lib/useSignupUrl";
 import MobileVideo from "./MobileVideo";
 
 export default function Hero() {

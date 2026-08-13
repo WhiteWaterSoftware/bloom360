@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import { trackSignupClick, useSignupUrl } from "@/lib/signup";
+import { trackSignupClick } from "@/lib/signup";
+import { useSignupUrl } from "@/lib/useSignupUrl";
 
 const links = [
   { label: "About", href: "#about" },

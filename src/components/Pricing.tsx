@@ -2,7 +2,8 @@
 
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
-import { trackSignupClick, useSignupUrl } from "@/lib/signup";
+import { trackSignupClick } from "@/lib/signup";
+import { useSignupUrl } from "@/lib/useSignupUrl";
 import { Check } from "@phosphor-icons/react";
 
 const plans = [

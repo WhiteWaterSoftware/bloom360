@@ -3,7 +3,8 @@
 import { motion, useInView, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import { trackSignupClick, useSignupUrl } from "@/lib/signup";
+import { trackSignupClick } from "@/lib/signup";
+import { useSignupUrl } from "@/lib/useSignupUrl";
 
 function getTimeLeft() {
   const target = new Date("2026-06-01T00:00:00-04:00");
