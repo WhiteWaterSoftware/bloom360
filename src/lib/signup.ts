@@ -1,4 +1,7 @@
 // bloom360 is live — all CTAs send people to the signup app.
+// Deliberately NOT a client module: policy pages and other server components
+// need to read this constant as a real string. The client-only hook that
+// decorates it with analytics lives in ./useSignupUrl.
 export const SIGNUP_URL = "https://bloom360.haloemr.com/signup";
 
 // Mirrors the old waitlist conversion event so we keep tracking CTA

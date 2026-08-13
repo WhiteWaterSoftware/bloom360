@@ -2,7 +2,8 @@
 
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
-import { SIGNUP_URL, trackSignupClick } from "@/lib/signup";
+import { trackSignupClick } from "@/lib/signup";
+import { useSignupUrl } from "@/lib/useSignupUrl";
 import { Check } from "@phosphor-icons/react";
 
 const plans = [
@@ -39,6 +40,8 @@ function PlanCard({
   isFront: boolean;
   onClick: () => void;
 }) {
+  const signupUrl = useSignupUrl();
+
   return (
     <motion.div
       layout
@@ -146,7 +149,7 @@ function PlanCard({
         {/* Fixed CTA area — never moves */}
         <div className="px-6 md:px-5 py-5 md:py-6">
           <a
-            href={SIGNUP_URL}
+            href={signupUrl}
             onClick={() => trackSignupClick(`pricing_${plan.name.toLowerCase()}`)}
             className="group w-full inline-flex items-center justify-center gap-3 bg-ink text-cream px-6 py-3.5 rounded-full text-sm tracking-wide uppercase hover:bg-salmon transition-colors duration-500"
           >

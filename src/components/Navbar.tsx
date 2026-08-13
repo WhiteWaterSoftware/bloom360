@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import { SIGNUP_URL, trackSignupClick } from "@/lib/signup";
+import { trackSignupClick } from "@/lib/signup";
+import { useSignupUrl } from "@/lib/useSignupUrl";
 
 const links = [
   { label: "About", href: "#about" },
@@ -15,6 +16,7 @@ const links = [
 ];
 
 export default function Navbar() {
+  const signupUrl = useSignupUrl();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -59,7 +61,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href={SIGNUP_URL}
+              href={signupUrl}
               onClick={() => trackSignupClick("navbar")}
               className="text-[13px] tracking-wide uppercase bg-ink text-cream px-6 py-2.5 rounded-full hover:bg-ink-light transition-colors duration-300"
             >
@@ -96,7 +98,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href={SIGNUP_URL}
+                href={signupUrl}
                 onClick={() => { setMobileOpen(false); trackSignupClick("navbar_mobile"); }}
                 className="block w-full text-center text-sm tracking-wide uppercase bg-ink text-cream px-6 py-3 rounded-full"
               >
