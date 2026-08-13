@@ -3,7 +3,7 @@
 import { motion, useInView, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import { SIGNUP_URL, trackSignupClick } from "@/lib/signup";
+import { trackSignupClick, useSignupUrl } from "@/lib/signup";
 
 function getTimeLeft() {
   const target = new Date("2026-06-01T00:00:00-04:00");
@@ -54,6 +54,7 @@ function CountdownUnit({ value, label }: { value: number; label: string }) {
 }
 
 export default function CTA() {
+  const signupUrl = useSignupUrl();
   const ref = useRef(null);
   const contentRef = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
@@ -164,7 +165,7 @@ export default function CTA() {
             className="mt-10 md:mt-14 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
           >
             <a
-              href={SIGNUP_URL}
+              href={signupUrl}
               onClick={() => trackSignupClick("footer_cta")}
               className="group inline-flex items-center justify-center gap-3 bg-cream text-ink px-8 py-4 md:px-10 md:py-5 rounded-full text-sm tracking-wide uppercase hover:bg-salmon-light hover:text-cream transition-colors duration-500"
             >

@@ -3,10 +3,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import { SIGNUP_URL, trackSignupClick } from "@/lib/signup";
+import { trackSignupClick, useSignupUrl } from "@/lib/signup";
 import MobileVideo from "./MobileVideo";
 
 export default function Hero() {
+  const signupUrl = useSignupUrl();
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -74,7 +75,7 @@ export default function Hero() {
             insurance needed.
           </p>
           <a
-            href={SIGNUP_URL}
+            href={signupUrl}
             onClick={() => trackSignupClick("hero")}
             className="group inline-flex items-center gap-3 bg-ink text-cream px-7 py-3.5 md:px-8 md:py-4 rounded-full text-sm tracking-wide uppercase hover:bg-salmon transition-colors duration-500 self-start"
           >
